@@ -2,9 +2,19 @@ name: Update feed
 
 on:
   schedule:
-    # 02:15 UTC daily = 07:45 IST. A few minutes past the hour on purpose:
-    # GitHub's scheduler is busiest exactly on the hour and delays those runs.
-    - cron: '15 2 * * *'
+    # Every 2 hours, at :25 past. Two deliberate choices:
+    #
+    # Frequency: relative timestamps in the UI are computed from the last fetch,
+    # not live. On a once-daily schedule the newest story aged from "8m ago" to
+    # "17h ago" before the next run, so the feed only ever looked fresh for a
+    # few minutes each morning. Twelve refreshes a day keeps the top of the feed
+    # inside minutes-to-2-hours. A run costs ~45s and public repos get unlimited
+    # Actions minutes, so the real cost is one commit per run to data/.
+    #
+    # Offset: never on the hour. GitHub's scheduler is heavily congested at :00
+    # and delays or drops those runs; scheduled workflows are best-effort in any
+    # case, so treat "every 2 hours" as approximate.
+    - cron: '25 */2 * * *'
   workflow_dispatch: # Lets you trigger a refresh by hand from the Actions tab.
   push:
     branches: [main]

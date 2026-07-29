@@ -36,7 +36,13 @@ Then open <http://localhost:4321>. The dev server exists because the page `fetch
 
 ## How the daily update works
 
-A GitHub Actions workflow (`.github/workflows/update.yml`) runs at **02:15 UTC / 07:45 IST**, commits the refreshed `data/` files, and deploys the site to GitHub Pages. It also runs on `workflow_dispatch` (manual trigger from the Actions tab) and on pushes that touch `scripts/`.
+A GitHub Actions workflow (`.github/workflows/update.yml`) runs **every 2 hours at :25 past**, commits the refreshed `data/` files, and deploys the site to GitHub Pages. It also runs on `workflow_dispatch` (manual trigger from the Actions tab) and on pushes that change anything user-visible.
+
+**Why every 2 hours and not daily.** The relative timestamps in the UI ("8m ago") are computed from the last fetch, not live. On a once-a-day schedule the newest story aged from minutes to 17 hours before the next run, so the feed only looked fresh for a few minutes each morning. Twelve refreshes a day keeps the top of the feed inside minutes-to-2-hours.
+
+Two caveats. GitHub's scheduler is **best-effort** — runs get delayed at busy times and are occasionally skipped, so treat the interval as approximate (the `:25` offset avoids the worst top-of-hour congestion). And each run commits to `data/`, so history accumulates roughly 12 data commits a day; the job already skips the commit when nothing changed.
+
+To change the cadence, edit the one `cron` line. `'25 */6 * * *'` is four times a day; `'25 * * * *'` is hourly.
 
 To enable it on a fresh repo: push to `main`, then set **Settings → Pages → Source** to **GitHub Actions**. Nothing else to configure — no secrets, no lockfile, no `npm ci`.
 

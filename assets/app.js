@@ -117,7 +117,11 @@ function applyTheme(theme) {
 function renderHeader() {
   const { generatedAt, stats } = state.data;
   const ageHours = (Date.now() - Date.parse(generatedAt)) / 3_600_000;
-  const stale = ageHours > 36; // The job runs daily; 36h means a run was missed.
+  // The job runs every ~2 hours. GitHub's scheduler is best-effort and can
+  // delay or skip runs, so allow roughly three missed windows before saying
+  // anything — but not the 36h this used to be, which would have hidden a
+  // whole day of failed runs behind a confident-looking timestamp.
+  const stale = ageHours > 6;
 
   el.freshness.dataset.stale = String(stale);
   el.freshness.textContent = `updated ${relativeTime(generatedAt)}${stale ? ' · update may have failed' : ''}`;
