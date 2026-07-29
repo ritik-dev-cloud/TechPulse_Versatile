@@ -1,0 +1,26 @@
+{
+  "name": "techpulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-page tech intelligence dashboard: cloud, DevOps, web dev, architecture and event-tech news, auto-updated daily.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "update": "node scripts/fetch-news.mjs",
+    "update:verbose": "node scripts/fetch-news.mjs --verbose",
+    "check-sources": "node scripts/check-sources.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\""
+  },
+  "keywords": [
+    "news",
+    "dashboard",
+    "rss",
+    "devops",
+    "cloud",
+    "event-tech"
+  ],
+  "license": "MIT"
+}

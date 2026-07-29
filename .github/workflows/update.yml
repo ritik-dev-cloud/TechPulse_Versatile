@@ -1,0 +1,107 @@
+name: Update feed
+
+on:
+  schedule:
+    # 02:15 UTC daily = 07:45 IST. A few minutes past the hour on purpose:
+    # GitHub's scheduler is busiest exactly on the hour and delays those runs.
+    - cron: '15 2 * * *'
+  workflow_dispatch: # Lets you trigger a refresh by hand from the Actions tab.
+  push:
+    branches: [main]
+    paths:
+      # Rebuild when the pipeline or the source list changes, so a config edit
+      # is reflected immediately instead of waiting for the next nightly run.
+      - 'scripts/**'
+      - '.github/workflows/update.yml'
+
+# Only one update may run at a time — two concurrent runs would race on the
+# commit and one would fail to push.
+concurrency:
+  group: update-feed
+  cancel-in-progress: false
+
+permissions:
+  contents: write # Needed to commit the refreshed data/ files.
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      # No `npm ci` — this project has zero dependencies by design, so there is
+      # nothing to install and no lockfile to audit.
+
+      - name: Run tests
+        # Parser regression tests. Cheap (<1s) and worth gating on: a parser
+        # bug would quietly publish an empty or malformed feed.
+        run: npm test
+
+      - name: Fetch sources
+        env:
+          # The built-in token needs no setup and raises the GitHub Search API
+          # limit from 10 to 30 requests/minute. Runner IPs are shared, so the
+          # unauthenticated quota is often already spent by someone else.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run update:verbose
+
+      - name: Commit refreshed data
+        run: |
+          set -euo pipefail
+          git config user.name  'techpulse-bot'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # --exit-code is inverted for diff: 0 means "no changes".
+          if git diff --quiet -- data/; then
+            echo 'No feed changes — nothing to commit.'
+            exit 0
+          fi
+
+          git add data/
+          git commit -m "chore(data): refresh feed $(date -u +'%Y-%m-%d %H:%M UTC')"
+
+          # A concurrent push (e.g. a manual dispatch) can land first; rebase
+          # and retry once rather than failing the nightly run.
+          git push || {
+            echo 'Push rejected — rebasing on origin/main and retrying.'
+            git pull --rebase --autostash origin main
+            git push
+          }
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    # Deploy even when `update` reports failure: a partially-refreshed feed is
+    # still worth publishing, and `update` only fails hard when the run is badly
+    # degraded. Skip only if it was cancelled.
+    if: ${{ always() && needs.update.result != 'cancelled' }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # The update job just pushed a commit; make sure we publish it rather
+          # than the tree this workflow started from.
+          ref: main
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.' # Static site — index.html, assets/, data/, docs/.
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
