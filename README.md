@@ -30,7 +30,8 @@ Then open <http://localhost:4321>. The dev server exists because the page `fetch
 | `npm run check-sources` | Health-check every feed: HTTP status, item count, feed title, staleness |
 | `npm run check-sources -- --fix` | Remove dead feeds from `scripts/sources.json` |
 | `npm run serve` | Static server on :4321 |
-| `npm test` | 31 parser/renderer regression tests (`node --test`, no framework) |
+| `npm test` | 41 parser/renderer regression tests (`node --test`, no framework) |
+| `npm run sync` | Rebase onto `origin/main`, auto-resolving `data/` conflicts (see below) |
 
 `GITHUB_TOKEN` is optional. Without it the GitHub Search API allows 10 requests/minute per IP; with it, 30. A classic token with **no scopes** is enough — this project only reads public data. See `.env.example`.
 
@@ -43,6 +44,16 @@ A GitHub Actions workflow (`.github/workflows/update.yml`) runs **every 2 hours 
 Two caveats. GitHub's scheduler is **best-effort** — runs get delayed at busy times and are occasionally skipped, so treat the interval as approximate (the `:25` offset avoids the worst top-of-hour congestion). And each run commits to `data/`, so history accumulates roughly 12 data commits a day; the job already skips the commit when nothing changed.
 
 To change the cadence, edit the one `cron` line. `'25 */6 * * *'` is four times a day; `'25 * * * *'` is hourly.
+
+### Working locally against a repo that commits to itself
+
+Because the workflow commits regenerated `data/` on every run, your clone falls behind within hours and `git push` gets rejected — then the rebase conflicts on `data/feed.json` and `data/status.json` every single time. The resolution is always identical, since those files are generated output. So:
+
+```bash
+npm run sync
+```
+
+It fetches, rebases, and auto-resolves **only** `data/*.json` by keeping your commit's copy (the next scheduled run regenerates from live sources anyway). A conflict in any other file stops the script for you to handle, and it refuses to run on a dirty tree.
 
 To enable it on a fresh repo: push to `main`, then set **Settings → Pages → Source** to **GitHub Actions**. Nothing else to configure — no secrets, no lockfile, no `npm ci`.
 
