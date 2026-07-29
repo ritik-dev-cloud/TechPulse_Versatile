@@ -18,7 +18,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { parseFeed, toPlainText } from './lib/parse-feed.mjs';
-import { fetchText, agentFor, validateFeedResponse } from './lib/http.mjs';
+import { fetchText, agentFor, validateFeedResponse, USER_AGENT } from './lib/http.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCES_PATH = path.join(ROOT, 'scripts', 'sources.json');
@@ -224,6 +224,87 @@ async function collectHackerNews(config) {
   } catch (error) {
     return {
       status: { name: 'Hacker News', category: 'community', url: config.endpoint, ok: false, items: 0, error: error.message },
+      items: [],
+    };
+  }
+}
+
+/* ----------------------------------------------------------------- reddit */
+
+/**
+ * Reddit, one subreddit per run.
+ *
+ * Measured behaviour (2026-07-29, from a residential IP):
+ *  - `/r/<sub>/.rss` returns 200 with a valid Atom feed.
+ *  - `/r/<sub>/top.json` returns 403 — so no score is available, and posts
+ *    cannot be filtered by upvotes. The RSS route is the only one that works.
+ *  - The FIRST request succeeds and every subsequent one returns 429, even at
+ *    3-second spacing. The limit is per-IP and unforgiving.
+ *
+ * So fetching a list of subreddits in one run is pointless and rude: one would
+ * succeed and the rest would hammer a service that already said no. Instead we
+ * make exactly one request per run and rotate which subreddit by the UTC hour.
+ * At a 2-hourly cadence that is ~12 requests a day spread across the list, and
+ * because items merge into the retained history, coverage accumulates rather
+ * than each run needing to see everything.
+ *
+ * Rotation is deliberately derived from the clock, not a random pick, so a run
+ * is reproducible and the sequence is evenly spread instead of clustering.
+ */
+async function collectReddit(config, now) {
+  if (!config?.enabled) return { status: null, items: [] };
+  const subs = config.subreddits ?? [];
+  if (!subs.length) return { status: null, items: [] };
+
+  const subreddit = subs[now.getUTCHours() % subs.length];
+  const url = `https://www.reddit.com/r/${subreddit}/.rss`;
+  const name = `Reddit r/${subreddit}`;
+
+  try {
+    const { body, contentType } = await fetchText(url, {
+      // Reddit's own block page tells bots to send something descriptive.
+      userAgent: `${USER_AGENT} (one request per run, rotating subreddit)`,
+      attempts: 1, // A 429 will not clear in a second; do not retry into it.
+    });
+    const valid = validateFeedResponse({ body, contentType });
+    if (!valid.ok) {
+      return {
+        status: { name, category: 'community', url, ok: false, items: 0, error: valid.reason },
+        items: [],
+      };
+    }
+    const { items } = parseFeed(body);
+    const mapped = items.slice(0, config.limit ?? 20).map((item) => ({
+      id: itemId(item.link, item.title),
+      title: item.title,
+      url: item.link,
+      source: name,
+      category: 'community',
+      published: item.published,
+      // No score is available on the RSS route, so say what this is rather than
+      // implying an engagement signal we do not have.
+      summary: item.summary || `Discussion on r/${subreddit}`,
+      author: item.author,
+      tags: [],
+      priority: 3,
+    }));
+    debug(`${name}: ${mapped.length} items`);
+    return {
+      status: { name, category: 'community', url, ok: true, items: mapped.length, note: `rotates hourly across ${subs.length} subreddits` },
+      items: mapped,
+    };
+  } catch (error) {
+    // 429 is the expected steady state if anything else on this IP touched
+    // Reddit recently. Never fail the run over it.
+    return {
+      status: {
+        name,
+        category: 'community',
+        url,
+        ok: false,
+        items: 0,
+        error: `${error.message}${error.status === 429 ? ' (rate limited — expected; retries next run)' : ''}`,
+      },
       items: [],
     };
   }
@@ -441,9 +522,10 @@ async function main() {
   log(`TechPulse update — ${now.toISOString()}`);
   log(`Fetching ${config.feeds.length} feeds…`);
 
-  const [feedResults, hn, devTo, github] = await Promise.all([
+  const [feedResults, hn, reddit, devTo, github] = await Promise.all([
     mapLimit(config.feeds, CONCURRENCY, collectFeed),
     collectHackerNews(config.hackerNews),
+    collectReddit(config.reddit, now),
     collectDevTo(config.devTo),
     collectGithub(config.github, now),
   ]);
@@ -451,6 +533,7 @@ async function main() {
   const statuses = [
     ...feedResults.map((r) => r.status),
     ...(hn.status ? [hn.status] : []),
+    ...(reddit.status ? [reddit.status] : []),
     ...devTo.statuses,
     ...github.statuses,
   ];
@@ -458,6 +541,7 @@ async function main() {
   const freshItems = [
     ...feedResults.flatMap((r) => r.items),
     ...hn.items,
+    ...reddit.items,
     ...devTo.items,
   ];
 

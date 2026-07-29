@@ -2,117 +2,652 @@
   "$comment": "Feed registry. Every URL was verified reachable AND parseable on 2026-07-29; re-check anytime with `npm run check-sources`. Add a source by appending an object — no code change needed. `category` must match an id in `categories`.",
   "$excluded": {
     "lobste.rs": "Deliberately excluded. robots.txt is `User-agent: * / Disallow: /` (named search engines only) and the site emits `Content-Signal: ai-input=no, ai-train=no`. The feed returns 200, but fetching it with a custom bot goes against the operator's stated wishes.",
-    "reddit.com/r/*/.rss": "Excluded: 403 without a browser UA and intermittent 429 even with one (2 of 5 fetches succeeded at 4s spacing). Reddit directs automated consumers to registered OAuth API access. Not worth a credential for a news panel.",
     "eventmanagerblog.com/feed": "Excluded: the domain was repurposed. It still serves valid RSS, but the feed title is now 'Crypto Casinos'. A status-code check alone would have accepted it.",
     "azurecomcdn.azureedge.net/en-us/updates/feed/": "Excluded: returns HTTP 200 with an `image/vnd.microsoft.icon` body — a favicon, not a feed. Use the releasecommunications API URL below instead.",
-    "shopify.engineering, uber.com/blog/engineering, anthropic.com/rss.xml": "No working feed found. Shopify serves an SPA HTML shell at .atom; Uber returns 406 to every UA tried; Anthropic has no feed at that path."
+    "shopify.engineering, uber.com/blog/engineering, anthropic.com/rss.xml": "No working feed found. Shopify serves an SPA HTML shell at .atom; Uber returns 406 to every UA tried; Anthropic has no feed at that path.",
+    "reddit.com — NOW INTEGRATED, see the `reddit` block": "Was excluded on rate-limit grounds. Now integrated: exactly ONE request per run, rotating the subreddit by UTC hour, because the first .rss request succeeds and every subsequent one returns 429. Noted here so the old exclusion is not mistaken for current state."
   },
   "categories": [
-    { "id": "cloud", "label": "Cloud & AWS", "blurb": "Provider launches, serverless, platform economics" },
-    { "id": "devops", "label": "DevOps & Platform", "blurb": "CI/CD, Kubernetes, IaC, observability, SRE" },
-    { "id": "webdev", "label": "Web Development", "blurb": "Frameworks, runtimes, browsers, the web platform" },
-    { "id": "architecture", "label": "Architecture", "blurb": "Microservices, monoliths, event-driven, data" },
-    { "id": "ai", "label": "AI & Dev Tooling", "blurb": "Models, coding agents, MCP, AI engineering" },
-    { "id": "eventtech", "label": "Event Tech", "blurb": "Event platforms, hybrid delivery, experience technology" },
-    { "id": "security", "label": "Security & Hacking", "blurb": "Breaches, CVEs, offensive and defensive tooling, AI/LLM security" },
-    { "id": "platform", "label": "Linux, Docker & Java", "blurb": "Operating systems, containers, config management, JVM ecosystem" },
-    { "id": "community", "label": "Community Pulse", "blurb": "What developers are actually discussing today" }
+    {
+      "id": "cloud",
+      "label": "Cloud & AWS",
+      "blurb": "Provider launches, serverless, platform economics"
+    },
+    {
+      "id": "devops",
+      "label": "DevOps & Platform",
+      "blurb": "CI/CD, Kubernetes, IaC, observability, SRE"
+    },
+    {
+      "id": "webdev",
+      "label": "Web Development",
+      "blurb": "Frameworks, runtimes, browsers, the web platform"
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "blurb": "Microservices, monoliths, event-driven, data"
+    },
+    {
+      "id": "ai",
+      "label": "AI & Dev Tooling",
+      "blurb": "Models, coding agents, MCP, AI engineering"
+    },
+    {
+      "id": "eventtech",
+      "label": "Event Tech",
+      "blurb": "Event platforms, hybrid delivery, experience technology"
+    },
+    {
+      "id": "security",
+      "label": "Security & Hacking",
+      "blurb": "Breaches, CVEs, offensive and defensive tooling, AI/LLM security"
+    },
+    {
+      "id": "platform",
+      "label": "Linux, Docker & Java",
+      "blurb": "Operating systems, containers, config management, JVM ecosystem"
+    },
+    {
+      "id": "community",
+      "label": "Community Pulse",
+      "blurb": "What developers are actually discussing today"
+    }
   ],
   "feeds": [
-    { "name": "AWS What's New", "category": "cloud", "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/", "priority": 1, "note": "Highest-volume cloud feed, ~100 items/fetch. Summary only." },
-    { "name": "AWS News Blog", "category": "cloud", "url": "https://aws.amazon.com/blogs/aws/feed/", "priority": 1 },
-    { "name": "Cloudflare Blog", "category": "cloud", "url": "https://blog.cloudflare.com/rss/", "priority": 1 },
-    { "name": "Azure Service Updates", "category": "cloud", "url": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss", "note": "~200 items/fetch." },
-    { "name": "Azure Blog", "category": "cloud", "url": "https://azure.microsoft.com/en-us/blog/feed/" },
-    { "name": "Google Cloud Blog", "category": "cloud", "url": "https://cloudblog.withgoogle.com/rss/", "note": "Description field is effectively empty — renders as title + link." },
-    { "name": "Google Cloud (GCP)", "category": "cloud", "url": "https://cloudblog.withgoogle.com/products/gcp/rss/", "note": "Same empty-description behaviour." },
-
-    { "name": "Kubernetes Blog", "category": "devops", "url": "https://kubernetes.io/feed.xml", "priority": 1 },
-    { "name": "CNCF Blog", "category": "devops", "url": "https://www.cncf.io/feed/", "priority": 1 },
-    { "name": "GitHub Changelog", "category": "devops", "url": "https://github.blog/changelog/feed/", "priority": 1 },
-    { "name": "GitHub Blog", "category": "devops", "url": "https://github.blog/feed/" },
-    { "name": "GitLab Blog", "category": "devops", "url": "https://about.gitlab.com/atom.xml" },
-    { "name": "Docker Blog", "category": "devops", "url": "https://www.docker.com/blog/feed/" },
-    { "name": "HashiCorp Blog", "category": "devops", "url": "https://www.hashicorp.com/blog/feed.xml" },
-    { "name": "Grafana Labs Blog", "category": "devops", "url": "https://grafana.com/blog/index.xml" },
-    { "name": "Prometheus Blog", "category": "devops", "url": "https://prometheus.io/blog/feed.xml", "note": "Low cadence." },
-    { "name": "OpenTofu Releases", "category": "devops", "url": "https://github.com/opentofu/opentofu/releases.atom", "note": "blog.opentofu.org does not resolve; releases are the usable signal." },
-    { "name": "Argo CD Releases", "category": "devops", "url": "https://github.com/argoproj/argo-cd/releases.atom" },
-    { "name": "Flux Releases", "category": "devops", "url": "https://github.com/fluxcd/flux2/releases.atom" },
-    { "name": "Kubernetes Releases", "category": "devops", "url": "https://github.com/kubernetes/kubernetes/releases.atom", "note": "Includes alpha/rc tags." },
-    { "name": "AWS DevOps Blog", "category": "devops", "url": "https://aws.amazon.com/blogs/devops/feed/" },
-
-    { "name": "web.dev", "category": "webdev", "url": "https://web.dev/static/blog/feed.xml", "priority": 1 },
-    { "name": "Chrome for Developers", "category": "webdev", "url": "https://developer.chrome.com/static/blog/feed.xml", "priority": 1 },
-    { "name": "Chrome Releases", "category": "webdev", "url": "https://chromereleases.googleblog.com/atom.xml", "note": "All channels and platforms mixed together." },
-    { "name": "Mozilla Hacks", "category": "webdev", "url": "https://hacks.mozilla.org/feed/" },
-    { "name": "V8 Dev Blog", "category": "webdev", "url": "https://v8.dev/blog.atom", "note": "Genuinely low cadence — latest post at time of setup was 2025-08." },
-    { "name": "React Blog", "category": "webdev", "url": "https://react.dev/rss.xml", "priority": 1 },
-    { "name": "Next.js Blog", "category": "webdev", "url": "https://nextjs.org/feed.xml", "note": "Near-empty descriptions." },
-    { "name": "Vercel Blog", "category": "webdev", "url": "https://vercel.com/atom" },
-    { "name": "Astro Blog", "category": "webdev", "url": "https://astro.build/rss.xml" },
-    { "name": "Svelte Blog", "category": "webdev", "url": "https://svelte.dev/blog/rss.xml" },
-    { "name": "Vue.js Blog", "category": "webdev", "url": "https://blog.vuejs.org/feed.rss", "note": "Stale — latest post at time of setup was 2024-09. Kept in case it resumes." },
-    { "name": "Node.js Blog", "category": "webdev", "url": "https://nodejs.org/en/feed/blog.xml", "note": "Descriptions are empty — renders as title + link." },
-    { "name": "Node.js Releases", "category": "webdev", "url": "https://github.com/nodejs/node/releases.atom", "note": "Large entry bodies (~46KB); truncated on ingest." },
-    { "name": "Deno Blog", "category": "webdev", "url": "https://deno.com/feed" },
-    { "name": "Bun Blog", "category": "webdev", "url": "https://bun.com/rss.xml" },
-    { "name": "TypeScript Dev Blog", "category": "webdev", "url": "https://devblogs.microsoft.com/typescript/feed/", "priority": 1 },
-    { "name": "Rust Blog", "category": "webdev", "url": "https://blog.rust-lang.org/feed.xml" },
-    { "name": "Smashing Magazine", "category": "webdev", "url": "https://www.smashingmagazine.com/feed/" },
-    { "name": "JetBrains Blog", "category": "webdev", "url": "https://blog.jetbrains.com/feed/", "note": "All JetBrains products mixed." },
-    { "name": "Google Developers Blog", "category": "webdev", "url": "https://blog.google/technology/developers/rss/" },
-
-    { "name": "Martin Fowler", "category": "architecture", "url": "https://martinfowler.com/feed.atom", "priority": 1 },
-    { "name": "Thoughtworks Insights", "category": "architecture", "url": "https://www.thoughtworks.com/rss/insights.xml", "note": "Very large feed (~2700 items); capped on ingest." },
-    { "name": "InfoQ Architecture", "category": "architecture", "url": "https://feed.infoq.com/architecture-design/", "priority": 1 },
-    { "name": "InfoQ News", "category": "architecture", "url": "https://feed.infoq.com/news/" },
-    { "name": "AWS Architecture Blog", "category": "architecture", "url": "https://aws.amazon.com/blogs/architecture/feed/" },
-    { "name": "Netflix Tech Blog", "category": "architecture", "url": "https://netflixtechblog.com/feed", "note": "Medium-hosted — may be IP-blocked from CI runners." },
-    { "name": "Meta Engineering", "category": "architecture", "url": "https://engineering.fb.com/feed/" },
-    { "name": "Slack Engineering", "category": "architecture", "url": "https://slack.engineering/feed/" },
-    { "name": "Dropbox Tech", "category": "architecture", "url": "https://dropbox.tech/feed" },
-    { "name": "Stripe Blog", "category": "architecture", "url": "https://stripe.com/blog/feed.rss" },
-    { "name": "Spotify Engineering", "category": "architecture", "url": "https://engineering.atspotify.com/feed" },
-    { "name": "Discord Blog", "category": "architecture", "url": "https://discord.com/blog/rss.xml", "note": "Mostly product/marketing rather than engineering." },
-    { "name": "Stack Overflow Engineering", "category": "architecture", "url": "https://stackoverflow.blog/engineering/feed/" },
-    { "name": "The Pragmatic Engineer", "category": "architecture", "url": "https://newsletter.pragmaticengineer.com/feed", "note": "Most posts are paywalled and truncated." },
-
-    { "name": "OpenAI Blog", "category": "ai", "url": "https://openai.com/news/rss.xml" },
-    { "name": "Hugging Face Blog", "category": "ai", "url": "https://huggingface.co/blog/feed.xml" },
-    { "name": "Simon Willison", "category": "ai", "url": "https://simonwillison.net/atom/everything/", "priority": 1 },
-
-    { "name": "Skift Meetings", "category": "eventtech", "url": "https://meetings.skift.com/feed/", "priority": 1, "note": "The only eventtech source with daily cadence and clean XML." },
-    { "name": "Event Industry News", "category": "eventtech", "url": "https://www.eventindustrynews.com/feed", "priority": 1, "userAgent": "browser", "note": "Returns 403 to some non-browser agents, and is blocked outright from GitHub Actions runner IPs by bot protection. A browser UA is not enough — the block is IP-reputation based. Works locally." },
-    { "name": "PCMA", "category": "eventtech", "url": "https://www.pcma.org/feed/" },
-    { "name": "BizBash", "category": "eventtech", "url": "https://www.bizbash.com/rss.xml", "userAgent": "browser", "note": "Note the .xml suffix — /rss and /feed both 404." },
-    { "name": "TSNN Trade Show News", "category": "eventtech", "url": "https://www.tsnn.com/rss.xml", "note": "CDATA-wrapped links." },
-    { "name": "Event Marketer", "category": "eventtech", "url": "https://www.eventmarketer.com/feed/" },
-
-    { "name": "Krebs on Security", "category": "security", "url": "https://krebsonsecurity.com/feed/", "priority": 1, "userAgent": "browser", "note": "Blocked from GitHub Actions runner IPs by bot protection — serves real XML from a laptop, an HTML challenge page from CI. Kept because the local run and any self-hosted runner get it fine." },
-    { "name": "BleepingComputer", "category": "security", "url": "https://www.bleepingcomputer.com/feed/", "priority": 1 },
-    { "name": "The Hacker News", "category": "security", "url": "https://feeds.feedburner.com/TheHackersNews", "priority": 1, "note": "High volume (~50/fetch); strong on AI/LLM supply-chain incidents." },
-    { "name": "Google Project Zero", "category": "security", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 1, "note": "Deep vulnerability research; low cadence, high value." },
-    { "name": "PortSwigger Research", "category": "security", "url": "https://portswigger.net/research/rss", "priority": 1, "note": "Web/appsec technique research (Burp authors)." },
-    { "name": "CISA Advisories", "category": "security", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "priority": 1, "note": "Authoritative KEV/ICS advisories — the patch-now signal." },
-    { "name": "Kali Linux", "category": "security", "url": "https://www.kali.org/rss.xml", "priority": 1 },
-    { "name": "SANS Internet Storm Center", "category": "security", "url": "https://isc.sans.edu/rssfeed.xml" },
-    { "name": "Schneier on Security", "category": "security", "url": "https://www.schneier.com/feed/atom/" },
-    { "name": "Dark Reading", "category": "security", "url": "https://www.darkreading.com/rss.xml" },
-    { "name": "The Record", "category": "security", "url": "https://therecord.media/feed" },
-
-    { "name": "LWN.net", "category": "platform", "url": "https://lwn.net/headlines/rss", "priority": 1, "note": "The authoritative kernel/Linux-internals source." },
-    { "name": "Phoronix", "category": "platform", "url": "https://www.phoronix.com/rss.php", "note": "Kernel/hardware/benchmark news; high volume." },
-    { "name": "Red Hat Blog", "category": "platform", "url": "https://www.redhat.com/en/rss/blog" },
-    { "name": "Ubuntu Blog", "category": "platform", "url": "https://ubuntu.com/blog/feed" },
-    { "name": "Docker Engine Releases", "category": "platform", "url": "https://github.com/moby/moby/releases.atom", "note": "moby = Docker Engine upstream." },
-    { "name": "Podman Releases", "category": "platform", "url": "https://github.com/containers/podman/releases.atom" },
-    { "name": "Ansible Releases", "category": "platform", "url": "https://github.com/ansible/ansible/releases.atom", "note": "ansible.com/blog/rss.xml parses to 0 items — releases are the usable signal." },
-    { "name": "Inside Java", "category": "platform", "url": "https://inside.java/feed.xml", "priority": 1, "note": "Official OpenJDK team blog. blogs.oracle.com/java returns 403." },
-    { "name": "InfoQ Java", "category": "platform", "url": "https://feed.infoq.com/java/" },
-    { "name": "Spring Blog", "category": "platform", "url": "https://spring.io/blog.atom" },
-    { "name": "Quarkus Blog", "category": "platform", "url": "https://quarkus.io/feed.xml", "note": "Full archive (~400 items); capped on ingest." }
+    {
+      "name": "AWS What's New",
+      "category": "cloud",
+      "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
+      "priority": 1,
+      "note": "Highest-volume cloud feed, ~100 items/fetch. Summary only."
+    },
+    {
+      "name": "AWS News Blog",
+      "category": "cloud",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Cloudflare Blog",
+      "category": "cloud",
+      "url": "https://blog.cloudflare.com/rss/",
+      "priority": 1
+    },
+    {
+      "name": "Azure Service Updates",
+      "category": "cloud",
+      "url": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+      "note": "~200 items/fetch."
+    },
+    {
+      "name": "Azure Blog",
+      "category": "cloud",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/"
+    },
+    {
+      "name": "Google Cloud Blog",
+      "category": "cloud",
+      "url": "https://cloudblog.withgoogle.com/rss/",
+      "note": "Description field is effectively empty — renders as title + link."
+    },
+    {
+      "name": "Google Cloud (GCP)",
+      "category": "cloud",
+      "url": "https://cloudblog.withgoogle.com/products/gcp/rss/",
+      "note": "Same empty-description behaviour."
+    },
+    {
+      "name": "Kubernetes Blog",
+      "category": "devops",
+      "url": "https://kubernetes.io/feed.xml",
+      "priority": 1
+    },
+    {
+      "name": "CNCF Blog",
+      "category": "devops",
+      "url": "https://www.cncf.io/feed/",
+      "priority": 1
+    },
+    {
+      "name": "GitHub Changelog",
+      "category": "devops",
+      "url": "https://github.blog/changelog/feed/",
+      "priority": 1
+    },
+    {
+      "name": "GitHub Blog",
+      "category": "devops",
+      "url": "https://github.blog/feed/"
+    },
+    {
+      "name": "GitLab Blog",
+      "category": "devops",
+      "url": "https://about.gitlab.com/atom.xml"
+    },
+    {
+      "name": "Docker Blog",
+      "category": "devops",
+      "url": "https://www.docker.com/blog/feed/"
+    },
+    {
+      "name": "HashiCorp Blog",
+      "category": "devops",
+      "url": "https://www.hashicorp.com/blog/feed.xml"
+    },
+    {
+      "name": "Grafana Labs Blog",
+      "category": "devops",
+      "url": "https://grafana.com/blog/index.xml"
+    },
+    {
+      "name": "Prometheus Blog",
+      "category": "devops",
+      "url": "https://prometheus.io/blog/feed.xml",
+      "note": "Low cadence."
+    },
+    {
+      "name": "OpenTofu Releases",
+      "category": "devops",
+      "url": "https://github.com/opentofu/opentofu/releases.atom",
+      "note": "blog.opentofu.org does not resolve; releases are the usable signal."
+    },
+    {
+      "name": "Argo CD Releases",
+      "category": "devops",
+      "url": "https://github.com/argoproj/argo-cd/releases.atom"
+    },
+    {
+      "name": "Flux Releases",
+      "category": "devops",
+      "url": "https://github.com/fluxcd/flux2/releases.atom"
+    },
+    {
+      "name": "Kubernetes Releases",
+      "category": "devops",
+      "url": "https://github.com/kubernetes/kubernetes/releases.atom",
+      "note": "Includes alpha/rc tags."
+    },
+    {
+      "name": "AWS DevOps Blog",
+      "category": "devops",
+      "url": "https://aws.amazon.com/blogs/devops/feed/"
+    },
+    {
+      "name": "web.dev",
+      "category": "webdev",
+      "url": "https://web.dev/static/blog/feed.xml",
+      "priority": 1
+    },
+    {
+      "name": "Chrome for Developers",
+      "category": "webdev",
+      "url": "https://developer.chrome.com/static/blog/feed.xml",
+      "priority": 1
+    },
+    {
+      "name": "Chrome Releases",
+      "category": "webdev",
+      "url": "https://chromereleases.googleblog.com/atom.xml",
+      "note": "All channels and platforms mixed together."
+    },
+    {
+      "name": "Mozilla Hacks",
+      "category": "webdev",
+      "url": "https://hacks.mozilla.org/feed/"
+    },
+    {
+      "name": "V8 Dev Blog",
+      "category": "webdev",
+      "url": "https://v8.dev/blog.atom",
+      "note": "Genuinely low cadence — latest post at time of setup was 2025-08."
+    },
+    {
+      "name": "React Blog",
+      "category": "webdev",
+      "url": "https://react.dev/rss.xml",
+      "priority": 1
+    },
+    {
+      "name": "Next.js Blog",
+      "category": "webdev",
+      "url": "https://nextjs.org/feed.xml",
+      "note": "Near-empty descriptions."
+    },
+    {
+      "name": "Vercel Blog",
+      "category": "webdev",
+      "url": "https://vercel.com/atom"
+    },
+    {
+      "name": "Astro Blog",
+      "category": "webdev",
+      "url": "https://astro.build/rss.xml"
+    },
+    {
+      "name": "Svelte Blog",
+      "category": "webdev",
+      "url": "https://svelte.dev/blog/rss.xml"
+    },
+    {
+      "name": "Vue.js Blog",
+      "category": "webdev",
+      "url": "https://blog.vuejs.org/feed.rss",
+      "note": "Stale — latest post at time of setup was 2024-09. Kept in case it resumes."
+    },
+    {
+      "name": "Node.js Blog",
+      "category": "webdev",
+      "url": "https://nodejs.org/en/feed/blog.xml",
+      "note": "Descriptions are empty — renders as title + link."
+    },
+    {
+      "name": "Node.js Releases",
+      "category": "webdev",
+      "url": "https://github.com/nodejs/node/releases.atom",
+      "note": "Large entry bodies (~46KB); truncated on ingest."
+    },
+    {
+      "name": "Deno Blog",
+      "category": "webdev",
+      "url": "https://deno.com/feed"
+    },
+    {
+      "name": "Bun Blog",
+      "category": "webdev",
+      "url": "https://bun.com/rss.xml"
+    },
+    {
+      "name": "TypeScript Dev Blog",
+      "category": "webdev",
+      "url": "https://devblogs.microsoft.com/typescript/feed/",
+      "priority": 1
+    },
+    {
+      "name": "Rust Blog",
+      "category": "webdev",
+      "url": "https://blog.rust-lang.org/feed.xml"
+    },
+    {
+      "name": "Smashing Magazine",
+      "category": "webdev",
+      "url": "https://www.smashingmagazine.com/feed/"
+    },
+    {
+      "name": "JetBrains Blog",
+      "category": "webdev",
+      "url": "https://blog.jetbrains.com/feed/",
+      "note": "All JetBrains products mixed."
+    },
+    {
+      "name": "Google Developers Blog",
+      "category": "webdev",
+      "url": "https://blog.google/technology/developers/rss/"
+    },
+    {
+      "name": "Martin Fowler",
+      "category": "architecture",
+      "url": "https://martinfowler.com/feed.atom",
+      "priority": 1
+    },
+    {
+      "name": "Thoughtworks Insights",
+      "category": "architecture",
+      "url": "https://www.thoughtworks.com/rss/insights.xml",
+      "note": "Very large feed (~2700 items); capped on ingest."
+    },
+    {
+      "name": "InfoQ Architecture",
+      "category": "architecture",
+      "url": "https://feed.infoq.com/architecture-design/",
+      "priority": 1
+    },
+    {
+      "name": "InfoQ News",
+      "category": "architecture",
+      "url": "https://feed.infoq.com/news/"
+    },
+    {
+      "name": "AWS Architecture Blog",
+      "category": "architecture",
+      "url": "https://aws.amazon.com/blogs/architecture/feed/"
+    },
+    {
+      "name": "Netflix Tech Blog",
+      "category": "architecture",
+      "url": "https://netflixtechblog.com/feed",
+      "note": "Medium-hosted — may be IP-blocked from CI runners."
+    },
+    {
+      "name": "Meta Engineering",
+      "category": "architecture",
+      "url": "https://engineering.fb.com/feed/"
+    },
+    {
+      "name": "Slack Engineering",
+      "category": "architecture",
+      "url": "https://slack.engineering/feed/"
+    },
+    {
+      "name": "Dropbox Tech",
+      "category": "architecture",
+      "url": "https://dropbox.tech/feed"
+    },
+    {
+      "name": "Stripe Blog",
+      "category": "architecture",
+      "url": "https://stripe.com/blog/feed.rss"
+    },
+    {
+      "name": "Spotify Engineering",
+      "category": "architecture",
+      "url": "https://engineering.atspotify.com/feed"
+    },
+    {
+      "name": "Discord Blog",
+      "category": "architecture",
+      "url": "https://discord.com/blog/rss.xml",
+      "note": "Mostly product/marketing rather than engineering."
+    },
+    {
+      "name": "Stack Overflow Engineering",
+      "category": "architecture",
+      "url": "https://stackoverflow.blog/engineering/feed/"
+    },
+    {
+      "name": "The Pragmatic Engineer",
+      "category": "architecture",
+      "url": "https://newsletter.pragmaticengineer.com/feed",
+      "note": "Most posts are paywalled and truncated."
+    },
+    {
+      "name": "OpenAI Blog",
+      "category": "ai",
+      "url": "https://openai.com/news/rss.xml"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "category": "ai",
+      "url": "https://huggingface.co/blog/feed.xml"
+    },
+    {
+      "name": "Simon Willison",
+      "category": "ai",
+      "url": "https://simonwillison.net/atom/everything/",
+      "priority": 1
+    },
+    {
+      "name": "Skift Meetings",
+      "category": "eventtech",
+      "url": "https://meetings.skift.com/feed/",
+      "priority": 1,
+      "note": "The only eventtech source with daily cadence and clean XML."
+    },
+    {
+      "name": "Event Industry News",
+      "category": "eventtech",
+      "url": "https://www.eventindustrynews.com/feed",
+      "priority": 1,
+      "userAgent": "browser",
+      "note": "Returns 403 to some non-browser agents, and is blocked outright from GitHub Actions runner IPs by bot protection. A browser UA is not enough — the block is IP-reputation based. Works locally."
+    },
+    {
+      "name": "PCMA",
+      "category": "eventtech",
+      "url": "https://www.pcma.org/feed/"
+    },
+    {
+      "name": "BizBash",
+      "category": "eventtech",
+      "url": "https://www.bizbash.com/rss.xml",
+      "userAgent": "browser",
+      "note": "Note the .xml suffix — /rss and /feed both 404."
+    },
+    {
+      "name": "TSNN Trade Show News",
+      "category": "eventtech",
+      "url": "https://www.tsnn.com/rss.xml",
+      "note": "CDATA-wrapped links."
+    },
+    {
+      "name": "Event Marketer",
+      "category": "eventtech",
+      "url": "https://www.eventmarketer.com/feed/"
+    },
+    {
+      "name": "Krebs on Security",
+      "category": "security",
+      "url": "https://krebsonsecurity.com/feed/",
+      "priority": 1,
+      "userAgent": "browser",
+      "note": "Blocked from GitHub Actions runner IPs by bot protection — serves real XML from a laptop, an HTML challenge page from CI. Kept because the local run and any self-hosted runner get it fine."
+    },
+    {
+      "name": "BleepingComputer",
+      "category": "security",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "priority": 1
+    },
+    {
+      "name": "The Hacker News",
+      "category": "security",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "priority": 1,
+      "note": "High volume (~50/fetch); strong on AI/LLM supply-chain incidents."
+    },
+    {
+      "name": "Google Project Zero",
+      "category": "security",
+      "url": "https://googleprojectzero.blogspot.com/feeds/posts/default",
+      "priority": 1,
+      "note": "Deep vulnerability research; low cadence, high value."
+    },
+    {
+      "name": "PortSwigger Research",
+      "category": "security",
+      "url": "https://portswigger.net/research/rss",
+      "priority": 1,
+      "note": "Web/appsec technique research (Burp authors)."
+    },
+    {
+      "name": "CISA Advisories",
+      "category": "security",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "priority": 1,
+      "note": "Authoritative KEV/ICS advisories — the patch-now signal."
+    },
+    {
+      "name": "Kali Linux",
+      "category": "security",
+      "url": "https://www.kali.org/rss.xml",
+      "priority": 1
+    },
+    {
+      "name": "SANS Internet Storm Center",
+      "category": "security",
+      "url": "https://isc.sans.edu/rssfeed.xml"
+    },
+    {
+      "name": "Schneier on Security",
+      "category": "security",
+      "url": "https://www.schneier.com/feed/atom/"
+    },
+    {
+      "name": "Dark Reading",
+      "category": "security",
+      "url": "https://www.darkreading.com/rss.xml"
+    },
+    {
+      "name": "The Record",
+      "category": "security",
+      "url": "https://therecord.media/feed"
+    },
+    {
+      "name": "LWN.net",
+      "category": "platform",
+      "url": "https://lwn.net/headlines/rss",
+      "priority": 1,
+      "note": "The authoritative kernel/Linux-internals source."
+    },
+    {
+      "name": "Phoronix",
+      "category": "platform",
+      "url": "https://www.phoronix.com/rss.php",
+      "note": "Kernel/hardware/benchmark news; high volume."
+    },
+    {
+      "name": "Red Hat Blog",
+      "category": "platform",
+      "url": "https://www.redhat.com/en/rss/blog"
+    },
+    {
+      "name": "Ubuntu Blog",
+      "category": "platform",
+      "url": "https://ubuntu.com/blog/feed"
+    },
+    {
+      "name": "Docker Engine Releases",
+      "category": "platform",
+      "url": "https://github.com/moby/moby/releases.atom",
+      "note": "moby = Docker Engine upstream."
+    },
+    {
+      "name": "Podman Releases",
+      "category": "platform",
+      "url": "https://github.com/containers/podman/releases.atom"
+    },
+    {
+      "name": "Ansible Releases",
+      "category": "platform",
+      "url": "https://github.com/ansible/ansible/releases.atom",
+      "note": "ansible.com/blog/rss.xml parses to 0 items — releases are the usable signal."
+    },
+    {
+      "name": "Inside Java",
+      "category": "platform",
+      "url": "https://inside.java/feed.xml",
+      "priority": 1,
+      "note": "Official OpenJDK team blog. blogs.oracle.com/java returns 403."
+    },
+    {
+      "name": "InfoQ Java",
+      "category": "platform",
+      "url": "https://feed.infoq.com/java/"
+    },
+    {
+      "name": "Spring Blog",
+      "category": "platform",
+      "url": "https://spring.io/blog.atom"
+    },
+    {
+      "name": "Quarkus Blog",
+      "category": "platform",
+      "url": "https://quarkus.io/feed.xml",
+      "note": "Full archive (~400 items); capped on ingest."
+    },
+    {
+      "name": "Marc Brooker",
+      "category": "architecture",
+      "url": "https://brooker.co.za/blog/rss.xml",
+      "priority": 1,
+      "note": "AWS Principal/Distinguished Engineer. Among the highest-signal distributed-systems writing anywhere."
+    },
+    {
+      "name": "Dan Luu",
+      "category": "architecture",
+      "url": "https://danluu.com/atom.xml",
+      "priority": 1,
+      "note": "Long-form empirical engineering analysis."
+    },
+    {
+      "name": "Julia Evans",
+      "category": "architecture",
+      "url": "https://jvns.ca/atom.xml",
+      "priority": 1,
+      "note": "Deep systems/debugging explainers."
+    },
+    {
+      "name": "ByteByteGo",
+      "category": "architecture",
+      "url": "https://blog.bytebytego.com/feed",
+      "priority": 1,
+      "note": "System-design newsletter. Substack — most posts are partially paywalled, so treat the body as a teaser."
+    },
+    {
+      "name": "Airbnb Engineering",
+      "category": "architecture",
+      "url": "https://medium.com/feed/airbnb-engineering"
+    },
+    {
+      "name": "Grab Tech",
+      "category": "architecture",
+      "url": "https://engineering.grab.com/feed.xml"
+    },
+    {
+      "name": "Flipkart Tech",
+      "category": "architecture",
+      "url": "https://blog.flipkart.tech/feed"
+    },
+    {
+      "name": "Medium: System Design",
+      "category": "community",
+      "url": "https://medium.com/feed/tag/system-design",
+      "note": "Tag feed. Mixed quality — see the noise warning in $mediumNotes."
+    },
+    {
+      "name": "Medium: Software Architecture",
+      "category": "community",
+      "url": "https://medium.com/feed/tag/software-architecture",
+      "note": "Tag feed. Intermittent — returned a connection error on one of two attempts."
+    },
+    {
+      "name": "Medium: Distributed Systems",
+      "category": "community",
+      "url": "https://medium.com/feed/tag/distributed-systems",
+      "note": "Tag feed."
+    },
+    {
+      "name": "Medium: DevOps",
+      "category": "community",
+      "url": "https://medium.com/feed/tag/devops",
+      "note": "Tag feed."
+    },
+    {
+      "name": "ITNEXT",
+      "category": "community",
+      "url": "https://itnext.io/feed",
+      "note": "Medium publication on its own domain — the medium.com/feed/<publication> form fails from this network, custom domains work."
+    },
+    {
+      "name": "Level Up Coding",
+      "category": "community",
+      "url": "https://levelup.gitconnected.com/feed",
+      "note": "High volume, variable quality."
+    }
   ],
+  "$mediumNotes": {
+    "whatWorks": "medium.com/feed/tag/<tag> returns valid RSS. medium.com/feed/<publication> failed at the connection level (curl exit, no HTTP status) for netflix-techblog, pinterest-engineering, zomato-technology and walmartglobaltech — so use each publication's CUSTOM DOMAIN instead (netflixtechblog.com/feed, itnext.io/feed, levelup.gitconnected.com/feed, blog.bytebytego.com/feed).",
+    "noiseWarning": "Medium tag feeds and the large programming publications carry a lot of beginner listicles and AI-generated filler. They are included for breadth, but the genuinely high-signal senior-engineer content in this project comes from the individual blogs filed under `architecture` (Marc Brooker, Dan Luu, Julia Evans) and from InfoQ, ByteByteGo and The Pragmatic Engineer — not from tag feeds.",
+    "paywall": "Member-only Medium stories are truncated in RSS, so the summary is a teaser and the link may hit the metered paywall.",
+    "ciRisk": "Medium does connection-level blocking from some networks. Expect these feeds to be less reliable from GitHub Actions runners than from a laptop.",
+    "alsoTested": "highscalability.com/rss.xml returns 404. tech.olacabs.com/feed and bytes.swiggy.com/feed fail to connect. blog.razorpay.com/feed/ served 200 with 10 items on first contact, then refused TCP connections entirely (SSL_ERROR_SYSCALL, then connection refused) on every later attempt — it appears to block an IP after a few fetches. Removed rather than shipped as a source that fails every run."
+  },
+  "reddit": {
+    "enabled": true,
+    "subreddits": [
+      "programming",
+      "devops",
+      "aws",
+      "kubernetes",
+      "ExperiencedDevs",
+      "softwarearchitecture",
+      "netsec",
+      "sre"
+    ],
+    "limit": 20,
+    "$comment": "ONE request per run, rotating by UTC hour. Measured 2026-07-29: /r/<sub>/.rss returns 200, but /r/<sub>/top.json returns 403, so no upvote score is available and posts cannot be score-filtered. The first .rss request succeeds and every subsequent one returns 429 even at 3s spacing — the limit is per-IP and unforgiving. Fetching the whole list in one run would mean one success and seven refusals, so we rotate instead and let coverage accumulate across the day's runs.",
+    "$ifYouWantItReliable": "Register a free Reddit 'script' app for OAuth (100 queries/min). That needs a client id and secret, which would have to be added as GitHub repository secrets — not done here, since it is credential handling the owner should do himself if he wants it."
+  },
   "hackerNews": {
     "enabled": true,
     "endpoint": "https://hn.algolia.com/api/v1/search",
@@ -125,25 +660,96 @@
   "devTo": {
     "enabled": true,
     "endpoint": "https://dev.to/api/articles",
-    "tags": ["devops", "aws", "webdev", "architecture", "kubernetes"],
-    "perTag": 6,
-    "minReactions": 15,
-    "$comment": "Public, no key. The list endpoint returns description only; full bodies would need a per-article call, which we do not need."
+    "tags": [
+      "architecture",
+      "systemdesign",
+      "devops",
+      "aws",
+      "kubernetes",
+      "security",
+      "java",
+      "linux",
+      "docker",
+      "webdev"
+    ],
+    "perTag": 5,
+    "minReactions": 12,
+    "$comment": "Public, no key. The list endpoint returns description only. top=7 asks for the week's best per tag, which filters out most low-effort posts; minReactions trims further. Tags chosen for senior-level topics rather than breadth."
   },
   "github": {
     "enabled": true,
     "$comment": "Unauthenticated GitHub Search API allows 10 req/min PER IP — and on a shared/NAT address the separate `core` bucket (60/hr) is often already exhausted by others, so we only use `search`, which embeds the license object for free. In CI, always pass the built-in GITHUB_TOKEN (30 search req/min). The REST search API does NOT support boolean OR between qualifiers — it returns HTTP 422 — so use one topic per query.",
     "queries": [
-      { "label": "Rising repos (30d)", "topic": "trending", "q": "created:>{{since:30d}} stars:>100", "sort": "stars", "limit": 12 },
-      { "label": "Kubernetes & platform", "topic": "devops", "q": "topic:kubernetes pushed:>{{since:14d}} stars:>800", "sort": "stars", "limit": 8 },
-      { "label": "DevOps tooling", "topic": "devops", "q": "topic:devops pushed:>{{since:21d}} stars:>400", "sort": "stars", "limit": 8 },
-      { "label": "AI agents", "topic": "ai", "q": "topic:ai-agents pushed:>{{since:14d}} stars:>400", "sort": "stars", "limit": 8 },
-      { "label": "MCP ecosystem", "topic": "ai", "q": "topic:mcp pushed:>{{since:14d}} stars:>300", "sort": "stars", "limit": 8 },
-      { "label": "Realtime & streaming", "topic": "eventtech", "q": "topic:webrtc pushed:>{{since:90d}} stars:>200", "sort": "stars", "limit": 8 },
-      { "label": "Event & ticketing platforms", "topic": "eventtech", "q": "topic:event-management pushed:>{{since:365d}} stars:>30", "sort": "stars", "limit": 10 },
-      { "label": "Security & pentesting", "topic": "security", "q": "topic:pentesting pushed:>{{since:30d}} stars:>300", "sort": "stars", "limit": 8 },
-      { "label": "Defensive & appsec", "topic": "security", "q": "topic:security-tools pushed:>{{since:30d}} stars:>300", "sort": "stars", "limit": 8 },
-      { "label": "Self-hosted & platform", "topic": "platform", "q": "topic:docker pushed:>{{since:14d}} stars:>1000", "sort": "stars", "limit": 8 }
+      {
+        "label": "Rising repos (30d)",
+        "topic": "trending",
+        "q": "created:>{{since:30d}} stars:>100",
+        "sort": "stars",
+        "limit": 12
+      },
+      {
+        "label": "Kubernetes & platform",
+        "topic": "devops",
+        "q": "topic:kubernetes pushed:>{{since:14d}} stars:>800",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "DevOps tooling",
+        "topic": "devops",
+        "q": "topic:devops pushed:>{{since:21d}} stars:>400",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "AI agents",
+        "topic": "ai",
+        "q": "topic:ai-agents pushed:>{{since:14d}} stars:>400",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "MCP ecosystem",
+        "topic": "ai",
+        "q": "topic:mcp pushed:>{{since:14d}} stars:>300",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "Realtime & streaming",
+        "topic": "eventtech",
+        "q": "topic:webrtc pushed:>{{since:90d}} stars:>200",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "Event & ticketing platforms",
+        "topic": "eventtech",
+        "q": "topic:event-management pushed:>{{since:365d}} stars:>30",
+        "sort": "stars",
+        "limit": 10
+      },
+      {
+        "label": "Security & pentesting",
+        "topic": "security",
+        "q": "topic:pentesting pushed:>{{since:30d}} stars:>300",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "Defensive & appsec",
+        "topic": "security",
+        "q": "topic:security-tools pushed:>{{since:30d}} stars:>300",
+        "sort": "stars",
+        "limit": 8
+      },
+      {
+        "label": "Self-hosted & platform",
+        "topic": "platform",
+        "q": "topic:docker pushed:>{{since:14d}} stars:>1000",
+        "sort": "stars",
+        "limit": 8
+      }
     ]
   }
 }
