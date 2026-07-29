@@ -9,10 +9,20 @@ on:
   push:
     branches: [main]
     paths:
-      # Rebuild when the pipeline or the source list changes, so a config edit
-      # is reflected immediately instead of waiting for the next nightly run.
+      # Anything that changes what the published page looks like or contains,
+      # so an edit goes live immediately instead of waiting up to 24h for the
+      # nightly run. This originally listed only scripts/**, which meant a CSS
+      # fix sat undeployed with no indication anything was pending.
       - 'scripts/**'
+      - 'assets/**'
+      - 'index.html'
+      - 'docs/**'
+      - 'tests/**'
+      - 'package.json'
       - '.github/workflows/update.yml'
+      # data/** is deliberately absent: it is this workflow's own output. Pushes
+      # made with GITHUB_TOKEN do not trigger workflows, so there is no loop
+      # today, but listing it would make one the moment a PAT was used instead.
 
 # Only one update may run at a time — two concurrent runs would race on the
 # commit and one would fail to push.
