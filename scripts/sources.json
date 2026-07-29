@@ -419,8 +419,7 @@
       "category": "security",
       "url": "https://krebsonsecurity.com/feed/",
       "priority": 1,
-      "userAgent": "browser",
-      "note": "Blocked from GitHub Actions runner IPs by bot protection — serves real XML from a laptop, an HTML challenge page from CI. Kept because the local run and any self-hosted runner get it fine."
+      "note": "Serves a valid RSS 2.0 body with `content-type: text/html` — a server misconfiguration, not a block. The ingest validator treats the body as authoritative for exactly this reason. No browser UA needed."
     },
     {
       "name": "BleepingComputer",

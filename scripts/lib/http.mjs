@@ -52,12 +52,14 @@ function describePage(head) {
  */
 export function validateFeedResponse({ body, contentType }) {
   const head = String(body ?? '').slice(0, 4000);
+  if (!head.trim()) return { ok: false, reason: 'empty body' };
 
-  // A bot-protection interstitial is worth naming explicitly. Several feeds
-  // (Krebs, Event Industry News) serve real XML to a laptop but a challenge
-  // page to datacenter IPs, so "unexpected content-type: text/html" sends you
-  // hunting for a broken feed URL when the URL is fine and the IP is the
-  // problem. Nothing in the code can fix it — the point is to say so.
+  // A bot-protection interstitial is worth naming explicitly. Some publishers
+  // serve real XML to a laptop but a challenge page to datacenter IPs, so
+  // "unexpected content-type: text/html" sends you hunting for a broken feed
+  // URL when the URL is fine and the IP is the problem. Nothing in the code can
+  // fix that — the point is to say so. Checked before the feed-root test
+  // because a challenge page never contains a feed root anyway.
   if (BOT_CHALLENGE.test(head)) {
     return {
       ok: false,
@@ -65,17 +67,28 @@ export function validateFeedResponse({ body, contentType }) {
     };
   }
 
-  if (contentType && !XML_CONTENT_TYPES.test(contentType)) {
-    return { ok: false, reason: `unexpected content-type: ${contentType}${describePage(head)}` };
-  }
-  if (!head.trim()) return { ok: false, reason: 'empty body' };
+  // THE BODY IS THE AUTHORITY; Content-Type is only a hint.
+  //
+  // Krebs on Security serves a perfectly valid RSS 2.0 document — <?xml
+  // declaration, <rss version="2.0"> at byte 38, ten <item> elements, no <html>
+  // anywhere — with `content-type: text/html`. Checking the header first
+  // rejected a working feed and reported it as an HTML page, which is simply
+  // wrong. Plenty of self-hosted WordPress and Drupal installs are misconfigured
+  // this way, so parse-what-you-got is both more correct and more forgiving.
+  //
+  // The rootAt < htmlAt guard stops an actual HTML page that merely mentions
+  // "<rss" further down (a blog post about feeds, say) from sneaking through.
+  const rootAt = head.search(/<(rss|feed|rdf:RDF)\b/i);
+  const htmlAt = head.search(/<html\b/i);
+  if (rootAt !== -1 && (htmlAt === -1 || rootAt < htmlAt)) return { ok: true };
+
   if (/^\s*(<!doctype html|<html)/i.test(head)) {
     return { ok: false, reason: `served an HTML page, not a feed${describePage(head)}` };
   }
-  if (!/<(rss|feed|rdf:RDF)\b/i.test(head)) {
-    return { ok: false, reason: 'no <rss>/<feed> root element' };
+  if (contentType && !XML_CONTENT_TYPES.test(contentType)) {
+    return { ok: false, reason: `unexpected content-type: ${contentType}${describePage(head)}` };
   }
-  return { ok: true };
+  return { ok: false, reason: `no <rss>/<feed> root element${describePage(head)}` };
 }
 
 /**

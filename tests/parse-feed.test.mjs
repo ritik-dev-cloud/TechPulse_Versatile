@@ -238,3 +238,25 @@ test('tolerates an HTML rejection with no title', () => {
   assert.equal(result.ok, false);
   assert.doesNotMatch(result.reason, /page title/);
 });
+
+// Krebs on Security serves a valid RSS 2.0 document with
+// `content-type: text/html`. Trusting the header over the body rejected a
+// working feed and mislabelled it an HTML page.
+test('accepts a valid feed served with a text/html Content-Type', () => {
+  const body =
+    '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>' +
+    '<title>Krebs on Security</title><item><title>A post</title>' +
+    '<link>https://krebsonsecurity.com/a</link></item></channel></rss>';
+  assert.equal(validateFeedResponse({ body, contentType: 'text/html; charset=UTF-8' }).ok, true);
+});
+
+// ...but an actual HTML page that merely mentions "<rss" must still be refused,
+// which is what the rootAt < htmlAt ordering guard is for.
+test('rejects an HTML page that merely mentions <rss later in the text', () => {
+  const body =
+    '<!doctype html><html><head><title>How RSS works</title></head><body>' +
+    '<p>A feed starts with &lt;rss version="2.0"&gt; like this: <rss></p></body></html>';
+  const result = validateFeedResponse({ body, contentType: 'text/html' });
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /HTML page/);
+});
