@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TechPulse — one page for cloud, DevOps, web & event tech</title>
+    <title>TechPulse — one page for cloud, DevOps, web, security & event tech</title>
     <meta
       name="description"
-      content="A single-page, daily auto-updating digest of cloud, DevOps, web development, architecture and event-technology news, plus trending GitHub repositories with licence classification."
+      content="A single-page, daily auto-updating digest of cloud, DevOps, web development, architecture, AI, security and event-technology news, plus trending GitHub repositories with licence classification."
     />
     <meta name="color-scheme" content="dark light" />
     <link rel="stylesheet" href="assets/styles.css" />
@@ -25,7 +25,7 @@
           <div>
             <h1 class="brand__name">TechPulse</h1>
             <p class="brand__tag">
-              Cloud · DevOps · Web · Architecture · Event tech — refreshed daily
+              Cloud · DevOps · Web · Architecture · AI · Security · Event tech — refreshed daily
             </p>
           </div>
         </div>
@@ -125,115 +125,139 @@
             primary source are explicitly marked <code>UNVERIFIED</code> rather than quietly repeated.
           </p>
         </div>
-        <div class="research-grid" id="research-grid">
-          <a class="research-card" href="docs/research/01-cloud-and-aws.md">
-            <span class="research-card__kicker">01 · Cloud</span>
-            <h3>AWS &amp; cloud platform landscape</h3>
-            <p>
+        <div class="research-groups" id="research-grid">
+          <section class="research-group">
+            <h3 class="research-group__title">The technology landscape</h3>
+            <p class="research-group__blurb">Where each area actually stands right now, and what the industry is quietly retiring.</p>
+            <div class="research-grid">
+              <a class="research-card" href="docs/research/01-cloud-and-aws.md">
+              <span class="research-card__kicker">01 · Cloud</span>
+              <h3>AWS &amp; cloud platform landscape</h3>
+              <p>
               What actually shipped since re:Invent 2025, what AWS is quietly retiring (App Runner,
               Amazon Q Developer, CodeCatalyst), the 2026 default architecture, and an honest AWS vs
               Cloudflare vs GCP vs Azure read for a small team.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/02-devops-and-platform.md">
-            <span class="research-card__kicker">02 · DevOps</span>
-            <h3>DevOps &amp; platform engineering tooling</h3>
-            <p>
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/02-devops-and-platform.md">
+              <span class="research-card__kicker">02 · DevOps</span>
+              <h3>DevOps &amp; platform engineering tooling</h3>
+              <p>
               The ingress-nginx retirement and forced Gateway API migration, what replaced Earthly and
               System Initiative, adoption numbers with sources, a reference platform stack, and a
               licence-audited repo list.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/03-web-development.md">
-            <span class="research-card__kicker">03 · Web</span>
-            <h3>Web development &amp; developer tooling</h3>
-            <p>
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/03-web-development.md">
+              <span class="research-card__kicker">03 · Web</span>
+              <h3>Web development &amp; developer tooling</h3>
+              <p>
               Framework versions that are real, Vite 8 / TypeScript 7 / Bun / Deno status, what is
               genuinely Baseline versus still an Interop target, and the contested evidence on whether
               AI coding tools actually help.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/04-architecture.md">
-            <span class="research-card__kicker">04 · Architecture</span>
-            <h3>Microservices, monoliths &amp; event-driven</h3>
-            <p>
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/04-architecture.md">
+              <span class="research-card__kicker">04 · Architecture</span>
+              <h3>Microservices, monoliths &amp; event-driven</h3>
+              <p>
               Where the pattern war actually landed, what the Prime Video post really said, the true
               cost of event-driven systems, durable execution as the emerging default, and a decision
               framework for splitting a service.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/05-event-technology.md">
-            <span class="research-card__kicker">05 · Event tech</span>
-            <h3>Smart events: technology &amp; AI</h3>
-            <p>
-              The commercial platform stack, AI features that shipped versus AI that is marketing, the
-              engineering stack for building event products, a licence-verified open-source table, and
-              GDPR / DPDP obligations.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/06-feed-sources.md">
-            <span class="research-card__kicker">06 · Method</span>
-            <h3>How this dashboard gets its data</h3>
-            <p>
-              Every source that was tested, which ones were rejected and why, the two feeds that
-              returned HTTP 200 with garbage, rate limits, and the sources deliberately excluded on
-              robots.txt grounds.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/07-global-event-tech.md">
-            <span class="research-card__kicker">07 · Global</span>
-            <h3>Event tech &amp; research worldwide</h3>
-            <p>
-              The event-technology market region by region — India, China, Japan, Hong Kong, Germany,
-              UAE — the trade shows that matter, peer-reviewed research on smart venues and hybrid
-              events, and what is genuinely transferable home.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/08-smart-engagement-build.md">
-            <span class="research-card__kicker">08 · Build</span>
-            <h3>Smart engagement software</h3>
-            <p>
-              An engineering blueprint for live polling, quizzes, gamification and second-screen
-              activities: realtime fan-out to thousands of attendees, moderation before it hits the
-              main screen, venue-wifi reality, and a 90-day MVP plan.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/09-aws-devops-enterprise.md">
-            <span class="research-card__kicker">09 · Career</span>
-            <h3>AWS + DevOps enterprise project</h3>
-            <p>
-              One coherent, non-toy system worth building: multi-account landing zone, full GitOps
-              chain, supply-chain security, observability, a realistic monthly bill with a cheap mode,
-              and a 12-week plan that reads as engineering rather than tutorial.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/10-ai-building-software.md">
-            <span class="research-card__kicker">10 · AI</span>
-            <h3>How AI builds software &amp; token economics</h3>
-            <p>
-              The agentic coding landscape on measured evidence, how large engineering orgs actually
-              operate it, and the part most people skip — prompt caching, batch discounts, model
-              routing and context engineering to cut token spend.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/11-cybersecurity.md">
-            <span class="research-card__kicker">11 · Security</span>
-            <h3>Offensive &amp; defensive security</h3>
-            <p>
-              The legal line, then the skills: Kali tooling, legal practice grounds, certifications
-              worth the money, detection engineering, the 2025–26 breach landscape, and AI/LLM supply
-              chain incidents — including which viral rumours turn out to be false.
-            </p>
-          </a>
-          <a class="research-card" href="docs/research/12-platform-tooling.md">
-            <span class="research-card__kicker">12 · Tooling</span>
-            <h3>Docker, Linux, Kali, Ansible, Java</h3>
-            <p>
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/12-platform-tooling.md">
+              <span class="research-card__kicker">12 · Tooling</span>
+              <h3>Docker, Linux, Kali, Ansible, Java</h3>
+              <p>
               Current state of each, what is quietly replacing them, the licence terms that bite
               commercially (Docker Desktop seats, Oracle JDK), and where Ansible still genuinely wins
               against immutable infrastructure.
-            </p>
-          </a>
+              </p>
+              </a>
+            </div>
+          </section>
+          <section class="research-group">
+            <h3 class="research-group__title">The event line</h3>
+            <p class="research-group__blurb">The domain you already work in — market, global research, and how to build the software yourself.</p>
+            <div class="research-grid">
+              <a class="research-card" href="docs/research/05-event-technology.md">
+              <span class="research-card__kicker">05 · Event tech</span>
+              <h3>Smart events: technology &amp; AI</h3>
+              <p>
+              The commercial platform stack, AI features that shipped versus AI that is marketing, the
+              engineering stack for building event products, a licence-verified open-source table, and
+              GDPR / DPDP obligations.
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/07-global-event-tech.md">
+              <span class="research-card__kicker">07 · Global</span>
+              <h3>Event tech &amp; research worldwide</h3>
+              <p>
+              The event-technology market region by region — India, China, Japan, Hong Kong, Germany,
+              UAE — the trade shows that matter, peer-reviewed research on smart venues and hybrid
+              events, and what is genuinely transferable home.
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/08-smart-engagement-build.md">
+              <span class="research-card__kicker">08 · Build</span>
+              <h3>Smart engagement software</h3>
+              <p>
+              An engineering blueprint for live polling, quizzes, gamification and second-screen
+              activities: realtime fan-out to thousands of attendees, moderation before it hits the
+              main screen, venue-wifi reality, and a 90-day MVP plan.
+              </p>
+              </a>
+            </div>
+          </section>
+          <section class="research-group">
+            <h3 class="research-group__title">Build it and get hired for it</h3>
+            <p class="research-group__blurb">Enterprise-shaped projects, the AI workflow that produces them, and the security skills employers ask for.</p>
+            <div class="research-grid">
+              <a class="research-card" href="docs/research/09-aws-devops-enterprise.md">
+              <span class="research-card__kicker">09 · Career</span>
+              <h3>AWS + DevOps enterprise project</h3>
+              <p>
+              One coherent, non-toy system worth building: multi-account landing zone, full GitOps
+              chain, supply-chain security, observability, a realistic monthly bill with a cheap mode,
+              and a 12-week plan that reads as engineering rather than tutorial.
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/10-ai-building-software.md">
+              <span class="research-card__kicker">10 · AI</span>
+              <h3>How AI builds software &amp; token economics</h3>
+              <p>
+              The agentic coding landscape on measured evidence, how large engineering orgs actually
+              operate it, and the part most people skip — prompt caching, batch discounts, model
+              routing and context engineering to cut token spend.
+              </p>
+              </a>
+              <a class="research-card" href="docs/research/11-cybersecurity.md">
+              <span class="research-card__kicker">11 · Security</span>
+              <h3>Offensive &amp; defensive security</h3>
+              <p>
+              The legal line, then the skills: Kali tooling, legal practice grounds, certifications
+              worth the money, detection engineering, the 2025–26 breach landscape, and AI/LLM supply
+              chain incidents — including which viral rumours turn out to be false.
+              </p>
+              </a>
+            </div>
+          </section>
+          <section class="research-group">
+            <h3 class="research-group__title">Method</h3>
+            <p class="research-group__blurb">How this dashboard sources its data, and what it refuses to source.</p>
+            <div class="research-grid">
+              <a class="research-card" href="docs/research/06-feed-sources.md">
+              <span class="research-card__kicker">06 · Method</span>
+              <h3>How this dashboard gets its data</h3>
+              <p>
+              Every source that was tested, which ones were rejected and why, the two feeds that
+              returned HTTP 200 with garbage, rate limits, and the sources deliberately excluded on
+              robots.txt grounds.
+              </p>
+              </a>
+            </div>
+          </section>
         </div>
 
         <!-- Populated by the in-page reader; the cards above stay as the index. -->

@@ -652,6 +652,29 @@ mark {
 
 /* ----------------------------------------------------------------- research */
 
+/* Twelve briefs in one flat grid stopped being scannable, so they are grouped
+   by what the reader is trying to do rather than by publication order. */
+.research-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.research-group__title {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+}
+
+.research-group__blurb {
+  margin: 0 0 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  max-width: 70ch;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
