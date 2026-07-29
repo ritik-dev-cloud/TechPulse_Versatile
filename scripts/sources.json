@@ -622,6 +622,25 @@
       "category": "community",
       "url": "https://levelup.gitconnected.com/feed",
       "note": "High volume, variable quality."
+    },
+    {
+      "name": "Hotstar Engineering",
+      "category": "architecture",
+      "url": "https://blog.hotstar.com/feed",
+      "priority": 1,
+      "note": "Live-streaming concurrency at IPL scale — the most directly relevant scale case for live event delivery. Medium publication on a custom domain. Returned 429 \"Just a moment...\" from a throttled residential IP during setup, not 404, so the endpoint exists; every other Medium-family feed verified green from the Actions runner in the same window."
+    },
+    {
+      "name": "Lyft Engineering",
+      "category": "architecture",
+      "url": "https://eng.lyft.com/feed",
+      "note": "Same Medium-on-custom-domain situation as Hotstar; verify on the next CI run."
+    },
+    {
+      "name": "Zerodha Tech",
+      "category": "architecture",
+      "url": "https://zerodha.tech/index.xml",
+      "note": "Verified locally: 200, 14 items. Indian fintech running very high throughput on a deliberately small stack — good counterpoint to hyperscaler advice."
     }
   ],
   "$mediumNotes": {
@@ -629,7 +648,8 @@
     "noiseWarning": "Medium tag feeds and the large programming publications carry a lot of beginner listicles and AI-generated filler. They are included for breadth, but the genuinely high-signal senior-engineer content in this project comes from the individual blogs filed under `architecture` (Marc Brooker, Dan Luu, Julia Evans) and from InfoQ, ByteByteGo and The Pragmatic Engineer — not from tag feeds.",
     "paywall": "Member-only Medium stories are truncated in RSS, so the summary is a teaser and the link may hit the metered paywall.",
     "ciRisk": "Medium does connection-level blocking from some networks. Expect these feeds to be less reliable from GitHub Actions runners than from a laptop.",
-    "alsoTested": "highscalability.com/rss.xml returns 404. tech.olacabs.com/feed and bytes.swiggy.com/feed fail to connect. blog.razorpay.com/feed/ served 200 with 10 items on first contact, then refused TCP connections entirely (SSL_ERROR_SYSCALL, then connection refused) on every later attempt — it appears to block an IP after a few fetches. Removed rather than shipped as a source that fails every run."
+    "alsoTested": "highscalability.com/rss.xml returns 404. tech.olacabs.com/feed and bytes.swiggy.com/feed fail to connect. blog.razorpay.com/feed/ served 200 with 10 items on first contact, then refused TCP connections entirely (SSL_ERROR_SYSCALL, then connection refused) on every later attempt — it appears to block an IP after a few fetches. Removed rather than shipped as a source that fails every run.",
+    "ciVsLocal": "IMPORTANT and counter-intuitive: Medium-family feeds are MORE reliable from GitHub Actions than from a laptop. After a burst of local testing, every Medium domain (medium.com tag feeds, itnext.io, levelup.gitconnected.com, blog.hotstar.com, eng.lyft.com) returned 429 \"Just a moment...\" from this residential IP, while the same feeds all returned green from the Actions runner minutes later. So do not delete a Medium feed because it fails locally — check data/status.json from the last CI run first."
   },
   "reddit": {
     "enabled": true,
