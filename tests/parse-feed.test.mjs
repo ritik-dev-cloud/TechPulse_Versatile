@@ -107,6 +107,31 @@ test('toPlainText truncates on a word boundary and strips scripts', () => {
   assert.equal(toPlainText('<p>One</p><p>Two</p>'), 'One Two');
 });
 
+// InfoQ (and Vercel, Discord) put ENTITY-ESCAPED markup in <description>.
+// Stripping tags before decoding found no angle brackets, and the later decode
+// then surfaced the markup as literal text — the dashboard displayed
+// `<img src="https://…"/><p>Microsoft has released…` as an item summary.
+test('strips markup that arrives entity-escaped, not just real tags', () => {
+  const infoq =
+    '&lt;img src="https://res.infoq.com/x.jpg"/&gt;&lt;p&gt;Microsoft has released .NET 11 Preview 6&lt;/p&gt;';
+  const text = toPlainText(infoq, 200);
+  assert.equal(text, 'Microsoft has released .NET 11 Preview 6');
+  assert.ok(!text.includes('<'), `markup leaked: ${text}`);
+  assert.ok(!text.includes('img src'), `attribute leaked: ${text}`);
+});
+
+test('strips double-escaped markup too', () => {
+  assert.equal(toPlainText('&amp;lt;p&amp;gt;Nested escape&amp;lt;/p&amp;gt;'), 'Nested escape');
+});
+
+test('strips an entity-escaped script block', () => {
+  assert.equal(toPlainText('&lt;script&gt;alert(1)&lt;/script&gt;Safe'), 'Safe');
+});
+
+test('still decodes entities that were only ever text', () => {
+  assert.equal(toPlainText('AT&amp;T caf&#233; &mdash; fine'), 'AT&T café — fine');
+});
+
 test('an undated item yields null rather than an invalid date', () => {
   const { items } = parseFeed(
     `<rss><channel><title>T</title><item><title>X</title><link>https://e.com/x</link><pubDate>not a date</pubDate></item></channel></rss>`
@@ -161,6 +186,28 @@ test('accepts RSS, Atom and RDF roots', () => {
   ]) {
     assert.equal(validateFeedResponse({ body, contentType: 'application/xml' }).ok, true);
   }
+});
+
+// Krebs and Event Industry News serve real XML to a laptop but a Cloudflare
+// challenge page to GitHub's runner IPs. "unexpected content-type: text/html"
+// sent us hunting for a dead feed URL when the URL was fine.
+test('names bot protection instead of blaming the content-type', () => {
+  const challenge =
+    '<!DOCTYPE html><html><head><title>Just a moment...</title></head><body>' +
+    '<div class="cf-browser-verification">Enable JavaScript and cookies to continue</div></body></html>';
+  const result = validateFeedResponse({ body: challenge, contentType: 'text/html' });
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /bot protection/);
+  assert.doesNotMatch(result.reason, /content-type/);
+});
+
+test('an ordinary HTML page is still reported as an HTML page', () => {
+  const result = validateFeedResponse({
+    body: '<!doctype html><html><body>A normal marketing page</body></html>',
+    contentType: 'text/html',
+  });
+  assert.equal(result.ok, false);
+  assert.doesNotMatch(result.reason, /bot protection/);
 });
 
 test('accepts a feed served with a vague content-type', () => {

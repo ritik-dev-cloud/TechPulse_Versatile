@@ -26,15 +26,32 @@ export function agentFor(feed) {
 const XML_CONTENT_TYPES =
   /(xml|rss|atom|json|text\/plain|application\/octet-stream)/i;
 
+/** Fingerprints of the common WAF / bot-check interstitials. */
+const BOT_CHALLENGE =
+  /(just a moment\.\.\.|attention required!|cf-browser-verification|cf_chl_opt|__cf_chl|enable javascript and cookies to continue|checking if the site connection is secure|ddos-guard|请开启javascript|access denied.*reference #)/i;
+
 /**
  * Decide whether a response body is plausibly the feed we asked for.
  * @returns {{ok: true} | {ok: false, reason: string}}
  */
 export function validateFeedResponse({ body, contentType }) {
+  const head = String(body ?? '').slice(0, 4000);
+
+  // A bot-protection interstitial is worth naming explicitly. Several feeds
+  // (Krebs, Event Industry News) serve real XML to a laptop but a challenge
+  // page to datacenter IPs, so "unexpected content-type: text/html" sends you
+  // hunting for a broken feed URL when the URL is fine and the IP is the
+  // problem. Nothing in the code can fix it — the point is to say so.
+  if (BOT_CHALLENGE.test(head)) {
+    return {
+      ok: false,
+      reason: 'blocked by bot protection (feed is fine; this IP is not trusted)',
+    };
+  }
+
   if (contentType && !XML_CONTENT_TYPES.test(contentType)) {
     return { ok: false, reason: `unexpected content-type: ${contentType}` };
   }
-  const head = String(body ?? '').slice(0, 2000);
   if (!head.trim()) return { ok: false, reason: 'empty body' };
   if (/^\s*(<!doctype html|<html)/i.test(head)) {
     return { ok: false, reason: 'served an HTML page, not a feed' };

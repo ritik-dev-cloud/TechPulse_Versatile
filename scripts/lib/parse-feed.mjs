@@ -59,17 +59,34 @@ export function unwrapCdata(input = '') {
   return String(input).replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
 }
 
-/** Strip CDATA wrappers, tags and entities down to readable plain text. */
-export function toPlainText(input = '', maxLength = 320) {
-  let text = String(input)
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+/** Remove script/style blocks and all tags, leaving spaced-out text. */
+function stripTags(input) {
+  return String(input)
     .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, ' ')
     .replace(/<br\s*\/?>/gi, ' ')
     .replace(/<\/(p|div|li|h[1-6])>/gi, ' ')
     .replace(/<[^>]+>/g, ' ');
-  text = decodeEntities(text)
-    .replace(/\s+/g, ' ')
-    .trim();
+}
+
+/**
+ * Strip CDATA wrappers, tags and entities down to readable plain text.
+ *
+ * Order matters and was wrong once: many feeds (InfoQ, Vercel, Discord) put
+ * *entity-escaped* markup in <description> — `&lt;img src="…"/&gt;&lt;p&gt;…`.
+ * Stripping tags first finds no angle brackets to remove, and the later decode
+ * then turns that escaped markup into literal text, so the dashboard printed
+ * `<img src="https://…"/><p>Microsoft has released…` as the summary.
+ *
+ * So: decode first to reveal any escaped markup, strip, then decode once more
+ * for entities that were only text to begin with (&nbsp;, &amp;amp;, &#8217;).
+ */
+export function toPlainText(input = '', maxLength = 320) {
+  let text = unwrapCdata(input);
+  text = stripTags(decodeEntities(text));
+  text = decodeEntities(text);
+  // A second strip catches markup that surfaced from double-escaping.
+  if (text.includes('<')) text = stripTags(text);
+  text = text.replace(/\s+/g, ' ').trim();
   if (text.length <= maxLength) return text;
   // Cut on a word boundary so summaries don't end mid-word.
   const cut = text.slice(0, maxLength);

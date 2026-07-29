@@ -83,13 +83,13 @@
     { "name": "Simon Willison", "category": "ai", "url": "https://simonwillison.net/atom/everything/", "priority": 1 },
 
     { "name": "Skift Meetings", "category": "eventtech", "url": "https://meetings.skift.com/feed/", "priority": 1, "note": "The only eventtech source with daily cadence and clean XML." },
-    { "name": "Event Industry News", "category": "eventtech", "url": "https://www.eventindustrynews.com/feed", "priority": 1, "userAgent": "browser", "note": "Returns 403 to some non-browser agents." },
+    { "name": "Event Industry News", "category": "eventtech", "url": "https://www.eventindustrynews.com/feed", "priority": 1, "userAgent": "browser", "note": "Returns 403 to some non-browser agents, and is blocked outright from GitHub Actions runner IPs by bot protection. A browser UA is not enough — the block is IP-reputation based. Works locally." },
     { "name": "PCMA", "category": "eventtech", "url": "https://www.pcma.org/feed/" },
     { "name": "BizBash", "category": "eventtech", "url": "https://www.bizbash.com/rss.xml", "userAgent": "browser", "note": "Note the .xml suffix — /rss and /feed both 404." },
     { "name": "TSNN Trade Show News", "category": "eventtech", "url": "https://www.tsnn.com/rss.xml", "note": "CDATA-wrapped links." },
     { "name": "Event Marketer", "category": "eventtech", "url": "https://www.eventmarketer.com/feed/" },
 
-    { "name": "Krebs on Security", "category": "security", "url": "https://krebsonsecurity.com/feed/", "priority": 1 },
+    { "name": "Krebs on Security", "category": "security", "url": "https://krebsonsecurity.com/feed/", "priority": 1, "userAgent": "browser", "note": "Blocked from GitHub Actions runner IPs by bot protection — serves real XML from a laptop, an HTML challenge page from CI. Kept because the local run and any self-hosted runner get it fine." },
     { "name": "BleepingComputer", "category": "security", "url": "https://www.bleepingcomputer.com/feed/", "priority": 1 },
     { "name": "The Hacker News", "category": "security", "url": "https://feeds.feedburner.com/TheHackersNews", "priority": 1, "note": "High volume (~50/fetch); strong on AI/LLM supply-chain incidents." },
     { "name": "Google Project Zero", "category": "security", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 1, "note": "Deep vulnerability research; low cadence, high value." },
