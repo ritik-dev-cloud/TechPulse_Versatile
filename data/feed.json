@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T08:57:21.415Z",
+ "generatedAt": "2026-07-29T09:04:41.199Z",
  "retainDays": 45,
  "categories": [
   {
@@ -49,10 +49,10 @@
   }
  ],
  "stats": {
-  "totalItems": 966,
-  "newThisRun": 0,
-  "last24h": 138,
-  "sourcesOk": 102,
+  "totalItems": 970,
+  "newThisRun": 4,
+  "last24h": 139,
+  "sourcesOk": 101,
   "sourcesTotal": 102,
   "repos": 79,
   "unlicensedRepos": 15,
@@ -61,15 +61,47 @@
    "cloud": 125,
    "devops": 136,
    "webdev": 125,
-   "architecture": 150,
+   "architecture": 151,
    "ai": 75,
    "eventtech": 83,
-   "security": 123,
+   "security": 125,
    "platform": 120,
-   "community": 29
+   "community": 30
   }
  },
  "items": [
+  {
+   "id": "yraohx",
+   "title": "Article: Securing MCP in Production: Defense-in-Depth Beyond the Gateway",
+   "url": "https://www.infoq.com/articles/securing-mcp-production-gateway/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
+   "source": "InfoQ Architecture",
+   "category": "architecture",
+   "published": "2026-07-29T09:00:00.000Z",
+   "summary": "This article presents a defense-in-depth approach for securing Model Context Protocol (MCP) deployments in production. It outlines four architectural control layers: safe execution, management infrastructure, outbound trust, and semantic integrity, arguing that production security requires enforcement beyond the…",
+   "author": "Nik Kale",
+   "tags": [
+    "Model Context Protocol (MCP)",
+    "AI Security",
+    "Development",
+    "AI, ML & Data Engineering",
+    "Architecture & Design"
+   ],
+   "priority": 1,
+   "firstSeen": "2026-07-29T09:04:41.199Z"
+  },
+  {
+   "id": "155wlcw",
+   "title": "Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass",
+   "url": "https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T08:58:27.000Z",
+   "summary": "Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Management Server and Multi-Domain Security Management Server (MDS) that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16232 (CVSS…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T09:04:41.199Z"
+  },
   {
    "id": "18hnhz4",
    "title": "The 360° Event Partner: How A Single Production Company Changes Everything",
@@ -116,6 +148,32 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "18o7i5r",
+   "title": "OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach",
+   "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T07:51:00.000Z",
+   "summary": "OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped its sealed evaluation environment and broke into Hugging Face's production environment also hacked multiple third-party accounts and services as part of the attack. The latest disclosure shows that the security incident, which stemmed…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "rse0mc",
+   "title": "New Gitea RCE Lets Repository Writers Plant a Git Hook to Run Shell Commands",
+   "url": "https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T07:47:19.000Z",
+   "summary": "Gitea, the self-hosted Git platform, has patched a critical remote code execution vulnerability. A user with ordinary repository write access can turn attacker-controlled patch content into a live Git hook and run shell commands as the Gitea service account. Tracked as CVE-2026-60004 (CVSS score: 9.8), the flaw…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T09:04:41.199Z"
+  },
+  {
    "id": "1bx83in",
    "title": "Apple Patches Everything (July 2026), (Wed, Jul 29th)",
    "url": "https://isc.sans.edu/diary/rss/33196",
@@ -127,6 +185,21 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "ijm1ut",
+   "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
+   "url": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T07:18:24Z",
+   "summary": "16 points · 0 comments",
+   "author": "@ankitg12",
+   "tags": [],
+   "score": 16,
+   "discussion": "https://news.ycombinator.com/item?id=49094346",
+   "priority": 1,
+   "firstSeen": "2026-07-29T09:04:41.199Z"
   },
   {
    "id": "xd44bn",
@@ -155,29 +228,16 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
-   "id": "18o7i5r",
-   "title": "OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach",
-   "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
-   "source": "The Hacker News",
-   "category": "security",
-   "published": "2026-07-29T06:45:02.000Z",
-   "summary": "OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped its sealed evaluation environment and broke into Hugging Face's production environment, and also hacked multiple third-party accounts and services as part of the attack. The latest disclosure shows that the security incident, which…",
-   "author": "info@thehackernews.com (The Hacker News)",
-   "tags": [],
-   "priority": 1,
-   "firstSeen": "2026-07-29T08:51:07.852Z"
-  },
-  {
    "id": "8lt533",
    "title": "More Tailscale tricks for your jailbroken Kindle",
    "url": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T04:58:46Z",
-   "summary": "156 points · 47 comments",
+   "summary": "163 points · 47 comments",
    "author": "@Error6571",
    "tags": [],
-   "score": 156,
+   "score": 163,
    "discussion": "https://news.ycombinator.com/item?id=49093569",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -189,10 +249,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T04:30:47Z",
-   "summary": "37 points · 8 comments",
+   "summary": "38 points · 8 comments",
    "author": "@zdw",
    "tags": [],
-   "score": 37,
+   "score": 38,
    "discussion": "https://news.ycombinator.com/item?id=49093435",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -204,10 +264,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T04:30:36Z",
-   "summary": "145 points · 22 comments",
+   "summary": "157 points · 25 comments",
    "author": "@zdw",
    "tags": [],
-   "score": 145,
+   "score": 157,
    "discussion": "https://news.ycombinator.com/item?id=49093434",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -232,10 +292,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T03:52:29Z",
-   "summary": "48 points · 2 comments",
+   "summary": "49 points · 2 comments",
    "author": "@ilreb",
    "tags": [],
-   "score": 48,
+   "score": 49,
    "discussion": "https://news.ycombinator.com/item?id=49093232",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -247,10 +307,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T02:25:29Z",
-   "summary": "31 points · 17 comments",
+   "summary": "34 points · 18 comments",
    "author": "@jruohonen",
    "tags": [],
-   "score": 31,
+   "score": 34,
    "discussion": "https://news.ycombinator.com/item?id=49092754",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -275,10 +335,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T01:49:19Z",
-   "summary": "173 points · 100 comments",
+   "summary": "174 points · 103 comments",
    "author": "@ajhai",
    "tags": [],
-   "score": 173,
+   "score": 174,
    "discussion": "https://news.ycombinator.com/item?id=49092499",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -303,10 +363,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T00:59:37Z",
-   "summary": "117 points · 79 comments",
+   "summary": "120 points · 81 comments",
    "author": "@marvinborner",
    "tags": [],
-   "score": 117,
+   "score": 120,
    "discussion": "https://news.ycombinator.com/item?id=49092112",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -370,7 +430,7 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T00:11:23Z",
-   "summary": "104 points · 35 comments",
+   "summary": "104 points · 38 comments",
    "author": "@handfuloflight",
    "tags": [],
    "score": 104,
@@ -437,10 +497,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T23:27:09Z",
-   "summary": "117 points · 20 comments",
+   "summary": "120 points · 22 comments",
    "author": "@phil294",
    "tags": [],
-   "score": 117,
+   "score": 120,
    "discussion": "https://news.ycombinator.com/item?id=49091379",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -509,10 +569,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T22:09:06Z",
-   "summary": "299 points · 77 comments",
+   "summary": "302 points · 79 comments",
    "author": "@twalichiewicz",
    "tags": [],
-   "score": 299,
+   "score": 302,
    "discussion": "https://news.ycombinator.com/item?id=49090607",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -602,10 +662,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T20:58:39Z",
-   "summary": "233 points · 109 comments",
+   "summary": "235 points · 110 comments",
    "author": "@freediver",
    "tags": [],
-   "score": 233,
+   "score": 235,
    "discussion": "https://news.ycombinator.com/item?id=49089814",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -617,10 +677,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T20:52:55Z",
-   "summary": "489 points · 161 comments",
+   "summary": "491 points · 163 comments",
    "author": "@bakigul",
    "tags": [],
-   "score": 489,
+   "score": 491,
    "discussion": "https://news.ycombinator.com/item?id=49089755",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -849,10 +909,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T17:37:12Z",
-   "summary": "173 points · 322 comments",
+   "summary": "177 points · 323 comments",
    "author": "@lkurtz",
    "tags": [],
-   "score": 173,
+   "score": 177,
    "discussion": "https://news.ycombinator.com/item?id=49087306",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -881,10 +941,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T17:22:16Z",
-   "summary": "215 points · 154 comments",
+   "summary": "216 points · 155 comments",
    "author": "@gslin",
    "tags": [],
-   "score": 215,
+   "score": 216,
    "discussion": "https://news.ycombinator.com/item?id=49087091",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -924,10 +984,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T17:11:54Z",
-   "summary": "229 points · 98 comments",
+   "summary": "230 points · 98 comments",
    "author": "@tmtvl",
    "tags": [],
-   "score": 229,
+   "score": 230,
    "discussion": "https://news.ycombinator.com/item?id=49086971",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -967,10 +1027,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T16:58:31Z",
-   "summary": "521 points · 261 comments",
+   "summary": "524 points · 264 comments",
    "author": "@speckx",
    "tags": [],
-   "score": 521,
+   "score": 524,
    "discussion": "https://news.ycombinator.com/item?id=49086788",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1200,10 +1260,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T15:50:38Z",
-   "summary": "292 points · 164 comments",
+   "summary": "293 points · 164 comments",
    "author": "@speerer",
    "tags": [],
-   "score": 292,
+   "score": 293,
    "discussion": "https://news.ycombinator.com/item?id=49085731",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1241,10 +1301,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T15:48:34Z",
-   "summary": "408 points · 72 comments",
+   "summary": "410 points · 75 comments",
    "author": "@ModelForge",
    "tags": [],
-   "score": 408,
+   "score": 410,
    "discussion": "https://news.ycombinator.com/item?id=49085698",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1256,10 +1316,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T15:46:45Z",
-   "summary": "236 points · 162 comments",
+   "summary": "237 points · 165 comments",
    "author": "@garyhtou",
    "tags": [],
-   "score": 236,
+   "score": 237,
    "discussion": "https://news.ycombinator.com/item?id=49085666",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1339,10 +1399,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T15:01:12Z",
-   "summary": "154 points · 124 comments",
+   "summary": "156 points · 126 comments",
    "author": "@rbanffy",
    "tags": [],
-   "score": 154,
+   "score": 156,
    "discussion": "https://news.ycombinator.com/item?id=49084987",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1380,10 +1440,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-28T14:48:13Z",
-   "summary": "203 points · 127 comments",
+   "summary": "206 points · 129 comments",
    "author": "@pimterry",
    "tags": [],
-   "score": 203,
+   "score": 206,
    "discussion": "https://news.ycombinator.com/item?id=49084813",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -2022,11 +2082,11 @@
    "summary": "A payroll and HR software team rebuilt three monoliths into over 120 smaller services over five years, with no dedicated migration budget. Every new feature was built as its own service instead of changing the old ones. The article covers the pull-based migration, the tools that made this possible, how costs were kept…",
    "author": "Prashanth Pasham",
    "tags": [
-    "Cloud Computing",
-    "Cloud",
-    "Cost Optimization",
     "Azure",
-    "Feature Toggle"
+    "Feature Toggle",
+    "Microservices",
+    "Cloud",
+    "Cost Optimization"
    ],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -2405,10 +2465,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-27T22:42:11Z",
-   "summary": "13 points · 5 comments",
+   "summary": "14 points · 5 comments",
    "author": "@baud147258",
    "tags": [],
-   "score": 13,
+   "score": 14,
    "discussion": "https://news.ycombinator.com/item?id=49076450",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -2898,10 +2958,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-27T18:04:30Z",
-   "summary": "30 points · 25 comments",
+   "summary": "31 points · 25 comments",
    "author": "@diodorus",
    "tags": [],
-   "score": 30,
+   "score": 31,
    "discussion": "https://news.ycombinator.com/item?id=49073357",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -3514,11 +3574,11 @@
    "summary": "Johannes Schickling explores how he moved beyond the traditional three-tier web stack to a local-first approach. He shares his experience transitioning from Prisma to developing Overtone—a music curation app leveraging client-side event sourcing and SQLite. The discussion highlights the trade-offs between event…",
    "author": "Johannes Schickling",
    "tags": [
-    "Web App Developer",
-    "UX",
-    "The InfoQ Podcast",
+    "Data",
+    "Architecture",
     "Sovereignty",
-    "Data"
+    "UX",
+    "Web App Developer"
    ],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -3530,10 +3590,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-27T12:56:36Z",
-   "summary": "89 points · 34 comments",
+   "summary": "90 points · 36 comments",
    "author": "@abelaer",
    "tags": [],
-   "score": 89,
+   "score": 90,
    "discussion": "https://news.ycombinator.com/item?id=49069033",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -3684,11 +3744,11 @@
    "summary": "Traditional API gateways assume deterministic services and simple schemas - assumptions agentic AI breaks. Discover why enterprise engineering leaders are adopting AI Gateways as an evolutionary architecture seam. Centralize guardrails, model routing, agent identity, action policy, and semantic audit within a single…",
    "author": "Joe Price, Branimir Đurek, Pavlos Migkiros, Trevor Dearham",
    "tags": [
-    "Agents",
-    "AI Security",
-    "Model Context Protocol (MCP)",
+    "Architecture ICSAET",
+    "API Gateway",
     "Evolutionary Architecture",
-    "InfoQ Certification Program"
+    "InfoQ Certification Program",
+    "Large language models"
    ],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -4272,10 +4332,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-26T08:06:45Z",
-   "summary": "127 points · 76 comments",
+   "summary": "128 points · 80 comments",
    "author": "@vinhnx",
    "tags": [],
-   "score": 127,
+   "score": 128,
    "discussion": "https://news.ycombinator.com/item?id=49055816",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -5736,11 +5796,11 @@
    "summary": "Expedia Group has introduced STAR, an internal AI-assisted observability platform that helps engineers investigate production incidents using service telemetry and LLMs. Built with FastAPI, Datadog, Celery, Redis, and Langfuse, STAR follows structured workflows to analyze telemetry, generate root cause assessments,…",
    "author": "Leela Kumili",
    "tags": [
+    "Redis",
+    "OpenTelemetry",
+    "AI Assisted Coding",
     "Site Reliability Engineering",
-    "Incident Response",
-    "GraphQL",
-    "Observability",
-    "Platform Engineering"
+    "Kubernetes"
    ],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -5765,7 +5825,7 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-23T14:00:48Z",
-   "summary": "51 points · 28 comments",
+   "summary": "51 points · 29 comments",
    "author": "@ibobev",
    "tags": [],
    "score": 51,
@@ -6589,11 +6649,11 @@
    "summary": "GitHub redesigned GitHub Issues navigation using a client-side architecture that combines caching, predictive prefetching, and service workers to reduce perceived latency. The approach uses IndexedDB, in-memory caching, and background synchronization to serve data faster. GitHub reported instant navigation…",
    "author": "Leela Kumili",
    "tags": [
-    "github",
-    "IndexedDB",
-    "navigation",
-    "Caching",
-    "Web Browser"
+    "Low Latency",
+    "Web Browser",
+    "Architecture",
+    "Front-end",
+    "Caching"
    ],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -6732,10 +6792,10 @@
    "summary": "Anthropic detailed the containment architectures it uses for Claude across its products. It argues that agent safety depends on placing deterministic limits on an agent’s filesystem, network, and execution environment rather than on permission prompts or safeguards. Most notably, it examines failures at trust…",
    "author": "Eran Stiller",
    "tags": [
+    "Claude",
     "Agents",
     "AI Architecture",
     "AI Security",
-    "Claude",
     "Security"
    ],
    "priority": 1,
@@ -13380,7 +13440,7 @@
    "name": "affaan-m/ECC",
    "url": "https://github.com/affaan-m/ECC",
    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-   "stars": 235147,
+   "stars": 235151,
    "forks": 35822,
    "language": "JavaScript",
    "topics": [
@@ -13408,8 +13468,8 @@
    "name": "NousResearch/hermes-agent",
    "url": "https://github.com/NousResearch/hermes-agent",
    "description": "The agent that grows with you",
-   "stars": 222080,
-   "forks": 42537,
+   "stars": 222082,
+   "forks": 42539,
    "language": "Python",
    "topics": [
     "ai",
@@ -13419,7 +13479,7 @@
     "chatgpt",
     "claude"
    ],
-   "pushedAt": "2026-07-29T08:49:25Z",
+   "pushedAt": "2026-07-29T09:01:32Z",
    "createdAt": "2025-07-22T22:22:28Z",
    "archived": false,
    "license": {
@@ -13436,7 +13496,7 @@
    "name": "n8n-io/n8n",
    "url": "https://github.com/n8n-io/n8n",
    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-   "stars": 198490,
+   "stars": 198491,
    "forks": 59734,
    "language": "TypeScript",
    "topics": [
@@ -13447,7 +13507,7 @@
     "data-flow",
     "development"
    ],
-   "pushedAt": "2026-07-29T08:56:01Z",
+   "pushedAt": "2026-07-29T09:04:20Z",
    "createdAt": "2019-06-22T09:24:21Z",
    "archived": false,
    "license": {
@@ -13464,7 +13524,7 @@
    "name": "firecrawl/firecrawl",
    "url": "https://github.com/firecrawl/firecrawl",
    "description": "The API to search, scrape, and interact with the web at scale. 🔥",
-   "stars": 157684,
+   "stars": 157686,
    "forks": 8960,
    "language": "TypeScript",
    "topics": [
@@ -13520,7 +13580,7 @@
    "name": "langgenius/dify",
    "url": "https://github.com/langgenius/dify",
    "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-   "stars": 150660,
+   "stars": 150663,
    "forks": 23740,
    "language": "TypeScript",
    "topics": [
@@ -13531,7 +13591,7 @@
     "ai",
     "automation"
    ],
-   "pushedAt": "2026-07-29T08:37:21Z",
+   "pushedAt": "2026-07-29T09:02:03Z",
    "createdAt": "2023-04-12T07:40:24Z",
    "archived": false,
    "license": {
@@ -13548,7 +13608,7 @@
    "name": "open-webui/open-webui",
    "url": "https://github.com/open-webui/open-webui",
    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-   "stars": 147175,
+   "stars": 147178,
    "forks": 21387,
    "language": "Python",
    "topics": [
@@ -13604,8 +13664,8 @@
    "name": "kubernetes/kubernetes",
    "url": "https://github.com/kubernetes/kubernetes",
    "description": "Production-Grade Container Scheduling and Management",
-   "stars": 124029,
-   "forks": 43640,
+   "stars": 124030,
+   "forks": 43639,
    "language": "Go",
    "topics": [
     "cncf",
@@ -13630,7 +13690,7 @@
    "name": "farion1231/cc-switch",
    "url": "https://github.com/farion1231/cc-switch",
    "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
-   "stars": 122155,
+   "stars": 122161,
    "forks": 8238,
    "language": "Rust",
    "topics": [
@@ -13714,7 +13774,7 @@
    "name": "Graphify-Labs/graphify",
    "url": "https://github.com/Graphify-Labs/graphify",
    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge…",
-   "stars": 98014,
+   "stars": 98016,
    "forks": 9516,
    "language": "Python",
    "topics": [
@@ -13742,14 +13802,14 @@
    "name": "punkpeye/awesome-mcp-servers",
    "url": "https://github.com/punkpeye/awesome-mcp-servers",
    "description": "A collection of MCP servers.",
-   "stars": 91523,
+   "stars": 91524,
    "forks": 13705,
    "language": "—",
    "topics": [
     "ai",
     "mcp"
    ],
-   "pushedAt": "2026-07-29T08:54:31Z",
+   "pushedAt": "2026-07-29T09:04:46Z",
    "createdAt": "2024-11-30T04:49:10Z",
    "archived": false,
    "license": {
@@ -13766,7 +13826,7 @@
    "name": "louislam/uptime-kuma",
    "url": "https://github.com/louislam/uptime-kuma",
    "description": "A fancy self-hosted monitoring tool",
-   "stars": 89587,
+   "stars": 89588,
    "forks": 8174,
    "language": "JavaScript",
    "topics": [
@@ -13794,7 +13854,7 @@
    "name": "thedotmack/claude-mem",
    "url": "https://github.com/thedotmack/claude-mem",
    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
-   "stars": 88914,
+   "stars": 88915,
    "forks": 7732,
    "language": "JavaScript",
    "topics": [
@@ -13822,7 +13882,7 @@
    "name": "Stirling-Tools/Stirling-PDF",
    "url": "https://github.com/Stirling-Tools/Stirling-PDF",
    "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
-   "stars": 88254,
+   "stars": 88255,
    "forks": 7852,
    "language": "Java",
    "topics": [
@@ -13833,7 +13893,7 @@
     "pdf-converter",
     "pdf-editor"
    ],
-   "pushedAt": "2026-07-29T08:49:57Z",
+   "pushedAt": "2026-07-29T09:01:50Z",
    "createdAt": "2023-01-27T18:22:42Z",
    "archived": false,
    "license": {
@@ -14377,8 +14437,8 @@
    "name": "aquasecurity/trivy",
    "url": "https://github.com/aquasecurity/trivy",
    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-   "stars": 37123,
-   "forks": 556,
+   "stars": 37124,
+   "forks": 557,
    "language": "Go",
    "topics": [
     "containers",
@@ -14406,7 +14466,7 @@
    "url": "https://github.com/Dokploy/dokploy",
    "description": "Open Source Alternative to Vercel, Netlify and Heroku.",
    "stars": 36160,
-   "forks": 2799,
+   "forks": 2800,
    "language": "TypeScript",
    "topics": [
     "agents",
@@ -14667,7 +14727,7 @@
     "data-orchestration",
     "data-orchestrator"
    ],
-   "pushedAt": "2026-07-29T08:54:56Z",
+   "pushedAt": "2026-07-29T09:04:18Z",
    "createdAt": "2019-08-24T13:56:15Z",
    "archived": false,
    "license": {
@@ -14684,7 +14744,7 @@
    "name": "trufflesecurity/trufflehog",
    "url": "https://github.com/trufflesecurity/trufflehog",
    "description": "Find, verify, and analyze leaked credentials",
-   "stars": 27233,
+   "stars": 27234,
    "forks": 2508,
    "language": "Go",
    "topics": [
@@ -14740,8 +14800,8 @@
    "name": "xai-org/grok-build",
    "url": "https://github.com/xai-org/grok-build",
    "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
-   "stars": 23339,
-   "forks": 4429,
+   "stars": 23341,
+   "forks": 4430,
    "language": "Rust",
    "topics": [],
    "pushedAt": "2026-07-28T22:50:24Z",
@@ -14873,8 +14933,8 @@
    "name": "JustVugg/colibri",
    "url": "https://github.com/JustVugg/colibri",
    "description": "Run GLM-5.2 (744B MoE) on a 25GB-RAM consumer machine — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-   "stars": 20748,
-   "forks": 2112,
+   "stars": 20754,
+   "forks": 2113,
    "language": "C",
    "topics": [],
    "pushedAt": "2026-07-29T06:43:15Z",
@@ -14905,7 +14965,7 @@
     "nmap",
     "pentesting"
    ],
-   "pushedAt": "2026-07-16T09:03:01Z",
+   "pushedAt": "2026-07-29T09:03:06Z",
    "createdAt": "2020-07-11T20:00:41Z",
    "archived": false,
    "license": {
@@ -15032,7 +15092,7 @@
    "name": "Fei-Away/Codex-Dream-Skin",
    "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
    "description": "Codex Dream Skin",
-   "stars": 12647,
+   "stars": 12649,
    "forks": 1261,
    "language": "JavaScript",
    "topics": [],
@@ -15053,7 +15113,7 @@
    "name": "andrewyng/openworker",
    "url": "https://github.com/andrewyng/openworker",
    "description": "",
-   "stars": 10275,
+   "stars": 10276,
    "forks": 1340,
    "language": "Python",
    "topics": [],
@@ -15074,7 +15134,7 @@
    "name": "img2threejs/img2threejs",
    "url": "https://github.com/img2threejs/img2threejs",
    "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
-   "stars": 7866,
+   "stars": 7871,
    "forks": 598,
    "language": "Python",
    "topics": [
@@ -15102,7 +15162,7 @@
    "name": "unicity-aos/aos-ce",
    "url": "https://github.com/unicity-aos/aos-ce",
    "description": "AOS Community Edition: the open agent operating system.",
-   "stars": 7753,
+   "stars": 7754,
    "forks": 14,
    "language": "Rust",
    "topics": [],
@@ -15220,7 +15280,7 @@
    "name": "MoonshotAI/Kimi-K3",
    "url": "https://github.com/MoonshotAI/Kimi-K3",
    "description": "Open Frontier Intelligence",
-   "stars": 3761,
+   "stars": 3765,
    "forks": 314,
    "language": "—",
    "topics": [],
@@ -15262,7 +15322,7 @@
    "name": "MDX-Tom/gpt-5.6-instruct",
    "url": "https://github.com/MDX-Tom/gpt-5.6-instruct",
    "description": "A Codex CLI jailbreak prompt and test pack for gpt-5.6-sol. 针对 gpt-5.6 系列的 Codex CLI 破甲提示词与测试包。",
-   "stars": 3627,
+   "stars": 3631,
    "forks": 570,
    "language": "Python",
    "topics": [],
