@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T12:27:29.134Z",
+ "generatedAt": "2026-07-29T16:00:18.439Z",
  "retainDays": 45,
  "categories": [
   {
@@ -49,27 +49,641 @@
   }
  ],
  "stats": {
-  "totalItems": 1199,
-  "newThisRun": 25,
-  "last24h": 214,
-  "sourcesOk": 119,
+  "totalItems": 1274,
+  "newThisRun": 75,
+  "last24h": 232,
+  "sourcesOk": 120,
   "sourcesTotal": 120,
   "repos": 79,
   "unlicensedRepos": 15,
   "restrictedRepos": 0,
   "byCategory": {
-   "cloud": 147,
-   "devops": 146,
-   "webdev": 126,
-   "architecture": 205,
+   "cloud": 148,
+   "devops": 150,
+   "webdev": 134,
+   "architecture": 207,
    "ai": 75,
-   "eventtech": 85,
-   "security": 131,
-   "platform": 126,
-   "community": 156
+   "eventtech": 87,
+   "security": 145,
+   "platform": 134,
+   "community": 192
   }
  },
  "items": [
+  {
+   "id": "1al40ek",
+   "title": "Tame Dependabot: Group your updates, slow the cadence, keep security fast",
+   "url": "https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/",
+   "source": "GitHub Blog",
+   "category": "devops",
+   "published": "2026-07-29T16:00:00.000Z",
+   "summary": "Dependabot keeps your dependencies current, but its defaults can flood your repository with pull requests. Here's how grouping updates, slowing the cadence, and keeping security fixes fast cut the noise on a Microsoft open source project. The post Tame Dependabot: Group your updates, slow the cadence, keep security…",
+   "author": "Bruno Borges",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "ns0nrv",
+   "title": "Aspen Food & Wine Classic 2026: See 40+ Delectable Bites, Brand Activations, and More From the Buzzy Weekend",
+   "url": "https://www.bizbash.com/food-beverage-trends/aspen-food-wine-classic-2026",
+   "source": "BizBash",
+   "category": "eventtech",
+   "published": "2026-07-29T15:52:24.000Z",
+   "summary": "The event returned for its 43rd year, bringing back its winning formula of tastings, demos, and special events, while making more room for elevated hospitality moments.",
+   "author": "Sarah Kloepple",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T10:56:50.677Z"
+  },
+  {
+   "id": "alvr0s",
+   "title": "PostgreSQL's MVCC is bad. So is everyone else's.",
+   "url": "https://www.reddit.com/r/programming/comments/1va00wm/postgresqls_mvcc_is_bad_so_is_everyone_elses/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T15:48:20.000Z",
+   "summary": "submitted by /u/BrewedDoritos [link] [comments]",
+   "author": "/u/BrewedDoritos",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1yijhui",
+   "title": "[$] Fedora approves a smaller GRUB",
+   "url": "https://lwn.net/Articles/1085609/",
+   "source": "LWN.net",
+   "category": "platform",
+   "published": "2026-07-29T15:44:01.000Z",
+   "summary": "Leo Sandoval and Marta Lewandowska have put forward a change proposal for Fedora 45, which is expected in October, to provide a separate, slimmed-down version of GRUB for a niche use case. The new package would be in addition to the main GRUB package and would not replace it for the majority of Fedora users. The idea…",
+   "author": "jzb",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1aq44cz",
+   "title": "Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory",
+   "url": "https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T15:39:30.000Z",
+   "summary": "Cybersecurity researchers have flagged a maximum-severity security flaw in Ruflo, an open-source agent meta-harness for Anthropic Claude Code and OpenAI Codex, that could result in unauthenticated remote code execution. The vulnerability, tracked as CVE-2026-59726 (CVSS score: 10.0), impacts all versions of the…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "j2fkun",
+   "title": "Three Critical VMware Flaws Allow Auth Bypass, Code Execution, and VM Escape",
+   "url": "https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T15:31:15.000Z",
+   "summary": "Broadcom has released security updates to address multiple security flaws impacting VMware ESX, vCenter, Workstation, and Fusion, three of which have been designated as critical in severity. The first of the three critical-rated flaws is CVE-2026-59309 (CVSS score: 9.8), which has been described as an authentication…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "11hw277",
+   "title": "Apple should be ashamed of its hostile App Store rating system",
+   "url": "https://lapcatsoftware.com/articles/2026/7/14.html",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T15:29:37Z",
+   "summary": "31 points · 26 comments",
+   "author": "@zdw",
+   "tags": [],
+   "score": 31,
+   "discussion": "https://news.ycombinator.com/item?id=49098803",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "q59lk8",
+   "title": "How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference",
+   "url": "https://blog.bytebytego.com/p/how-chatgpt-optimizes-its-agent-loop",
+   "source": "ByteByteGo",
+   "category": "architecture",
+   "published": "2026-07-29T15:18:25.000Z",
+   "summary": "To understand what techniques are adopted in frontier labs to make AI applications more efficient, we met with the OpenAI engineers who developed and shipped various efficiency techniques into the systems behind Codex and ChatGPT Work.",
+   "author": "ByteByteGo",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "u4jecs",
+   "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+   "url": "https://github.com/drumih/turbo-fieldfare",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T15:05:43Z",
+   "summary": "88 points · 19 comments",
+   "author": "@gitpusher42",
+   "tags": [],
+   "score": 88,
+   "discussion": "https://news.ycombinator.com/item?id=49098510",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1jl8r3e",
+   "title": "Hugging Face: Anatomy of a frontier-lab agent intrusion",
+   "url": "https://huggingface-anatomy-of-frontier-lab-model-intrusion.static.hf.space/index.html",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T15:01:52Z",
+   "summary": "17 points · 2 comments",
+   "author": "@dn2k",
+   "tags": [],
+   "score": 17,
+   "discussion": "https://news.ycombinator.com/item?id=49098466",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "fbb77m",
+   "title": "PostgreSQL's MVCC is bad. So is everyone else's",
+   "url": "https://boringsql.com/posts/mvcc-bad-bad/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T14:58:17Z",
+   "summary": "18 points · 5 comments",
+   "author": "@masklinn",
+   "tags": [],
+   "score": 18,
+   "discussion": "https://news.ycombinator.com/item?id=49098417",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "qv6rsq",
+   "title": "GPT-5.6 vs. Claude Fable 5 for Physical AI, which performs best?",
+   "url": "https://juliahub.com/blog/frontier-models-physical-ai-evaluation",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T14:56:28Z",
+   "summary": "11 points · 2 comments",
+   "author": "@mbauman",
+   "tags": [],
+   "score": 11,
+   "discussion": "https://news.ycombinator.com/item?id=49098388",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1do1bnm",
+   "title": "Hackers target over 30 Minnesota water utilities in coordinated OT attack",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-target-over-30-minnesota-water-utilities-in-coordinated-ot-attack/",
+   "source": "BleepingComputer",
+   "category": "security",
+   "published": "2026-07-29T14:55:57.000Z",
+   "summary": "The Minnesota IT Services (MNIT) agency activated its cybersecurity incident response capabilities across the entire state after hackers targeted more than 30 community water systems in \"a coordinated cyberattack.\" [...]",
+   "author": "Ionut Ilascu",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1wwckyg",
+   "title": "Show HN: Qwen Scribe – local transcription and dictation for Apple Silicon",
+   "url": "https://github.com/VladUZH/qwen-scribe",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T14:47:22Z",
+   "summary": "9 points · 1 comments",
+   "author": "@sidclaw",
+   "tags": [],
+   "score": 9,
+   "discussion": "https://news.ycombinator.com/item?id=49098260",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1v1qwt9",
+   "title": "Laundry Bear’s webmail hackers had more in store after February, report says",
+   "url": "https://therecord.media/russia-hackers-outlook-webmail-malware",
+   "source": "The Record",
+   "category": "security",
+   "published": "2026-07-29T14:45:00.000Z",
+   "summary": "Researchers say the Russian state-linked hacking group tracked as Laundry Bear recently began exploiting a bug in Microsoft Outlook Web Access.",
+   "author": "",
+   "tags": [
+    "News",
+    "News Briefs",
+    "Cybercrime",
+    "Nation-state",
+    "Malware"
+   ],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1jh0kz7",
+   "title": "A.I. Companies Are Recruiting Electricians and Carpenters by the Thousands",
+   "url": "https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T14:43:47Z",
+   "summary": "40 points · 14 comments",
+   "author": "@thm",
+   "tags": [],
+   "score": 40,
+   "discussion": "https://news.ycombinator.com/item?id=49098198",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "gbosc2",
+   "title": "Patch-Resistant 'RufRoot' Flaw Can Unleash Malicious AI Agent Swarms",
+   "url": "https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms",
+   "source": "Dark Reading",
+   "category": "security",
+   "published": "2026-07-29T14:40:33.000Z",
+   "summary": "The vulnerability in the AI hosting platform Ruflo allows an unauthenticated attacker to take over the system and corrupt memory, so bad behavior can persist after patching.",
+   "author": "Elizabeth Montalbano",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "df3xhe",
+   "title": "GCC steering committee announces AI policy",
+   "url": "https://lwn.net/Articles/1086041/",
+   "source": "LWN.net",
+   "category": "platform",
+   "published": "2026-07-29T14:38:44.000Z",
+   "summary": "The GCC steering committee has announced that it has accepted an AI contributions policy recommended by the GCC AI policy working group. The policy, in part, states that the project will decline any \" legally significant contributions which include LLM-generated content or are derived from LLM-generated content \". It…",
+   "author": "jzb",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "dyr27p",
+   "title": "2026-07-29 Node.js v24.18.1 Krypton (LTS) Release",
+   "url": "https://github.com/nodejs/node/releases/tag/v24.18.1",
+   "source": "Node.js Releases",
+   "category": "webdev",
+   "published": "2026-07-29T14:22:56.000Z",
+   "summary": "Git-EVTag-v0-SHA512: 04092518acce745fae797d9ee29d21abd661e3b4808875a64530244372d900b2b96f8f531c338867e927e299992c979b6782372a6ca036975042ecde3218bdda",
+   "author": "juanarbol",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1cx9flk",
+   "title": "Developers are attached to tools because tools encode trust​​​​‌ ‍ ​‍​‍‌‍ ‌ ​‍‌‍‍‌‌‍‌ ‌‍‍‌‌‍ ‍​‍​‍​ ‍‍​‍​‍‌ ​ ‌‍​‌‌‍ ‍‌‍‍‌‌ ‌​‌ ‍‌​‍ ‍‌‍‍‌‌‍ ​‍​‍​‍ ​​‍​‍‌‍‍​‌ ​‍‌‍‌‌‌‍‌‍​‍​‍​ ‍‍​‍​‍‌‍‍​‌ ‌​‌ ‌​‌ ​​‌…",
+   "url": "https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/",
+   "source": "Stack Overflow Engineering",
+   "category": "architecture",
+   "published": "2026-07-29T14:06:38.000Z",
+   "summary": "The tools themselves are new and their capabilities are in constant flux. If your kitchen knife kept changing shape, weight, and edge, you’d have to relearn it every time; that’s a hard tool to build trust in. But it also points to a flaw in how you use that tool, the process around it, and the way the tool reinforces…",
+   "author": "Ryan Donovan",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1euzwqq",
+   "title": "Node.js 26.5.1 (Current)",
+   "url": "https://nodejs.org/en/blog/release/v26.5.1",
+   "source": "Node.js Blog",
+   "category": "webdev",
+   "published": "2026-07-29T14:03:39.000Z",
+   "summary": "",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "z1bidk",
+   "title": "Your AI Agents Are Guessing at Scale: Permissions Decide the Damage",
+   "url": "https://www.bleepingcomputer.com/news/security/your-ai-agents-are-guessing-at-scale-permissions-decide-the-damage/",
+   "source": "BleepingComputer",
+   "category": "security",
+   "published": "2026-07-29T14:02:12.000Z",
+   "summary": "AI agents are designed to improvise as they complete tasks, making broad permissions a growing security risk. Token Security explains why identity, intent-based access controls, and least privilege are becoming the foundation for securing agentic AI. [...]",
+   "author": "Sponsored by Token Security",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "10f6954",
+   "title": "2026-07-29, Version 26.5.1 (Current), @RafaelGSS",
+   "url": "https://github.com/nodejs/node/releases/tag/v26.5.1",
+   "source": "Node.js Releases",
+   "category": "webdev",
+   "published": "2026-07-29T14:02:10.000Z",
+   "summary": "This is a security release. Notable Changes (CVE-2026-56848) http2: defer rst stream while in scope (Matteo Collina) – High (CVE-2026-58043) permission: avoid granting radix split nodes (RafaelGSS) – High (CVE-2026-56850) https: distinguish PFX object-array agent keys (RafaelGSS) – Medium (CVE-2026-58040) https: bind…",
+   "author": "RafaelGSS",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "2jjvxm",
+   "title": "Node.js 22.23.2 (LTS)",
+   "url": "https://nodejs.org/en/blog/release/v22.23.2",
+   "source": "Node.js Blog",
+   "category": "webdev",
+   "published": "2026-07-29T14:01:35.000Z",
+   "summary": "",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1l2k848",
+   "title": "2026-07-29, Version 22.23.2 'Jod' (LTS), @marco-ippolito",
+   "url": "https://github.com/nodejs/node/releases/tag/v22.23.2",
+   "source": "Node.js Releases",
+   "category": "webdev",
+   "published": "2026-07-29T14:00:18.000Z",
+   "summary": "This is a security release. Notable Changes (CVE-2026-56846) http2: retain header memory in session accounting (Matteo Collina) – High (CVE-2026-56848) http2: defer rst stream while in scope (Matteo Collina) – High (CVE-2026-58043) permission: avoid granting radix split nodes (RafaelGSS) – High (CVE-2026-56850) https:…",
+   "author": "marco-ippolito",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "jq8m0d",
+   "title": "Windows 11 KB5101684 update released with 42 changes and fixes",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5101684-update-released-with-42-changes-and-fixes/",
+   "source": "BleepingComputer",
+   "category": "security",
+   "published": "2026-07-29T13:56:22.000Z",
+   "summary": "​​Microsoft has released the KB5101684 preview cumulative update for Windows 11 24H2 and 25H2, which 42 bug fixes and additional feature improvements for the operating system. [...]",
+   "author": "Lawrence Abrams",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "ayga38",
+   "title": "Valve Sponsors Work Bringing Open-Source RADV Driver to Windows",
+   "url": "https://www.phoronix.com/news/Valve-Sponsors-RADV-Windows",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T13:55:00Z",
+   "summary": "45 points · 13 comments",
+   "author": "@DemiGuru",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T10:56:50.677Z",
+   "score": 45,
+   "discussion": "https://news.ycombinator.com/item?id=49097591"
+  },
+  {
+   "id": "bta4jv",
+   "title": "Coordinated Cyberattack Targets 30+ Minnesota Water Systems as One Plant Goes Offline",
+   "url": "https://thehackernews.com/2026/07/coordinated-cyberattack-targets-30.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T13:48:36.000Z",
+   "summary": "A coordinated cyberattack targeted operational technology at more than 30 Minnesota community water systems on July 26 and 27, triggering a statewide cybersecurity response. Braham, Plymouth, South St. Paul and Maple Plain have publicly described a plant outage, communications failures or affected automated controls.…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "19p4732",
+   "title": "Qodana 2026.2: More Security, Better Coverage, Less Configuration",
+   "url": "https://blog.jetbrains.com/qodana/2026/07/qodana-2026-2-more-security-better-coverage-less-configuration/",
+   "source": "JetBrains Blog",
+   "category": "webdev",
+   "published": "2026-07-29T13:47:03.000Z",
+   "summary": "Qodana 2026.2 makes it easier for development teams to act on code quality, security, and compliance findings throughout the development workflow. This release introduces clearer code coverage insights for pull requests, highlights uncovered new lines directly in the IDE, and automatically detects coverage reports in…",
+   "author": "Kerry Beetge",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1rvifu1",
+   "title": "Nine-Year Fraud Campaign Clones Russian Company Sites to Steal Advance Payments",
+   "url": "https://thehackernews.com/2026/07/nine-year-fraud-campaign.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T13:42:57.000Z",
+   "summary": "Cybersecurity researchers have disclosed details of a large-scale fraud campaign that involves creating lookalike websites of major Russian companies with an aim to siphon funds from international firms for more than nine years. According to Russian cybersecurity vendor F6, the threat actors have set up clone websites…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "132e2sg",
+   "title": "Intel Graphics Driver Support For Xe3 \"Peak Bandwidth Threshold\" Feature In Linux 7.3",
+   "url": "https://www.phoronix.com/news/Intel-Linux-7.3-Peak-Bandwidth",
+   "source": "Phoronix",
+   "category": "platform",
+   "published": "2026-07-29T13:12:09.000Z",
+   "summary": "Intel today sent out their latest batch of kernel graphics driver updates that are ready for staging ahead of next month's Linux 7.3 merge window...",
+   "author": "Michael Larabel",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "157gjmx",
+   "title": "Security updates for Wednesday",
+   "url": "https://lwn.net/Articles/1086031/",
+   "source": "LWN.net",
+   "category": "platform",
+   "published": "2026-07-29T13:11:23.000Z",
+   "summary": "Security updates have been issued by AlmaLinux (dovecot, go-fdo-client, go-fdo-server, kernel, kernel-rt, and sssd), Debian (calibre, hplip, libraw, and samba), Fedora (btrbk, chromium, gpsd, kronosnet, and restic), Mageia (gstreamer1.0-libav and libslirp), Slackware (libarchive, samba, and seamonkey), SUSE…",
+   "author": "jzb",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "pd9pct",
+   "title": "Handbook.md shows that long policy documents do not reliably govern agents",
+   "url": "https://arxiv.org/abs/2607.25398",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T13:01:57Z",
+   "summary": "151 points · 92 comments",
+   "author": "@spIrr",
+   "tags": [],
+   "score": 151,
+   "discussion": "https://news.ycombinator.com/item?id=49096969",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1hc27dc",
+   "title": "Post-quantum authentication to origins is now supported",
+   "url": "https://blog.cloudflare.com/post-quantum-authentication-to-origins/",
+   "source": "Cloudflare Blog",
+   "category": "cloud",
+   "published": "2026-07-29T13:00:00.000Z",
+   "summary": "Cloudflare now supports post-quantum (PQ) authentication when connecting to customer origin servers via Authenticated Origin Pulls and Custom Origin Trust Store. This is the first step towards providing PQ authentication for all Cloudflare products.",
+   "author": "Luke Valenta",
+   "tags": [
+    "Cryptography",
+    "Cybersecurity",
+    "Post-Quantum",
+    "Research",
+    "SSL"
+   ],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1hf4g0z",
+   "title": "The Bull And Bear Case For Digital Design In The Age Of AI",
+   "url": "https://smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/",
+   "source": "Smashing Magazine",
+   "category": "webdev",
+   "published": "2026-07-29T13:00:00.000Z",
+   "summary": "As AI reshapes product design, it could give designers greater autonomy or expose the gaps that autonomy makes harder to hide. Exploring both the bull and bear cases, Andy Budd examines what happens when designers need less permission to act.",
+   "author": "hello@smashingmagazine.com (Andy Budd)",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1htyyzt",
+   "title": "San Francisco: Don't Fall for Industry Defense of Surveillance Pricing",
+   "url": "https://www.eff.org/deeplinks/2026/07/san-francisco-dont-fall-industry-defense-surveillance-pricing",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T12:55:50Z",
+   "summary": "75 points · 25 comments",
+   "author": "@hn_acker",
+   "tags": [],
+   "score": 75,
+   "discussion": "https://news.ycombinator.com/item?id=49096885",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "rq73cr",
+   "title": "Hyperbole Implicit Buttons: Build your Hyperverse",
+   "url": "https://www.reddit.com/r/programming/comments/1v9vec3/hyperbole_implicit_buttons_build_your_hyperverse/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T12:55:27.000Z",
+   "summary": "This is a post on a Bob Weiner's Hyperbole package, and what makes it's flexible hypertext concepts so special in Emacs. submitted by /u/misterchiply [link] [comments]",
+   "author": "/u/misterchiply",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1stcnem",
+   "title": "MAD//North Returns to Aviva Studios for 2027",
+   "url": "https://www.eventindustrynews.com/news/mad-north-returns-to-aviva-studios-for-2027",
+   "source": "Event Industry News",
+   "category": "eventtech",
+   "published": "2026-07-29T12:51:00.000Z",
+   "summary": "Aviva Studios, home of Factory International, will host MAD//North for a third consecutive year when it returns in March 2027. The announcement, which went live at MAD//Fest earlier this month, follows another successful showing in Manchester, which saw the event welcome 4,000 delegates from the North’s creative,…",
+   "author": "Kizzy Allott",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "72kdtd",
+   "title": "Shipping Godot VR and Porting to PSVR2: A Partial Post Mortem",
+   "url": "https://www.claire-blackshaw.com/blog/2026/07/shipping-godot-vr-and-porting-to-psvr2-a-partial-post-mortem/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T12:48:18Z",
+   "summary": "51 points · 0 comments",
+   "author": "@ibobev",
+   "tags": [],
+   "score": 51,
+   "discussion": "https://news.ycombinator.com/item?id=49096811",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "2esmy5",
+   "title": "Russia accuses Telegram founder of aiding terrorism, seeks international arrest",
+   "url": "https://therecord.media/russia-telegram-durov-arrest",
+   "source": "The Record",
+   "category": "security",
+   "published": "2026-07-29T12:45:00.000Z",
+   "summary": "Russia is seeking to place Telegram founder Pavel Durov on an international wanted list, alleging that the app has been used by Ukrainian intelligence to organize terrorist attacks and conduct espionage inside Russia.",
+   "author": "",
+   "tags": [
+    "News",
+    "Technology",
+    "Government"
+   ],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "agxdz3",
+   "title": "A Texture Lookup Approach to Bézier Curve Evaluation on the GPU (JCGT)",
+   "url": "https://jcgt.org/published/0015/02/01/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T12:40:13Z",
+   "summary": "26 points · 3 comments",
+   "author": "@ibobev",
+   "tags": [],
+   "score": 26,
+   "discussion": "https://news.ycombinator.com/item?id=49096742",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "rzg5e4",
+   "title": "How Company 3 Streamlines Studio Image Management with EC2 Image Builder and AWS CDK",
+   "url": "https://aws.amazon.com/blogs/devops/how-company-3-streamlines-studio-image-management-with-ec2-image-builder-and-aws-cdk/",
+   "source": "AWS DevOps Blog",
+   "category": "devops",
+   "published": "2026-07-29T12:34:47.000Z",
+   "summary": "Guest post in collaboration with Company 3 Director of New Technology, Phil Wortas, and Senior New Technology Engineer, Matthew Galloway Introduction Company 3 provides specialized services for the entertainment industry, including post-production services, visual effects, and color grading for feature films,…",
+   "author": "Natalie White",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1nlcz70",
+   "title": "Add security context to operational investigations with AWS DevOps Agent and Wiz",
+   "url": "https://aws.amazon.com/blogs/devops/add-security-context-to-operational-investigations-with-aws-devops-agent-and-wiz/",
+   "source": "AWS DevOps Blog",
+   "category": "devops",
+   "published": "2026-07-29T12:33:53.000Z",
+   "summary": "This post was co-authored by Ayelet Harcz (Product Manager), Hen Perez (CTO Architect), and Shani Gafni (Product Manager) at Wiz. When an on-call engineer receives an alert at 2 AM, a CPU spike, a latency anomaly, or an unexpected API error, the first question is whether this is an operational issue or a security…",
+   "author": "Yuriy Prykhodko",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "m7f58d",
+   "title": "Darktable",
+   "url": "https://www.darktable.org/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T12:33:02Z",
+   "summary": "113 points · 57 comments",
+   "author": "@siatko",
+   "tags": [],
+   "score": 113,
+   "discussion": "https://news.ycombinator.com/item?id=49096654",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
   {
    "id": "1v4mkxb",
    "title": "Cyberattack hits Angola’s largest telco hours before landmark stock debut",
@@ -85,6 +699,47 @@
    ],
    "priority": 2,
    "firstSeen": "2026-07-29T12:27:29.134Z"
+  },
+  {
+   "id": "1nit4va",
+   "title": "Mythos Asks the Right Question. It Doesn't Answer It.",
+   "url": "https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T12:15:00.000Z",
+   "summary": "AI is compressing exploit timelines. The real question isn't whether your vulnerability management playbook needs to change, it's which part of it you've been getting wrong all along. The conversation happening in security circles right now goes something like this: Mythos is here. Exploit timelines are collapsing.…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "g950a",
+   "title": "Disrupting supply chain attacks on NPM and GitHub Actions",
+   "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T12:11:18Z",
+   "summary": "53 points · 16 comments",
+   "author": "@nyku",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T08:51:07.852Z",
+   "score": 53,
+   "discussion": "https://news.ycombinator.com/item?id=49096427"
+  },
+  {
+   "id": "tsggox",
+   "title": "That time when I failed the Microsoft interview",
+   "url": "https://www.reddit.com/r/programming/comments/1v9u8yw/that_time_when_i_failed_the_microsoft_interview/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T12:04:34.000Z",
+   "summary": "submitted by /u/aochagavia [link] [comments]",
+   "author": "/u/aochagavia",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "1yb3v2x",
@@ -106,16 +761,70 @@
    "firstSeen": "2026-07-29T12:27:29.134Z"
   },
   {
+   "id": "4o9lof",
+   "title": "2026 Minimum Elements for a Software Bill of Materials (SBOM)",
+   "url": "https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom",
+   "source": "CISA Advisories",
+   "category": "security",
+   "published": "2026-07-29T12:00:00.000Z",
+   "summary": "CISA, the National Security Agency, the Federal Bureau of Investigation, and international partners released joint guidance, 2026 Minimum Elements for a Software Bill of Materials (SBOM) , that updates and replaces the minimum elements for an SBOM published by the National Telecommunications and Information…",
+   "author": "CISA",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "j21kal",
+   "title": "Distributed rate limiter with HRW in Elixir",
+   "url": "https://www.reddit.com/r/programming/comments/1v9u4qb/distributed_rate_limiter_with_hrw_in_elixir/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T11:59:57.000Z",
+   "summary": "submitted by /u/joladev [link] [comments]",
+   "author": "/u/joladev",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "zc0dq9",
+   "title": "Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser",
+   "url": "https://thehackernews.com/2026/07/researchers-show-single-malicious.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T11:57:00.000Z",
+   "summary": "Nebula Security says a patched Firefox JIT flaw could be triggered by simply visiting a malicious webpage and was also used to compromise Tor Browser. Tracked as CVE-2026-10702, the bug provides arbitrary code execution inside the browser's renderer process. Mozilla rated it High and fixed it in the Firefox 151.0.3…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1tnq9kb",
+   "title": "French musician Kavinsky found dead",
+   "url": "https://www.euronews.com/culture/2026/07/29/dj-kavinsky-known-for-his-track-nightcall-found-dead-at-his-paris-home",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-29T11:54:37Z",
+   "summary": "265 points · 60 comments",
+   "author": "@bristleworm",
+   "tags": [],
+   "score": 265,
+   "discussion": "https://news.ycombinator.com/item?id=49096290",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "134lby4",
    "title": "Document-borne AI worms can self-propagate through Copilot for Word",
    "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T11:44:33Z",
-   "summary": "31 points · 14 comments",
+   "summary": "189 points · 165 comments",
    "author": "@Canopy9560",
    "tags": [],
-   "score": 31,
+   "score": 189,
    "discussion": "https://news.ycombinator.com/item?id=49096188",
    "priority": 1,
    "firstSeen": "2026-07-29T12:27:29.134Z"
@@ -162,6 +871,19 @@
    "firstSeen": "2026-07-29T11:55:33.562Z"
   },
   {
+   "id": "4jlpok",
+   "title": "73% of Organizations Say They Are Not Fully Ready for a Major Cyberattack",
+   "url": "https://thehackernews.com/2026/07/73-of-organizations-say-they-are-not.html",
+   "source": "The Hacker News",
+   "category": "security",
+   "published": "2026-07-29T11:13:10.000Z",
+   "summary": "Most organizations have incident response plans, security tools, and technical teams in place. Yet new research suggests that many still lack the coordination, visibility, and executive alignment needed to withstand a serious cyberattack. According to The State of Incident Response Readiness 2026, based on a survey of…",
+   "author": "info@thehackernews.com (The Hacker News)",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "t95h1f",
    "title": "These near-mint ASUS Chromebook refurbs are only $145",
    "url": "https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/",
@@ -181,10 +903,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T11:05:08Z",
-   "summary": "64 points · 14 comments",
+   "summary": "443 points · 142 comments",
    "author": "@Cider9986",
    "tags": [],
-   "score": 64,
+   "score": 443,
    "discussion": "https://news.ycombinator.com/item?id=49095865",
    "priority": 1,
    "firstSeen": "2026-07-29T12:27:29.134Z"
@@ -250,19 +972,6 @@
    "published": "2026-07-29T16:40:52.000Z",
    "summary": "The league took over Philadelphia to celebrate America's favorite pastime during the country's 250th anniversary.",
    "author": "Michele Laufik",
-   "tags": [],
-   "priority": 2,
-   "firstSeen": "2026-07-29T10:56:50.677Z"
-  },
-  {
-   "id": "ns0nrv",
-   "title": "Aspen Food & Wine Classic 2026: See 40+ Delectable Bites, Brand Activations, and More From the Buzzy Weekend",
-   "url": "https://www.bizbash.com/food-beverage-trends/aspen-food-wine-classic-2026",
-   "source": "BizBash",
-   "category": "eventtech",
-   "published": "2026-07-29T15:52:24.000Z",
-   "summary": "The event returned for its 43rd year, bringing back its winning formula of tastings, demos, and special events, while making more room for elevated hospitality moments.",
-   "author": "Sarah Kloepple",
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T10:56:50.677Z"
@@ -335,29 +1044,16 @@
    "firstSeen": "2026-07-29T10:56:50.677Z"
   },
   {
-   "id": "ayga38",
-   "title": "Valve Sponsors Work Bringing Open-Source RADV Driver To Windows",
-   "url": "https://www.phoronix.com/news/Valve-Sponsors-RADV-Windows",
-   "source": "Phoronix",
-   "category": "platform",
-   "published": "2026-07-29T10:35:22.000Z",
-   "summary": "Valve has been sponsoring Collabora engineers with early phase, exploratory work for trying to bring the open-source Radeon Vulkan \"RADV\" driver to Microsoft Windows...",
-   "author": "Michael Larabel",
-   "tags": [],
-   "priority": 2,
-   "firstSeen": "2026-07-29T10:56:50.677Z"
-  },
-  {
    "id": "12d8s3d",
    "title": "SpecForge – A Platform for Authoring Formal Specifications",
    "url": "https://docs.imiron.io/v/0.5.10/en/tour.html",
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T10:35:19Z",
-   "summary": "25 points · 1 comments",
+   "summary": "60 points · 7 comments",
    "author": "@agnishom",
    "tags": [],
-   "score": 25,
+   "score": 60,
    "discussion": "https://news.ycombinator.com/item?id=49095628",
    "priority": 1,
    "firstSeen": "2026-07-29T11:07:57.038Z"
@@ -453,10 +1149,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T10:19:44Z",
-   "summary": "40 points · 7 comments",
+   "summary": "104 points · 17 comments",
    "author": "@Bluestein",
    "tags": [],
-   "score": 40,
+   "score": 104,
    "discussion": "https://news.ycombinator.com/item?id=49095511",
    "priority": 1,
    "firstSeen": "2026-07-29T11:50:59.044Z"
@@ -657,6 +1353,19 @@
    "firstSeen": "2026-07-29T10:56:50.677Z"
   },
   {
+   "id": "28piwr",
+   "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers for Low-Latency App Servers",
+   "url": "https://www.reddit.com/r/programming/comments/1v9r162/sqlite_in_production_optimizing_wal_mode/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T09:22:37.000Z",
+   "summary": "submitted by /u/Either_Collection349 [link] [comments]",
+   "author": "/u/Either_Collection349",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "r4zsai",
    "title": "my crashloop debugging agent told me a pod didn't exist. it existed, just not in a namespace i'd documented",
    "url": "https://www.reddit.com/r/kubernetes/comments/1v9qrok/my_crashloop_debugging_agent_told_me_a_pod_didnt/",
@@ -754,6 +1463,19 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T10:56:50.677Z"
+  },
+  {
+   "id": "1pnb4eu",
+   "title": "The Untold Story of Log4j and Log4Shell, with Christian Grobmeier",
+   "url": "https://www.reddit.com/r/programming/comments/1v9qh6x/the_untold_story_of_log4j_and_log4shell_with/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T08:51:08.000Z",
+   "summary": "submitted by /u/brunocborges [link] [comments]",
+   "author": "/u/brunocborges",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "18hnhz4",
@@ -976,10 +1698,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T07:18:24Z",
-   "summary": "102 points · 40 comments",
+   "summary": "189 points · 56 comments",
    "author": "@ankitg12",
    "tags": [],
-   "score": 102,
+   "score": 189,
    "discussion": "https://news.ycombinator.com/item?id=49094346",
    "priority": 1,
    "firstSeen": "2026-07-29T09:04:41.199Z"
@@ -1048,6 +1770,19 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T10:56:50.677Z"
+  },
+  {
+   "id": "4w3rsg",
+   "title": "Parsers don’t have to be complicated",
+   "url": "https://www.reddit.com/r/programming/comments/1v9o8g3/parsers_dont_have_to_be_complicated/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T06:44:34.000Z",
+   "summary": "submitted by /u/f311a [link] [comments]",
+   "author": "/u/f311a",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "14ec31b",
@@ -1121,13 +1856,26 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T04:58:46Z",
-   "summary": "252 points · 84 comments",
+   "summary": "335 points · 100 comments",
    "author": "@Error6571",
    "tags": [],
-   "score": 252,
+   "score": 335,
    "discussion": "https://news.ycombinator.com/item?id=49093569",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "15710vh",
+   "title": "Benchmarks | Koi Editor",
+   "url": "https://www.reddit.com/r/programming/comments/1v9lvlj/benchmarks_koi_editor/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T04:41:29.000Z",
+   "summary": "submitted by /u/MichaelSjoeberg [link] [comments]",
+   "author": "/u/MichaelSjoeberg",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "ltfjmj",
@@ -1164,10 +1912,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-29T04:30:36Z",
-   "summary": "257 points · 41 comments",
+   "summary": "331 points · 56 comments",
    "author": "@zdw",
    "tags": [],
-   "score": 257,
+   "score": 331,
    "discussion": "https://news.ycombinator.com/item?id=49093434",
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
@@ -1184,6 +1932,19 @@
    "tags": [],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "16wjn2u",
+   "title": "The Difference Between a Button and a Link",
+   "url": "https://www.reddit.com/r/programming/comments/1v9lgdk/the_difference_between_a_button_and_a_link/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-29T04:20:35.000Z",
+   "summary": "submitted by /u/lelanthran [link] [comments]",
+   "author": "/u/lelanthran",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "u9pz57",
@@ -1488,6 +2249,97 @@
    "firstSeen": "2026-07-29T10:56:50.677Z"
   },
   {
+   "id": "u7ya5y",
+   "title": "Why GitLab signed the Open Weights and American AI Leadership letter",
+   "url": "https://about.gitlab.com/blog/open-weight-model-letter/",
+   "source": "GitLab Blog",
+   "category": "devops",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "This week GitLab signed the Open Weights and American AI Leadership letter , joining a long list of other technology companies that support a strong, open AI ecosystem. The letter argues that open weights spur innovation, give customers greater control, and provide an important path to AI safety and security. In…",
+   "author": "Bill Staples",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "17aki5n",
+   "title": "Discover and install eve integrations from the CLI",
+   "url": "https://vercel.com/changelog/discover-and-install-eve-integrations-from-the-cli",
+   "source": "Vercel Blog",
+   "category": "webdev",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "You can now discover and install integrations for eve agents directly from the eve CLI. Integrations come from the official eve catalog and third-party sources. Run eve add from your eve project to install an integration: Integrations write their files directly into your project and can add anything an eve agent uses,…",
+   "author": "Colton Padden",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "3v0nex",
+   "title": "Sovereign by design: Lessons from Red Hat Summit",
+   "url": "https://www.redhat.com/en/blog/sovereign-design-lessons-red-hat-summit",
+   "source": "Red Hat Blog",
+   "category": "platform",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "Digital sovereignty used to sit somewhere between a compliance checkbox and a future roadmap item. That’s changing fast. At Red Hat Summit, Mohammed Retmi of Core42 in the United Arab Emirates and A.S. \"Raj\" Rajgopal of NxtGen in India joined me for a roundtable on how 2 very different markets are building sovereign…",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "i752b7",
+   "title": "No time to lose: Why post-quantum security for financial services must start now",
+   "url": "https://www.redhat.com/en/blog/no-time-lose-why-post-quantum-security-financial-services-must-start-now",
+   "source": "Red Hat Blog",
+   "category": "platform",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "Post-quantum cryptography: The emerging threatThe transition to post-quantum cryptography (PQC) is becoming an urgent priority for the global financial sector due to the rapid evolution of quantum computing. Cryptographically relevant quantum computers exist only as research prototypes. However, their inevitable…",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "1xs4p0j",
+   "title": "Lights on! Real-time threat response with Red Hat Advanced Cluster Security",
+   "url": "https://www.redhat.com/en/blog/lights-real-time-threat-response-red-hat-advanced-cluster-security",
+   "source": "Red Hat Blog",
+   "category": "platform",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "Part 2 of a series on implementing zero trust in Red Hat OpenShift with the layered zero trust validated pattern (ZTVP)In our previous article, we explored why network policies, specifically a default-deny posture combined with strict ingress and egress rules, are your critical last line of defense when you can’t…",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "ao5gkx",
+   "title": "Architecting for maintainability: Lessons from a global multicluster platform blueprint",
+   "url": "https://www.redhat.com/en/blog/architecting-maintainability-lessons-global-multicluster-platform-blueprint",
+   "source": "Red Hat Blog",
+   "category": "platform",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "How can a large organization achieve 100% uptime and zero security breaches at a massive scale? It requires moving past standard management techniques and focusing on a critical metric: maintainability. At the recent Red Hat OpenShift Commons Gathering in Amsterdam, ING senior engineers Robbin Siepman and Rob de Boer…",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
+   "id": "b4c14a",
+   "title": "Quarkus 3.38 - Weight-based eviction for Hibernate second level Caffeine cache, and more",
+   "url": "https://quarkus.io/blog/quarkus-3-38-released/",
+   "source": "Quarkus Blog",
+   "category": "platform",
+   "published": "2026-07-29T00:00:00.000Z",
+   "summary": "We’re pleased to announce the release of Quarkus 3.38. As most of the development effort for new features and major upgrades is now focused on Quarkus 4, this release is lighter on features than usual. It still comes with the following notable feature: #55284 - Support weight-based eviction for Hibernate 2LC Caffeine…",
+   "author": "Guillaume Smet (https://twitter.com/gsmet_)",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "1gikw0v",
    "title": "Engineering Traffic at Planetary Scale: How Atlas Handles the Biggest Traffic Spikes Without…",
    "url": "https://medium.com/@summitkumar/engineering-traffic-at-planetary-scale-how-atlas-handles-the-biggest-traffic-spikes-without-908b98add5da?source=rss------distributed_systems-5",
@@ -1698,7 +2550,7 @@
    "source": "Dark Reading",
    "category": "security",
    "published": "2026-07-28T21:33:23.000Z",
-   "summary": "Dormant nonhuman identities can create security blind spots, says security researcher Aleksandr Krasnov, who has released an open source tool to sniff out trust paths.",
+   "summary": "Dormant nonhuman identities can create security blind spots, says security researcher Aleksandr Krasnov, who plans to release an open source tool next week at Black Hat USA 2026 that sniffs out trust paths.",
    "author": "Jeffrey Schwartz",
    "tags": [],
    "priority": 2,
@@ -1813,6 +2665,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "11e9x7g",
+   "title": "Five Languages, One Pyramid, Zero Practical Value",
+   "url": "https://www.reddit.com/r/programming/comments/1v9adp0/five_languages_one_pyramid_zero_practical_value/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T20:35:11.000Z",
+   "summary": "submitted by /u/Refresh98370 [link] [comments]",
+   "author": "/u/Refresh98370",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "62b1wi",
    "title": "Extended Stable Updates for Desktop",
    "url": "http://chromereleases.googleblog.com/2026/07/extended-stable-updates-for-desktop.html",
@@ -1837,6 +2702,19 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "1y9qiy0",
+   "title": "Detection-as-Code in One GitHub Action with RSigma",
+   "url": "https://www.reddit.com/r/programming/comments/1v9a099/detectionascode_in_one_github_action_with_rsigma/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T20:18:35.000Z",
+   "summary": "submitted by /u/Happycodeine [link] [comments]",
+   "author": "/u/Happycodeine",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "1xazc0z",
@@ -2191,6 +3069,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "tm6lrx",
+   "title": "The Elevator Glitch: How One Function Destroyed Public Lobbies in CoD4",
+   "url": "https://www.reddit.com/r/programming/comments/1v94mgb/the_elevator_glitch_how_one_function_destroyed/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T17:10:09.000Z",
+   "summary": "Walk with me inside one of the most influential game's code and discover the secret of elevators! Turns out the bug comes down to a single line buried in the engine's collision code. Went through the decompiled source (thanks to KisakCOD) and traced the whole thing back. Let me know your thoughts! ✨ submitted by…",
+   "author": "/u/Rex109",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "tc65yz",
    "title": "Eval-driven development: Lessons from evaluating GenAI at scale",
    "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5---4",
@@ -2334,6 +3225,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "kjph4r",
+   "title": "Inside Zig's Incremental Compilation",
+   "url": "https://www.reddit.com/r/programming/comments/1v93h07/inside_zigs_incremental_compilation/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T16:29:27.000Z",
+   "summary": "submitted by /u/f311a [link] [comments]",
+   "author": "/u/f311a",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "6dd4x8",
    "title": "The OlmoEarth Platform: Geospatial inference at planetary scale",
    "url": "https://huggingface.co/blog/allenai/olmoearth-infrastructure",
@@ -2446,19 +3350,6 @@
    "author": "kthornhill",
    "tags": [],
    "priority": 1,
-   "firstSeen": "2026-07-29T08:51:07.852Z"
-  },
-  {
-   "id": "g950a",
-   "title": "Disrupting supply chain attacks on npm and GitHub Actions",
-   "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/",
-   "source": "GitHub Blog",
-   "category": "devops",
-   "published": "2026-07-28T16:00:00.000Z",
-   "summary": "Explore the changes we've shipped across npm and GitHub Actions over the past few months to disrupt supply chain attack techniques and limit their impact. The post Disrupting supply chain attacks on npm and GitHub Actions appeared first on The GitHub Blog .",
-   "author": "Greg Ose",
-   "tags": [],
-   "priority": 2,
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
@@ -2697,6 +3588,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "7jx5g8",
+   "title": "A shell colon does nothing. Use it anyway. | Filip Roséen",
+   "url": "https://www.reddit.com/r/programming/comments/1v90z1b/a_shell_colon_does_nothing_use_it_anyway_filip/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T14:59:49.000Z",
+   "summary": "submitted by /u/f311a [link] [comments]",
+   "author": "/u/f311a",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "1fyp1yp",
    "title": "My friend only got 20$ of Free Credits on Signup. Why?",
    "url": "https://www.reddit.com/r/aws/comments/1v90v0h/my_friend_only_got_20_of_free_credits_on_signup/",
@@ -2767,6 +3671,19 @@
    ],
    "priority": 2,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "vl1c3h",
+   "title": "Finding bugs in Raft implementations",
+   "url": "https://www.reddit.com/r/programming/comments/1v90kmd/finding_bugs_in_raft_implementations/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T14:45:05.000Z",
+   "summary": "submitted by /u/f311a [link] [comments]",
+   "author": "/u/f311a",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "tz0wzd",
@@ -2884,6 +3801,19 @@
    "tags": [],
    "priority": 1,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "4vxv8d",
+   "title": "Dependency Cultures - Richard Feldman",
+   "url": "https://www.reddit.com/r/programming/comments/1v8ynjn/dependency_cultures_richard_feldman/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T13:33:00.000Z",
+   "summary": "Excellent talk by Richard Feldman about how different programming communities approach dependencies. submitted by /u/isaacvando [link] [comments]",
+   "author": "/u/isaacvando",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "19eh9hb",
@@ -3556,6 +4486,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "1qpc2kz",
+   "title": "Watching Go's new garbage collector move through the heap",
+   "url": "https://www.reddit.com/r/programming/comments/1v8r302/watching_gos_new_garbage_collector_move_through/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-28T07:26:31.000Z",
+   "summary": "submitted by /u/BlondieCoder [link] [comments]",
+   "author": "/u/BlondieCoder",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "1ax1nmv",
    "title": "AWS Launches Amazon GuardDuty Investigation Agent to Automate Threat Triage",
    "url": "https://www.infoq.com/news/2026/07/guardduty-investigation-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
@@ -4140,6 +5083,19 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T10:56:50.677Z"
+  },
+  {
+   "id": "bnvis4",
+   "title": "Pollard's P-1 Factoring Algorithm in Plain C",
+   "url": "https://www.reddit.com/r/programming/comments/1v8dy8c/pollards_p1_factoring_algorithm_in_plain_c/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-27T21:31:58.000Z",
+   "summary": "submitted by /u/DataBaeBee [link] [comments]",
+   "author": "/u/DataBaeBee",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "1w3km7r",
@@ -5089,6 +6045,19 @@
    "firstSeen": "2026-07-29T11:50:59.044Z"
   },
   {
+   "id": "1mgo67w",
+   "title": "Building a Fast Lock-Free Queue in Modern C++ From Scratch",
+   "url": "https://www.reddit.com/r/programming/comments/1v83ukz/building_a_fast_lockfree_queue_in_modern_c_from/",
+   "source": "Reddit r/programming",
+   "category": "community",
+   "published": "2026-07-27T15:35:37.000Z",
+   "summary": "submitted by /u/Dear-Economics-315 [link] [comments]",
+   "author": "/u/Dear-Economics-315",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "1ynwd4g",
    "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
    "url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
@@ -5963,6 +6932,21 @@
    "firstSeen": "2026-07-29T11:50:59.044Z"
   },
   {
+   "id": "1076dyh",
+   "title": "Hunter-gatherers introduced fish to a mountain lake 7000 years ago",
+   "url": "https://www.newscientist.com/article/2580119-hunter-gatherers-introduced-fish-to-a-mountain-lake-7000-years-ago/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-27T00:58:45Z",
+   "summary": "65 points · 38 comments",
+   "author": "@stevenwoo",
+   "tags": [],
+   "score": 65,
+   "discussion": "https://news.ycombinator.com/item?id=49063983",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "eap8tb",
    "title": "WebSocket support for OpenAI Responses API live on AI Gateway",
    "url": "https://vercel.com/changelog/websocket-support-for-openai-responses-api-live-on-ai-gateway",
@@ -6190,10 +7174,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-26T17:37:33Z",
-   "summary": "46 points · 16 comments",
+   "summary": "87 points · 22 comments",
    "author": "@fallat",
    "tags": [],
-   "score": 46,
+   "score": 87,
    "discussion": "https://news.ycombinator.com/item?id=49060363",
    "priority": 1,
    "firstSeen": "2026-07-29T10:56:50.677Z"
@@ -8028,6 +9012,21 @@
    "firstSeen": "2026-07-29T11:50:59.044Z"
   },
   {
+   "id": "b0dzjt",
+   "title": "Show HN: Write, simulate and synthesize VHDL/Verilog in the browser",
+   "url": "https://risingedge.pro",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-07-23T15:22:34Z",
+   "summary": "11 points · 4 comments",
+   "author": "@wozniakpawel",
+   "tags": [],
+   "score": 11,
+   "discussion": "https://news.ycombinator.com/item?id=49023076",
+   "priority": 1,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "b6mxvh",
    "title": "Expedia Uses AI-Driven Service Telemetry Analyzer to Accelerate Incident Investigation",
    "url": "https://www.infoq.com/news/2026/07/expedia-ai-observability-star/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
@@ -8731,10 +9730,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-07-22T20:14:38Z",
-   "summary": "30 points · 23 comments",
+   "summary": "58 points · 46 comments",
    "author": "@gnabgib",
    "tags": [],
-   "score": 30,
+   "score": 58,
    "discussion": "https://news.ycombinator.com/item?id=49012754",
    "priority": 1,
    "firstSeen": "2026-07-29T10:56:50.677Z"
@@ -8931,7 +9930,7 @@
     "programming",
     "agents"
    ],
-   "score": 16,
+   "score": 18,
    "devtoSurface": "org:aws",
    "priority": 3,
    "firstSeen": "2026-07-29T11:50:59.044Z"
@@ -12603,6 +13602,19 @@
    "tags": [],
    "priority": 2,
    "firstSeen": "2026-07-29T08:51:07.852Z"
+  },
+  {
+   "id": "1gpa78r",
+   "title": "AI Is Making Human Connection More Valuable",
+   "url": "https://www.pcma.org/podcast-ai-human-connection-scarce/",
+   "source": "PCMA",
+   "category": "eventtech",
+   "published": "2026-07-12T13:48:52.000Z",
+   "summary": "Two different Convene Podcast conversations recorded months apart, one with future-of-work researchers Sandra Peter and Kai Riemer and another with AI strategist Álvaro Meléndez, arrived at a similar conclusion: As AI accelerates information abundance, it only makes the value of live events, trust, and human…",
+   "author": "Magdalina Atanassova",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
   },
   {
    "id": "159drn6",
@@ -16605,6 +17617,19 @@
    "firstSeen": "2026-07-29T08:51:07.852Z"
   },
   {
+   "id": "1v5vb20",
+   "title": "What’s new with Terraform + Ansible",
+   "url": "https://www.hashicorp.com/blog/whats-new-with-terraform-ansible",
+   "source": "HashiCorp Blog",
+   "category": "devops",
+   "published": "2026-06-16T16:00:00.000Z",
+   "summary": "Learn how the Terraform Ansible Collection 2.0, pyTFE, and an enhanced Terraform actions experience help simplify infrastructure lifecycle management across Terraform and Ansible.",
+   "author": "Mitchell Ross",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-07-29T16:00:18.439Z"
+  },
+  {
    "id": "gsj3qa",
    "title": "Fragments: June 16",
    "url": "https://martinfowler.com/fragments/2026-06-16.html",
@@ -16728,8 +17753,8 @@
    "name": "affaan-m/ECC",
    "url": "https://github.com/affaan-m/ECC",
    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-   "stars": 235238,
-   "forks": 35832,
+   "stars": 235356,
+   "forks": 35846,
    "language": "JavaScript",
    "topics": [
     "ai-agents",
@@ -16756,8 +17781,8 @@
    "name": "NousResearch/hermes-agent",
    "url": "https://github.com/NousResearch/hermes-agent",
    "description": "The agent that grows with you",
-   "stars": 222143,
-   "forks": 42555,
+   "stars": 222186,
+   "forks": 42575,
    "language": "Python",
    "topics": [
     "ai",
@@ -16767,7 +17792,7 @@
     "chatgpt",
     "claude"
    ],
-   "pushedAt": "2026-07-29T12:14:40Z",
+   "pushedAt": "2026-07-29T15:59:48Z",
    "createdAt": "2025-07-22T22:22:28Z",
    "archived": false,
    "license": {
@@ -16784,8 +17809,8 @@
    "name": "n8n-io/n8n",
    "url": "https://github.com/n8n-io/n8n",
    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-   "stars": 198520,
-   "forks": 59737,
+   "stars": 198534,
+   "forks": 59742,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -16795,7 +17820,7 @@
     "data-flow",
     "development"
    ],
-   "pushedAt": "2026-07-29T12:23:50Z",
+   "pushedAt": "2026-07-29T15:59:59Z",
    "createdAt": "2019-06-22T09:24:21Z",
    "archived": false,
    "license": {
@@ -16812,8 +17837,8 @@
    "name": "firecrawl/firecrawl",
    "url": "https://github.com/firecrawl/firecrawl",
    "description": "The API to search, scrape, and interact with the web at scale. 🔥",
-   "stars": 157727,
-   "forks": 8961,
+   "stars": 157769,
+   "forks": 8964,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -16840,8 +17865,8 @@
    "name": "Snailclimb/JavaGuide",
    "url": "https://github.com/Snailclimb/JavaGuide",
    "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-   "stars": 157379,
-   "forks": 46174,
+   "stars": 157375,
+   "forks": 46175,
    "language": "JavaScript",
    "topics": [
     "agent",
@@ -16868,8 +17893,8 @@
    "name": "langgenius/dify",
    "url": "https://github.com/langgenius/dify",
    "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-   "stars": 150679,
-   "forks": 23743,
+   "stars": 150693,
+   "forks": 23748,
    "language": "TypeScript",
    "topics": [
     "agent",
@@ -16879,7 +17904,7 @@
     "ai",
     "automation"
    ],
-   "pushedAt": "2026-07-29T12:24:46Z",
+   "pushedAt": "2026-07-29T15:52:45Z",
    "createdAt": "2023-04-12T07:40:24Z",
    "archived": false,
    "license": {
@@ -16896,8 +17921,8 @@
    "name": "open-webui/open-webui",
    "url": "https://github.com/open-webui/open-webui",
    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-   "stars": 147201,
-   "forks": 21391,
+   "stars": 147215,
+   "forks": 21402,
    "language": "Python",
    "topics": [
     "ai",
@@ -16924,8 +17949,8 @@
    "name": "langchain-ai/langchain",
    "url": "https://github.com/langchain-ai/langchain",
    "description": "The agent engineering platform.",
-   "stars": 142868,
-   "forks": 23783,
+   "stars": 142878,
+   "forks": 23785,
    "language": "Python",
    "topics": [
     "agents",
@@ -16952,7 +17977,7 @@
    "name": "kubernetes/kubernetes",
    "url": "https://github.com/kubernetes/kubernetes",
    "description": "Production-Grade Container Scheduling and Management",
-   "stars": 124034,
+   "stars": 124037,
    "forks": 43639,
    "language": "Go",
    "topics": [
@@ -16961,7 +17986,7 @@
     "go",
     "kubernetes"
    ],
-   "pushedAt": "2026-07-28T21:38:00Z",
+   "pushedAt": "2026-07-29T14:36:02Z",
    "createdAt": "2014-06-06T22:56:04Z",
    "archived": false,
    "license": {
@@ -16978,8 +18003,8 @@
    "name": "farion1231/cc-switch",
    "url": "https://github.com/farion1231/cc-switch",
    "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
-   "stars": 122194,
-   "forks": 8243,
+   "stars": 122243,
+   "forks": 8245,
    "language": "Rust",
    "topics": [
     "ai-tools",
@@ -16989,7 +18014,7 @@
     "grok",
     "grokbuild"
    ],
-   "pushedAt": "2026-07-29T09:10:22Z",
+   "pushedAt": "2026-07-29T15:49:47Z",
    "createdAt": "2025-08-04T14:16:16Z",
    "archived": false,
    "license": {
@@ -17006,8 +18031,8 @@
    "name": "browser-use/browser-use",
    "url": "https://github.com/browser-use/browser-use",
    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-   "stars": 107177,
-   "forks": 11786,
+   "stars": 107195,
+   "forks": 11788,
    "language": "Python",
    "topics": [
     "ai-agents",
@@ -17034,8 +18059,8 @@
    "name": "google-gemini/gemini-cli",
    "url": "https://github.com/google-gemini/gemini-cli",
    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-   "stars": 106232,
-   "forks": 14339,
+   "stars": 106234,
+   "forks": 14340,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -17045,7 +18070,7 @@
     "gemini-api",
     "mcp-client"
    ],
-   "pushedAt": "2026-07-29T01:29:18Z",
+   "pushedAt": "2026-07-29T15:43:28Z",
    "createdAt": "2025-04-17T17:04:31Z",
    "archived": false,
    "license": {
@@ -17062,8 +18087,8 @@
    "name": "Graphify-Labs/graphify",
    "url": "https://github.com/Graphify-Labs/graphify",
    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge…",
-   "stars": 98111,
-   "forks": 9522,
+   "stars": 98238,
+   "forks": 9536,
    "language": "Python",
    "topics": [
     "ai-agents",
@@ -17090,8 +18115,8 @@
    "name": "punkpeye/awesome-mcp-servers",
    "url": "https://github.com/punkpeye/awesome-mcp-servers",
    "description": "A collection of MCP servers.",
-   "stars": 91535,
-   "forks": 13716,
+   "stars": 91551,
+   "forks": 13723,
    "language": "—",
    "topics": [
     "ai",
@@ -17114,8 +18139,8 @@
    "name": "louislam/uptime-kuma",
    "url": "https://github.com/louislam/uptime-kuma",
    "description": "A fancy self-hosted monitoring tool",
-   "stars": 89591,
-   "forks": 8176,
+   "stars": 89597,
+   "forks": 8178,
    "language": "JavaScript",
    "topics": [
     "docker",
@@ -17125,7 +18150,7 @@
     "self-hosted",
     "selfhosted"
    ],
-   "pushedAt": "2026-07-29T10:31:27Z",
+   "pushedAt": "2026-07-29T15:55:27Z",
    "createdAt": "2021-07-03T01:02:42Z",
    "archived": false,
    "license": {
@@ -17142,8 +18167,8 @@
    "name": "thedotmack/claude-mem",
    "url": "https://github.com/thedotmack/claude-mem",
    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw,…",
-   "stars": 88924,
-   "forks": 7732,
+   "stars": 88948,
+   "forks": 7733,
    "language": "JavaScript",
    "topics": [
     "ai",
@@ -17170,8 +18195,8 @@
    "name": "Stirling-Tools/Stirling-PDF",
    "url": "https://github.com/Stirling-Tools/Stirling-PDF",
    "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
-   "stars": 88265,
-   "forks": 7853,
+   "stars": 88271,
+   "forks": 7855,
    "language": "Java",
    "topics": [
     "docker",
@@ -17181,7 +18206,7 @@
     "pdf-converter",
     "pdf-editor"
    ],
-   "pushedAt": "2026-07-29T12:19:48Z",
+   "pushedAt": "2026-07-29T15:59:40Z",
    "createdAt": "2023-01-27T18:22:42Z",
    "archived": false,
    "license": {
@@ -17198,8 +18223,8 @@
    "name": "sherlock-project/sherlock",
    "url": "https://github.com/sherlock-project/sherlock",
    "description": "Hunt down social media accounts by username across social networks",
-   "stars": 87283,
-   "forks": 10255,
+   "stars": 87293,
+   "forks": 10256,
    "language": "Python",
    "topics": [
     "cli",
@@ -17226,8 +18251,8 @@
    "name": "netdata/netdata",
    "url": "https://github.com/netdata/netdata",
    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
-   "stars": 79899,
-   "forks": 6549,
+   "stars": 79900,
+   "forks": 6551,
    "language": "Go",
    "topics": [
     "ai",
@@ -17237,7 +18262,7 @@
     "database",
     "devops"
    ],
-   "pushedAt": "2026-07-29T10:40:15Z",
+   "pushedAt": "2026-07-29T15:42:21Z",
    "createdAt": "2013-06-17T18:39:10Z",
    "archived": false,
    "license": {
@@ -17254,8 +18279,8 @@
    "name": "moby/moby",
    "url": "https://github.com/moby/moby",
    "description": "The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
-   "stars": 71923,
-   "forks": 19083,
+   "stars": 71921,
+   "forks": 19082,
    "language": "Go",
    "topics": [
     "containers",
@@ -17263,7 +18288,7 @@
     "go",
     "golang"
    ],
-   "pushedAt": "2026-07-28T16:12:16Z",
+   "pushedAt": "2026-07-29T15:27:54Z",
    "createdAt": "2013-01-18T18:10:57Z",
    "archived": false,
    "license": {
@@ -17280,7 +18305,7 @@
    "name": "nektos/act",
    "url": "https://github.com/nektos/act",
    "description": "Run your GitHub Actions locally 🚀",
-   "stars": 71242,
+   "stars": 71247,
    "forks": 1991,
    "language": "Go",
    "topics": [
@@ -17306,7 +18331,7 @@
    "name": "dani-garcia/vaultwarden",
    "url": "https://github.com/dani-garcia/vaultwarden",
    "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
-   "stars": 64541,
+   "stars": 64550,
    "forks": 3055,
    "language": "Rust",
    "topics": [
@@ -17317,7 +18342,7 @@
     "rust",
     "vaultwarden"
    ],
-   "pushedAt": "2026-07-24T16:52:05Z",
+   "pushedAt": "2026-07-29T13:27:43Z",
    "createdAt": "2018-02-17T22:40:20Z",
    "archived": false,
    "license": {
@@ -17362,7 +18387,7 @@
    "name": "usememos/memos",
    "url": "https://github.com/usememos/memos",
    "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
-   "stars": 61862,
+   "stars": 61870,
    "forks": 4603,
    "language": "Go",
    "topics": [
@@ -17373,7 +18398,7 @@
     "memo",
     "microblog"
    ],
-   "pushedAt": "2026-07-29T01:07:27Z",
+   "pushedAt": "2026-07-29T13:48:36Z",
    "createdAt": "2021-12-08T15:30:18Z",
    "archived": false,
    "license": {
@@ -17390,7 +18415,7 @@
    "name": "sansan0/TrendRadar",
    "url": "https://github.com/sansan0/TrendRadar",
    "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 + RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 + AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI…",
-   "stars": 60994,
+   "stars": 61001,
    "forks": 24827,
    "language": "Python",
    "topics": [
@@ -17418,8 +18443,8 @@
    "name": "go-gitea/gitea",
    "url": "https://github.com/go-gitea/gitea",
    "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD",
-   "stars": 57097,
-   "forks": 6951,
+   "stars": 57101,
+   "forks": 6950,
    "language": "Go",
    "topics": [
     "bitbucket",
@@ -17429,7 +18454,7 @@
     "git",
     "git-gui"
    ],
-   "pushedAt": "2026-07-29T00:48:52Z",
+   "pushedAt": "2026-07-29T12:39:36Z",
    "createdAt": "2016-11-01T02:13:26Z",
    "archived": false,
    "license": {
@@ -17446,7 +18471,7 @@
    "name": "etcd-io/etcd",
    "url": "https://github.com/etcd-io/etcd",
    "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-   "stars": 52038,
+   "stars": 52037,
    "forks": 10442,
    "language": "Go",
    "topics": [
@@ -17457,7 +18482,7 @@
     "distributed-systems",
     "etcd"
    ],
-   "pushedAt": "2026-07-29T08:57:08Z",
+   "pushedAt": "2026-07-29T12:34:49Z",
    "createdAt": "2013-07-06T21:57:21Z",
    "archived": false,
    "license": {
@@ -17474,7 +18499,7 @@
    "name": "x64dbg/x64dbg",
    "url": "https://github.com/x64dbg/x64dbg",
    "description": "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",
-   "stars": 49015,
+   "stars": 49016,
    "forks": 2800,
    "language": "C++",
    "topics": [
@@ -17502,7 +18527,7 @@
    "name": "KeygraphHQ/shannon",
    "url": "https://github.com/KeygraphHQ/shannon",
    "description": "Shannon is an autonomous, white-box AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
-   "stars": 46248,
+   "stars": 46251,
    "forks": 5345,
    "language": "TypeScript",
    "topics": [
@@ -17529,7 +18554,7 @@
    "name": "RocketChat/Rocket.Chat",
    "url": "https://github.com/RocketChat/Rocket.Chat",
    "description": "The Secure CommsOS™ for mission-critical operations",
-   "stars": 45885,
+   "stars": 45886,
    "forks": 13756,
    "language": "TypeScript",
    "topics": [
@@ -17540,7 +18565,7 @@
     "hacktoberfest",
     "javascript"
    ],
-   "pushedAt": "2026-07-29T12:26:56Z",
+   "pushedAt": "2026-07-29T15:47:55Z",
    "createdAt": "2015-05-19T07:36:09Z",
    "archived": false,
    "license": {
@@ -17557,7 +18582,7 @@
    "name": "getsentry/sentry",
    "url": "https://github.com/getsentry/sentry",
    "description": "Developer-first error tracking and performance monitoring",
-   "stars": 44400,
+   "stars": 44398,
    "forks": 4774,
    "language": "Python",
    "topics": [
@@ -17568,7 +18593,7 @@
     "devops",
     "django"
    ],
-   "pushedAt": "2026-07-29T12:20:55Z",
+   "pushedAt": "2026-07-29T16:00:19Z",
    "createdAt": "2010-08-30T22:06:41Z",
    "archived": false,
    "license": {
@@ -17613,7 +18638,7 @@
    "name": "istio/istio",
    "url": "https://github.com/istio/istio",
    "description": "Connect, secure, control, and observe services.",
-   "stars": 38302,
+   "stars": 38304,
    "forks": 8360,
    "language": "Go",
    "topics": [
@@ -17641,8 +18666,8 @@
    "name": "ToolJet/ToolJet",
    "url": "https://github.com/ToolJet/ToolJet",
    "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
-   "stars": 38270,
-   "forks": 5194,
+   "stars": 38271,
+   "forks": 5197,
    "language": "JavaScript",
    "topics": [
     "ai-app-builder",
@@ -17652,7 +18677,7 @@
     "internal-project",
     "internal-tool"
    ],
-   "pushedAt": "2026-07-29T12:26:52Z",
+   "pushedAt": "2026-07-29T15:01:45Z",
    "createdAt": "2021-03-30T08:51:34Z",
    "archived": false,
    "license": {
@@ -17669,7 +18694,7 @@
    "name": "portainer/portainer",
    "url": "https://github.com/portainer/portainer",
    "description": "Making Docker and Kubernetes management easy.",
-   "stars": 38078,
+   "stars": 38079,
    "forks": 2869,
    "language": "TypeScript",
    "topics": [
@@ -17680,7 +18705,7 @@
     "docker-image",
     "docker-swarm"
    ],
-   "pushedAt": "2026-07-28T00:01:39Z",
+   "pushedAt": "2026-07-29T13:31:21Z",
    "createdAt": "2016-05-19T20:15:28Z",
    "archived": false,
    "license": {
@@ -17697,7 +18722,7 @@
    "name": "sqlmapproject/sqlmap",
    "url": "https://github.com/sqlmapproject/sqlmap",
    "description": "Automatic SQL injection and database takeover tool",
-   "stars": 38039,
+   "stars": 38040,
    "forks": 6326,
    "language": "Python",
    "topics": [
@@ -17708,7 +18733,7 @@
     "dbms",
     "detection"
    ],
-   "pushedAt": "2026-07-29T11:03:24Z",
+   "pushedAt": "2026-07-29T15:40:06Z",
    "createdAt": "2012-06-26T09:52:15Z",
    "archived": false,
    "license": {
@@ -17725,7 +18750,7 @@
    "name": "aquasecurity/trivy",
    "url": "https://github.com/aquasecurity/trivy",
    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-   "stars": 37127,
+   "stars": 37131,
    "forks": 557,
    "language": "Go",
    "topics": [
@@ -17753,8 +18778,8 @@
    "name": "Dokploy/dokploy",
    "url": "https://github.com/Dokploy/dokploy",
    "description": "Open Source Alternative to Vercel, Netlify and Heroku.",
-   "stars": 36163,
-   "forks": 2801,
+   "stars": 36179,
+   "forks": 2802,
    "language": "TypeScript",
    "topics": [
     "agents",
@@ -17781,7 +18806,7 @@
    "name": "soxoj/maigret",
    "url": "https://github.com/soxoj/maigret",
    "description": "🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites",
-   "stars": 35913,
+   "stars": 35918,
    "forks": 2749,
    "language": "Python",
    "topics": [
@@ -17809,8 +18834,8 @@
    "name": "lissy93/web-check",
    "url": "https://github.com/lissy93/web-check",
    "description": "🕵️‍♂️ All-in-one OSINT tool for analysing any website",
-   "stars": 34311,
-   "forks": 2816,
+   "stars": 34312,
+   "forks": 2817,
    "language": "TypeScript",
    "topics": [
     "osint",
@@ -17836,7 +18861,7 @@
    "name": "dokku/dokku",
    "url": "https://github.com/dokku/dokku",
    "description": "A docker-powered PaaS that helps you build and manage the lifecycle of applications",
-   "stars": 32065,
+   "stars": 32066,
    "forks": 2062,
    "language": "Shell",
    "topics": [
@@ -17847,7 +18872,7 @@
     "dokku",
     "heroku"
    ],
-   "pushedAt": "2026-07-27T23:15:02Z",
+   "pushedAt": "2026-07-29T13:54:14Z",
    "createdAt": "2013-06-08T10:26:57Z",
    "archived": false,
    "license": {
@@ -17864,7 +18889,7 @@
    "name": "webtorrent/webtorrent",
    "url": "https://github.com/webtorrent/webtorrent",
    "description": "⚡️ Streaming torrent client for the web",
-   "stars": 31296,
+   "stars": 31298,
    "forks": 2909,
    "language": "JavaScript",
    "topics": [
@@ -17892,8 +18917,8 @@
    "name": "jitsi/jitsi-meet",
    "url": "https://github.com/jitsi/jitsi-meet",
    "description": "Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.",
-   "stars": 29666,
-   "forks": 7974,
+   "stars": 29667,
+   "forks": 7975,
    "language": "TypeScript",
    "topics": [
     "debian",
@@ -17903,7 +18928,7 @@
     "scalable-video-conferences",
     "sfu"
    ],
-   "pushedAt": "2026-07-28T19:47:26Z",
+   "pushedAt": "2026-07-29T15:31:29Z",
    "createdAt": "2013-12-16T12:51:09Z",
    "archived": false,
    "license": {
@@ -17920,7 +18945,7 @@
    "name": "ossrs/srs",
    "url": "https://github.com/ossrs/srs",
    "description": "SRS is a simple, high-efficiency, real-time media server supporting RTMP, WebRTC, HLS, HTTP-FLV, HTTP-TS, SRT, MPEG-DASH, and GB28181, with codec support for H.264, H.265, AV1, VP9, AAC, Opus, and G.711.",
-   "stars": 29081,
+   "stars": 29082,
    "forks": 5687,
    "language": "C++",
    "topics": [
@@ -17948,8 +18973,8 @@
    "name": "Infisical/infisical",
    "url": "https://github.com/Infisical/infisical",
    "description": "Infisical is the open-source platform for secrets, certificates, and privileged access management.",
-   "stars": 28437,
-   "forks": 2155,
+   "stars": 28438,
+   "forks": 2157,
    "language": "TypeScript",
    "topics": [
     "acme",
@@ -17959,7 +18984,7 @@
     "go",
     "golang"
    ],
-   "pushedAt": "2026-07-29T10:59:46Z",
+   "pushedAt": "2026-07-29T15:46:44Z",
    "createdAt": "2022-08-05T13:50:00Z",
    "archived": false,
    "license": {
@@ -17976,7 +19001,7 @@
    "name": "gitleaks/gitleaks",
    "url": "https://github.com/gitleaks/gitleaks",
    "description": "Find secrets with Gitleaks 🔑",
-   "stars": 28352,
+   "stars": 28356,
    "forks": 2166,
    "language": "Go",
    "topics": [
@@ -18004,8 +19029,8 @@
    "name": "kestra-io/kestra",
    "url": "https://github.com/kestra-io/kestra",
    "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
-   "stars": 27497,
-   "forks": 2791,
+   "stars": 27500,
+   "forks": 2790,
    "language": "Java",
    "topics": [
     "ai-agents",
@@ -18015,7 +19040,7 @@
     "data-orchestration",
     "data-orchestrator"
    ],
-   "pushedAt": "2026-07-29T12:25:04Z",
+   "pushedAt": "2026-07-29T15:02:50Z",
    "createdAt": "2019-08-24T13:56:15Z",
    "archived": false,
    "license": {
@@ -18032,8 +19057,8 @@
    "name": "trufflesecurity/trufflehog",
    "url": "https://github.com/trufflesecurity/trufflehog",
    "description": "Find, verify, and analyze leaked credentials",
-   "stars": 27237,
-   "forks": 2508,
+   "stars": 27239,
+   "forks": 2509,
    "language": "Go",
    "topics": [
     "credentials",
@@ -18043,7 +19068,7 @@
     "scanning",
     "secret"
    ],
-   "pushedAt": "2026-07-29T06:37:34Z",
+   "pushedAt": "2026-07-29T15:23:35Z",
    "createdAt": "2016-12-31T05:08:12Z",
    "archived": false,
    "license": {
@@ -18060,7 +19085,7 @@
    "name": "promptfoo/promptfoo",
    "url": "https://github.com/promptfoo/promptfoo",
    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD…",
-   "stars": 23724,
+   "stars": 23727,
    "forks": 2132,
    "language": "TypeScript",
    "topics": [
@@ -18071,7 +19096,7 @@
     "evaluation-framework",
     "llm"
    ],
-   "pushedAt": "2026-07-29T01:30:49Z",
+   "pushedAt": "2026-07-29T15:44:25Z",
    "createdAt": "2023-04-28T15:48:49Z",
    "archived": false,
    "license": {
@@ -18088,8 +19113,8 @@
    "name": "xai-org/grok-build",
    "url": "https://github.com/xai-org/grok-build",
    "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
-   "stars": 23367,
-   "forks": 4436,
+   "stars": 23396,
+   "forks": 4445,
    "language": "Rust",
    "topics": [],
    "pushedAt": "2026-07-28T22:50:24Z",
@@ -18165,7 +19190,7 @@
    "name": "vxcontrol/pentagi",
    "url": "https://github.com/vxcontrol/pentagi",
    "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
-   "stars": 21342,
+   "stars": 21345,
    "forks": 2793,
    "language": "Go",
    "topics": [
@@ -18176,7 +19201,7 @@
     "golang",
     "gpt"
    ],
-   "pushedAt": "2026-07-29T12:24:39Z",
+   "pushedAt": "2026-07-29T12:40:53Z",
    "createdAt": "2025-01-06T22:22:48Z",
    "archived": false,
    "license": {
@@ -18193,7 +19218,7 @@
    "name": "pavlobu/deskreen",
    "url": "https://github.com/pavlobu/deskreen",
    "description": "Deskreen turns any device with a web browser into a secondary screen for your computer. ⭐️ Star to support our work!",
-   "stars": 21212,
+   "stars": 21214,
    "forks": 1186,
    "language": "TypeScript",
    "topics": [
@@ -18221,8 +19246,8 @@
    "name": "JustVugg/colibri",
    "url": "https://github.com/JustVugg/colibri",
    "description": "Run GLM-5.2 (744B MoE) on a 25GB-RAM consumer machine — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-   "stars": 20797,
-   "forks": 2120,
+   "stars": 20866,
+   "forks": 2131,
    "language": "C",
    "topics": [],
    "pushedAt": "2026-07-29T06:43:15Z",
@@ -18242,7 +19267,7 @@
    "name": "bee-san/RustScan",
    "url": "https://github.com/bee-san/RustScan",
    "description": "🤖 The Modern Port Scanner 🤖",
-   "stars": 20189,
+   "stars": 20190,
    "forks": 1360,
    "language": "Rust",
    "topics": [
@@ -18270,8 +19295,8 @@
    "name": "livekit/livekit",
    "url": "https://github.com/livekit/livekit",
    "description": "End-to-end realtime stack for connecting humans and AI",
-   "stars": 20019,
-   "forks": 2197,
+   "stars": 20021,
+   "forks": 2198,
    "language": "Go",
    "topics": [
     "golang",
@@ -18281,7 +19306,7 @@
     "voice",
     "voice-ai"
    ],
-   "pushedAt": "2026-07-28T08:18:22Z",
+   "pushedAt": "2026-07-29T13:59:49Z",
    "createdAt": "2020-09-30T06:49:46Z",
    "archived": false,
    "license": {
@@ -18298,8 +19323,8 @@
    "name": "bluenviron/mediamtx",
    "url": "https://github.com/bluenviron/mediamtx",
    "description": "Ready-to-use Media-over-QUIC / SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP live media server and media proxy that allows to read, publish, proxy, record and playback real-time video and audio streams.",
-   "stars": 19658,
-   "forks": 2310,
+   "stars": 19660,
+   "forks": 2312,
    "language": "Go",
    "topics": [
     "go",
@@ -18309,7 +19334,7 @@
     "media-server",
     "obs-studio"
    ],
-   "pushedAt": "2026-07-29T12:12:31Z",
+   "pushedAt": "2026-07-29T14:57:11Z",
    "createdAt": "2019-12-28T20:08:43Z",
    "archived": false,
    "license": {
@@ -18352,7 +19377,7 @@
    "name": "saltstack/salt",
    "url": "https://github.com/saltstack/salt",
    "description": "Software to automate the management and configuration of infrastructure and applications at scale.",
-   "stars": 15584,
+   "stars": 15582,
    "forks": 5606,
    "language": "Python",
    "topics": [
@@ -18380,7 +19405,7 @@
    "name": "Fei-Away/Codex-Dream-Skin",
    "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
    "description": "Codex Dream Skin",
-   "stars": 12663,
+   "stars": 12678,
    "forks": 1265,
    "language": "JavaScript",
    "topics": [],
@@ -18401,8 +19426,8 @@
    "name": "andrewyng/openworker",
    "url": "https://github.com/andrewyng/openworker",
    "description": "",
-   "stars": 10390,
-   "forks": 1351,
+   "stars": 10507,
+   "forks": 1373,
    "language": "Python",
    "topics": [],
    "pushedAt": "2026-07-28T19:34:17Z",
@@ -18422,8 +19447,8 @@
    "name": "img2threejs/img2threejs",
    "url": "https://github.com/img2threejs/img2threejs",
    "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
-   "stars": 7949,
-   "forks": 604,
+   "stars": 8046,
+   "forks": 613,
    "language": "Python",
    "topics": [
     "3d",
@@ -18433,7 +19458,7 @@
     "generative",
     "image-to-3d"
    ],
-   "pushedAt": "2026-07-29T11:59:19Z",
+   "pushedAt": "2026-07-29T15:11:00Z",
    "createdAt": "2026-07-15T02:58:39Z",
    "archived": false,
    "license": {
@@ -18450,7 +19475,7 @@
    "name": "unicity-aos/aos-ce",
    "url": "https://github.com/unicity-aos/aos-ce",
    "description": "AOS Community Edition: the open agent operating system.",
-   "stars": 7774,
+   "stars": 7797,
    "forks": 14,
    "language": "Rust",
    "topics": [],
@@ -18471,8 +19496,8 @@
    "name": "x4gKing/X4G",
    "url": "https://github.com/x4gKing/X4G",
    "description": "",
-   "stars": 6985,
-   "forks": 12780,
+   "stars": 7008,
+   "forks": 12816,
    "language": "Python",
    "topics": [],
    "pushedAt": "2026-07-21T12:47:04Z",
@@ -18492,8 +19517,8 @@
    "name": "oso95/scroll-world",
    "url": "https://github.com/oso95/scroll-world",
    "description": "A skill that turn any brand into a scrollable 3D world",
-   "stars": 5667,
-   "forks": 651,
+   "stars": 5702,
+   "forks": 658,
    "language": "JavaScript",
    "topics": [],
    "pushedAt": "2026-07-29T04:44:56Z",
@@ -18513,8 +19538,8 @@
    "name": "elder-plinius/T3MP3ST",
    "url": "https://github.com/elder-plinius/T3MP3ST",
    "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
-   "stars": 5286,
-   "forks": 1092,
+   "stars": 5289,
+   "forks": 1093,
    "language": "TypeScript",
    "topics": [
     "agents",
@@ -18540,8 +19565,8 @@
    "name": "MoonshotAI/Kimi-K3",
    "url": "https://github.com/MoonshotAI/Kimi-K3",
    "description": "Open Frontier Intelligence",
-   "stars": 4090,
-   "forks": 323,
+   "stars": 4785,
+   "forks": 359,
    "language": "—",
    "topics": [],
    "pushedAt": "2026-07-28T11:48:27Z",
@@ -18557,11 +19582,32 @@
    "bucketLabel": "Rising repos (30d)"
   },
   {
+   "id": "gh-1299769220",
+   "name": "openai/codex-security",
+   "url": "https://github.com/openai/codex-security",
+   "description": "SDKs and CLI for Codex Security",
+   "stars": 4358,
+   "forks": 253,
+   "language": "TypeScript",
+   "topics": [],
+   "pushedAt": "2026-07-29T06:41:49Z",
+   "createdAt": "2026-07-13T22:00:13Z",
+   "archived": false,
+   "license": {
+    "spdx": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "class": "permissive",
+    "note": "Permissive — reuse and redistribute freely with attribution."
+   },
+   "bucket": "trending",
+   "bucketLabel": "Rising repos (30d)"
+  },
+  {
    "id": "gh-709147463",
    "name": "HiEventsDev/Hi.Events",
    "url": "https://github.com/HiEventsDev/Hi.Events",
    "description": "Open-source event management and ticket selling platform — perfect for concerts, conferences, and everything in between 🎟️ If you find this project helpful, please consider giving us a star ⭐️",
-   "stars": 3941,
+   "stars": 3944,
    "forks": 692,
    "language": "PHP",
    "topics": [
@@ -18585,32 +19631,11 @@
    "bucketLabel": "Event & ticketing platforms"
   },
   {
-   "id": "gh-1299769220",
-   "name": "openai/codex-security",
-   "url": "https://github.com/openai/codex-security",
-   "description": "SDKs and CLI for Codex Security",
-   "stars": 3784,
-   "forks": 210,
-   "language": "TypeScript",
-   "topics": [],
-   "pushedAt": "2026-07-29T06:41:49Z",
-   "createdAt": "2026-07-13T22:00:13Z",
-   "archived": false,
-   "license": {
-    "spdx": "Apache-2.0",
-    "name": "Apache License 2.0",
-    "class": "permissive",
-    "note": "Permissive — reuse and redistribute freely with attribution."
-   },
-   "bucket": "trending",
-   "bucketLabel": "Rising repos (30d)"
-  },
-  {
    "id": "gh-1293375068",
    "name": "withmarbleapp/os-taxonomy",
    "url": "https://github.com/withmarbleapp/os-taxonomy",
    "description": "",
-   "stars": 3717,
+   "stars": 3719,
    "forks": 644,
    "language": "JavaScript",
    "topics": [],
@@ -18778,7 +19803,7 @@
     "student-scheduling",
     "timetabling"
    ],
-   "pushedAt": "2026-07-28T17:11:44Z",
+   "pushedAt": "2026-07-29T14:52:59Z",
    "createdAt": "2015-01-21T14:58:53Z",
    "archived": false,
    "license": {
