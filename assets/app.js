@@ -133,10 +133,13 @@ function renderHeader() {
     { label: 'Sources live', value: `${stats.sourcesOk}/${stats.sourcesTotal}`, tone: failing > 3 ? 'warn' : null },
     { label: 'Repos tracked', value: formatNumber(stats.repos) },
     {
-      label: 'Repos to avoid',
+      // Informational, not a warning. This is a personal learning project:
+      // running or reading unlicensed code is normal and unremarkable. The
+      // count matters only if you plan to REDISTRIBUTE — copying it into this
+      // public MIT repo, or into work you ship to someone else.
+      label: 'Unlicensed repos',
       value: formatNumber(stats.unlicensedRepos + stats.restrictedRepos),
-      note: 'no / restricted licence',
-      tone: stats.unlicensedRepos + stats.restrictedRepos > 0 ? 'warn' : null,
+      note: 'fine to run · not to redistribute',
     },
   ];
 
@@ -341,10 +344,10 @@ function renderRepoChips() {
 
   el.legend.replaceChildren(
     ...[
-      ['permissive', 'MIT / Apache / BSD — reuse freely'],
-      ['copyleft', 'GPL / AGPL / MPL — derivatives inherit'],
-      ['restricted', 'BSL / SSPL / Elastic — source-available, not OSS'],
-      ['none', 'No licence or unrecognised — verify before any reuse'],
+      ['permissive', 'MIT / Apache / BSD — reuse and redistribute freely'],
+      ['copyleft', 'GPL / AGPL / MPL — derivatives inherit the licence'],
+      ['restricted', 'BSL / SSPL / Elastic — source-available, not OSI'],
+      ['none', 'No licence — run and learn freely, just don’t redistribute'],
     ].map(([className, text]) => {
       const span = document.createElement('span');
       const dot = document.createElement('i');

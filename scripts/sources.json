@@ -588,40 +588,10 @@
       "url": "https://blog.flipkart.tech/feed"
     },
     {
-      "name": "Medium: System Design",
-      "category": "community",
-      "url": "https://medium.com/feed/tag/system-design",
-      "note": "Tag feed. Mixed quality — see the noise warning in $mediumNotes."
-    },
-    {
-      "name": "Medium: Software Architecture",
-      "category": "community",
-      "url": "https://medium.com/feed/tag/software-architecture",
-      "note": "Tag feed. Intermittent — returned a connection error on one of two attempts."
-    },
-    {
-      "name": "Medium: Distributed Systems",
-      "category": "community",
-      "url": "https://medium.com/feed/tag/distributed-systems",
-      "note": "Tag feed."
-    },
-    {
-      "name": "Medium: DevOps",
-      "category": "community",
-      "url": "https://medium.com/feed/tag/devops",
-      "note": "Tag feed."
-    },
-    {
       "name": "ITNEXT",
       "category": "community",
       "url": "https://itnext.io/feed",
       "note": "Medium publication on its own domain — the medium.com/feed/<publication> form fails from this network, custom domains work."
-    },
-    {
-      "name": "Level Up Coding",
-      "category": "community",
-      "url": "https://levelup.gitconnected.com/feed",
-      "note": "High volume, variable quality."
     },
     {
       "name": "Hotstar Engineering",
@@ -641,6 +611,30 @@
       "category": "architecture",
       "url": "https://zerodha.tech/index.xml",
       "note": "Verified locally: 200, 14 items. Indian fintech running very high throughput on a deliberately small stack — good counterpoint to hyperscaler advice."
+    },
+    {
+      "name": "Pinterest Engineering",
+      "category": "architecture",
+      "url": "https://medium.com/feed/pinterest-engineering",
+      "note": "Verified fresh 2026-07-27."
+    },
+    {
+      "name": "Zalando Engineering",
+      "category": "architecture",
+      "url": "https://engineering.zalando.com/atom.xml",
+      "note": "MUST be atom.xml — feed.xml and index.xml both serve an HTML error page under HTTP 200, with feed title \"Oooops, something went wrong.\" ~100 entries, 2.2 MB."
+    },
+    {
+      "name": "Expedia Technology",
+      "category": "architecture",
+      "url": "https://medium.com/feed/expedia-group-tech",
+      "note": "Verified fresh 2026-07-14."
+    },
+    {
+      "name": "Agoda Engineering",
+      "category": "architecture",
+      "url": "https://medium.com/feed/agoda-engineering",
+      "note": "Verified current."
     }
   ],
   "$mediumNotes": {
@@ -649,7 +643,9 @@
     "paywall": "Member-only Medium stories are truncated in RSS, so the summary is a teaser and the link may hit the metered paywall.",
     "ciRisk": "Medium does connection-level blocking from some networks. Expect these feeds to be less reliable from GitHub Actions runners than from a laptop.",
     "alsoTested": "highscalability.com/rss.xml returns 404. tech.olacabs.com/feed and bytes.swiggy.com/feed fail to connect. blog.razorpay.com/feed/ served 200 with 10 items on first contact, then refused TCP connections entirely (SSL_ERROR_SYSCALL, then connection refused) on every later attempt — it appears to block an IP after a few fetches. Removed rather than shipped as a source that fails every run.",
-    "ciVsLocal": "IMPORTANT and counter-intuitive: Medium-family feeds are MORE reliable from GitHub Actions than from a laptop. After a burst of local testing, every Medium domain (medium.com tag feeds, itnext.io, levelup.gitconnected.com, blog.hotstar.com, eng.lyft.com) returned 429 \"Just a moment...\" from this residential IP, while the same feeds all returned green from the Actions runner minutes later. So do not delete a Medium feed because it fails locally — check data/status.json from the last CI run first."
+    "ciVsLocal": "IMPORTANT and counter-intuitive: Medium-family feeds are MORE reliable from GitHub Actions than from a laptop. After a burst of local testing, every Medium domain (medium.com tag feeds, itnext.io, levelup.gitconnected.com, blog.hotstar.com, eng.lyft.com) returned 429 \"Just a moment...\" from this residential IP, while the same feeds all returned green from the Actions runner minutes later. So do not delete a Medium feed because it fails locally — check data/status.json from the last CI run first.",
+    "tagFeedsRemoved": "The four medium.com/feed/tag/* feeds and Level Up Coding were added, then removed on evidence. The tag/software-architecture window contained a PHP framework docs announcement, a Portuguese-language post, and swlh — not a programming publication at all — led with \"The Simple Math You Need to Manage Unpredictable Income\". Corporate engineering publications on Medium are the opposite: 0% paywalled, full text, edited. Ingest those, not tags.",
+    "abandonedButReturning200": "Detectable only by date, never by status code: medium.com/feed/salesforce-engineering newest item 2022-05-05; medium.com/feed/@swiggybytes 2024-07-02; medium.com/feed/@kelseyhightower 2017-01-23 (and kelseyhightower.com does not resolve — he has no live feed). All return HTTP 200."
   },
   "reddit": {
     "enabled": true,
@@ -684,16 +680,17 @@
       "systemdesign",
       "devops",
       "aws",
-      "kubernetes",
-      "security",
-      "java",
-      "linux",
-      "docker",
-      "webdev"
+      "kubernetes"
     ],
-    "perTag": 5,
-    "minReactions": 12,
-    "$comment": "Public, no key. The list endpoint returns description only. top=7 asks for the week's best per tag, which filters out most low-effort posts; minReactions trims further. Tags chosen for senior-level topics rather than breadth."
+    "perTag": 15,
+    "minReactions": 10,
+    "$comment": "Public, no key. IMPORTANT: the query param is `tag` (singular) — `tags` is silently ignored. Raw tag polling is near-worthless: the devops tag published 30+ articles in a single day with a median of 0 reactions and 0 comments, the signature of automated SEO output. `?tag=X&top=14` sorts by reactions over two weeks, which surfaces real posts; a client-side reaction floor trims the rest. `state=rising` works alone but degrades when combined with `tag`, so it is not used. The /api/organizations/{org}/articles endpoint is the highest-signal surface on the platform.",
+    "topDays": 14,
+    "organizations": [
+      "aws",
+      "cloudflare"
+    ],
+    "$organizations": "Verified 2026-07-29: dev.to/api/organizations/aws and /cloudflare return 200; /hashicorp returns 404 — HashiCorp has no dev.to organisation, so it was removed. Note many org articles duplicate what the tag surface already returned; the URL dedupe handles that, so an org contributing 0 net-new items is normal, not a fault."
   },
   "github": {
     "enabled": true,

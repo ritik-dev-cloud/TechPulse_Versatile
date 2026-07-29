@@ -312,38 +312,86 @@ async function collectReddit(config, now) {
 
 /* ----------------------------------------------------------------- dev.to */
 
+/**
+ * dev.to tags map onto this dashboard's categories, which are not the same
+ * vocabulary. An unmapped tag would set a category no chip filters on, so the
+ * items would load and then be invisible — a silent hole, not an error.
+ */
+const DEVTO_CATEGORY = {
+  architecture: 'architecture',
+  systemdesign: 'architecture',
+  devops: 'devops',
+  kubernetes: 'devops',
+  docker: 'platform',
+  linux: 'platform',
+  java: 'platform',
+  aws: 'cloud',
+  security: 'security',
+  webdev: 'webdev',
+  ai: 'ai',
+};
+
 async function collectDevTo(config) {
   if (!config?.enabled) return { statuses: [], items: [] };
   const statuses = [];
   const collected = [];
+
+  const toItem = (article, category, label) => ({
+    id: itemId(article.url, article.title),
+    title: toPlainText(article.title, 200),
+    url: article.url,
+    source: 'DEV Community',
+    category,
+    published: article.published_at ?? null,
+    summary: toPlainText(article.description ?? '', 260),
+    author: article.user?.name ? toPlainText(article.user.name, 60) : '',
+    tags: (article.tag_list ?? []).slice(0, 4),
+    score: article.public_reactions_count ?? 0,
+    devtoSurface: label,
+    priority: 3,
+  });
+
+  // Tag surface. `top=<days>` sorts by reactions over that window, which is the
+  // only thing that separates real posts from automated SEO output — raw tag
+  // polling returns 30+ articles a day with a median of zero reactions.
   for (const topic of config.tags ?? []) {
     const url = new URL(config.endpoint);
-    url.searchParams.set('tag', topic);
-    url.searchParams.set('per_page', String(config.perTag ?? 6));
-    url.searchParams.set('top', '7'); // Top of the last week.
+    url.searchParams.set('tag', topic); // Singular. `tags` is silently ignored.
+    url.searchParams.set('per_page', String(config.perTag ?? 15));
+    url.searchParams.set('top', String(config.topDays ?? 14));
+    const category = DEVTO_CATEGORY[topic];
+    if (!category) {
+      statuses.push({ name: `DEV / ${topic}`, category: 'community', url: url.toString(), ok: false, items: 0, error: `no category mapping for dev.to tag "${topic}" — add one to DEVTO_CATEGORY` });
+      continue;
+    }
     try {
       const articles = JSON.parse(await fetchBody(url.toString()));
       const mapped = (Array.isArray(articles) ? articles : [])
         .filter((a) => (a.public_reactions_count ?? 0) >= (config.minReactions ?? 0))
-        .map((a) => ({
-          id: itemId(a.url, a.title),
-          title: toPlainText(a.title, 200),
-          url: a.url,
-          source: 'DEV Community',
-          category: topic === 'aws' ? 'cloud' : topic === 'kubernetes' ? 'devops' : topic,
-          published: a.published_at ?? null,
-          summary: toPlainText(a.description ?? '', 260),
-          author: a.user?.name ? toPlainText(a.user.name, 60) : '',
-          tags: (a.tag_list ?? []).slice(0, 4),
-          score: a.public_reactions_count ?? 0,
-          priority: 3,
-        }));
+        .map((a) => toItem(a, category, `tag:${topic}`));
       collected.push(...mapped);
       statuses.push({ name: `DEV / ${topic}`, category: 'community', url: url.toString(), ok: true, items: mapped.length });
     } catch (error) {
       statuses.push({ name: `DEV / ${topic}`, category: 'community', url: url.toString(), ok: false, items: 0, error: error.message });
     }
   }
+
+  // Organisation surface — vendor engineering accounts, no reaction floor
+  // needed because the account itself is the quality filter.
+  for (const org of config.organizations ?? []) {
+    const url = `https://dev.to/api/organizations/${org}/articles?per_page=${config.perTag ?? 15}`;
+    try {
+      const articles = JSON.parse(await fetchBody(url));
+      const mapped = (Array.isArray(articles) ? articles : []).map((a) =>
+        toItem(a, org === 'aws' ? 'cloud' : 'devops', `org:${org}`)
+      );
+      collected.push(...mapped);
+      statuses.push({ name: `DEV org / ${org}`, category: 'community', url, ok: true, items: mapped.length });
+    } catch (error) {
+      statuses.push({ name: `DEV org / ${org}`, category: 'community', url, ok: false, items: 0, error: error.message });
+    }
+  }
+
   return { statuses, items: collected };
 }
 
@@ -372,10 +420,14 @@ function classifyLicense(license) {
       spdx: spdx === 'NOASSERTION' ? 'NOASSERTION' : null,
       name: license?.name ?? 'No license file',
       class: 'none',
+      // Framing matters here. This dashboard is a personal learning tool, and
+      // cloning, running and reading unlicensed code is ordinary practice. The
+      // legal constraint is on REDISTRIBUTION — shipping it to someone else, or
+      // vendoring it into a public repo under a different licence.
       note:
         spdx === 'NOASSERTION'
-          ? 'Custom or unrecognised license — read it before reuse.'
-          : 'No license = all rights reserved. Readable, but not legally reusable.',
+          ? 'Custom or unrecognised licence — read it if you plan to redistribute.'
+          : 'No licence file, so formally all rights reserved. Fine to clone, run and learn from; do not redistribute or vendor into your own repo.',
     };
   }
   if (NON_OSS_LICENSES.has(spdx)) {
@@ -383,7 +435,7 @@ function classifyLicense(license) {
       spdx,
       name: license.name,
       class: 'restricted',
-      note: 'Source-available, not OSI open source. Commercial use is restricted.',
+      note: 'Source-available, not OSI open source. Self-hosting for yourself is fine; commercial redistribution is restricted.',
     };
   }
   if (/^(AGPL|GPL|LGPL|MPL|EPL|OSL|CDDL)/i.test(spdx)) {
@@ -391,14 +443,14 @@ function classifyLicense(license) {
       spdx,
       name: license.name,
       class: 'copyleft',
-      note: 'Copyleft — derivative works inherit the license. Fine to run, care needed to embed.',
+      note: 'Copyleft — run it freely; derivative works you distribute inherit the licence.',
     };
   }
   return {
     spdx,
     name: license.name,
     class: 'permissive',
-    note: 'Permissive — safe to reuse with attribution.',
+    note: 'Permissive — reuse and redistribute freely with attribution.',
   };
 }
 
@@ -572,7 +624,12 @@ async function main() {
   }
   for (const source of statuses) {
     if (source.category === 'github') continue; // Repos are not merged into items.
-    source.retained = retainedBySource.get(source.name.replace(/^DEV \/ .*/, 'DEV Community')) ?? 0;
+    // Every dev.to surface — "DEV / <tag>" and "DEV org / <org>" — emits items
+    // under the single source name "DEV Community", so both spellings must
+    // normalise to it. Matching only "DEV / …" made every org surface look like
+    // it had retained nothing, which is exactly the false positive this check is
+    // supposed to avoid producing.
+    source.retained = retainedBySource.get(source.name.replace(/^DEV(?: org)? \/ .*/, 'DEV Community')) ?? 0;
     if (!source.ok || source.items === 0 || source.retained > 0) continue;
 
     const newest = Date.parse(source.newestItem ?? '');
