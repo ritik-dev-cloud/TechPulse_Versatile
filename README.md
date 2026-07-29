@@ -56,7 +56,7 @@ Append to `feeds` in [`scripts/sources.json`](scripts/sources.json) and run `npm
 
 A few decisions that aren't obvious from the code:
 
-**Zero dependencies, on purpose.** This runs unattended in CI against ~70 remote endpoints. Every npm package would be supply-chain surface for no real gain, so the RSS/Atom parser is ~200 lines in `scripts/lib/parse-feed.mjs`. A malformed feed degrades to "skipped," never a crash.
+**Zero dependencies, on purpose.** This runs unattended in CI against ~100 remote endpoints. Every npm package would be supply-chain surface for no real gain, so the RSS/Atom parser is ~200 lines in `scripts/lib/parse-feed.mjs`. A malformed feed degrades to "skipped," never a crash.
 
 **HTTP 200 is not proof of a feed.** Two real sources taught this: an Azure CDN feed URL returns 200 with a *favicon* body, and a retired event-industry blog still serves valid RSS after its domain was repurposed into casino spam. Ingest asserts status, content-type **and** an `<rss>`/`<feed>` root; `check-sources` prints the feed title it actually found.
 
@@ -77,6 +77,8 @@ Full detail in [docs/research/06-feed-sources.md](docs/research/06-feed-sources.
 ## Research briefs
 
 Point-in-time deep dives with inline sources. Claims that couldn't be traced to a primary source are marked `UNVERIFIED` rather than repeated as fact — several widely-circulated statistics in this space turned out to originate from AI-generated SEO blogs citing each other.
+
+Briefs 07–12 were each written by one research agent and then independently fact-checked by a second adversarial agent that re-verified every GitHub licence claim against the API and edited the file in place. **That pass applied 97 corrections**, including three repos filed under the wrong licence class and a statutory commencement date that was a day out. Where a verifier could not confirm something, it marked it `UNVERIFIED` rather than leaving the assertion standing.
 
 | | Brief |
 |---|---|
