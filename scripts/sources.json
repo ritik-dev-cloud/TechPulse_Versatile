@@ -14,6 +14,8 @@
     { "id": "architecture", "label": "Architecture", "blurb": "Microservices, monoliths, event-driven, data" },
     { "id": "ai", "label": "AI & Dev Tooling", "blurb": "Models, coding agents, MCP, AI engineering" },
     { "id": "eventtech", "label": "Event Tech", "blurb": "Event platforms, hybrid delivery, experience technology" },
+    { "id": "security", "label": "Security & Hacking", "blurb": "Breaches, CVEs, offensive and defensive tooling, AI/LLM security" },
+    { "id": "platform", "label": "Linux, Docker & Java", "blurb": "Operating systems, containers, config management, JVM ecosystem" },
     { "id": "community", "label": "Community Pulse", "blurb": "What developers are actually discussing today" }
   ],
   "feeds": [
@@ -85,7 +87,31 @@
     { "name": "PCMA", "category": "eventtech", "url": "https://www.pcma.org/feed/" },
     { "name": "BizBash", "category": "eventtech", "url": "https://www.bizbash.com/rss.xml", "userAgent": "browser", "note": "Note the .xml suffix — /rss and /feed both 404." },
     { "name": "TSNN Trade Show News", "category": "eventtech", "url": "https://www.tsnn.com/rss.xml", "note": "CDATA-wrapped links." },
-    { "name": "Event Marketer", "category": "eventtech", "url": "https://www.eventmarketer.com/feed/" }
+    { "name": "Event Marketer", "category": "eventtech", "url": "https://www.eventmarketer.com/feed/" },
+
+    { "name": "Krebs on Security", "category": "security", "url": "https://krebsonsecurity.com/feed/", "priority": 1 },
+    { "name": "BleepingComputer", "category": "security", "url": "https://www.bleepingcomputer.com/feed/", "priority": 1 },
+    { "name": "The Hacker News", "category": "security", "url": "https://feeds.feedburner.com/TheHackersNews", "priority": 1, "note": "High volume (~50/fetch); strong on AI/LLM supply-chain incidents." },
+    { "name": "Google Project Zero", "category": "security", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 1, "note": "Deep vulnerability research; low cadence, high value." },
+    { "name": "PortSwigger Research", "category": "security", "url": "https://portswigger.net/research/rss", "priority": 1, "note": "Web/appsec technique research (Burp authors)." },
+    { "name": "CISA Advisories", "category": "security", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "priority": 1, "note": "Authoritative KEV/ICS advisories — the patch-now signal." },
+    { "name": "Kali Linux", "category": "security", "url": "https://www.kali.org/rss.xml", "priority": 1 },
+    { "name": "SANS Internet Storm Center", "category": "security", "url": "https://isc.sans.edu/rssfeed.xml" },
+    { "name": "Schneier on Security", "category": "security", "url": "https://www.schneier.com/feed/atom/" },
+    { "name": "Dark Reading", "category": "security", "url": "https://www.darkreading.com/rss.xml" },
+    { "name": "The Record", "category": "security", "url": "https://therecord.media/feed" },
+
+    { "name": "LWN.net", "category": "platform", "url": "https://lwn.net/headlines/rss", "priority": 1, "note": "The authoritative kernel/Linux-internals source." },
+    { "name": "Phoronix", "category": "platform", "url": "https://www.phoronix.com/rss.php", "note": "Kernel/hardware/benchmark news; high volume." },
+    { "name": "Red Hat Blog", "category": "platform", "url": "https://www.redhat.com/en/rss/blog" },
+    { "name": "Ubuntu Blog", "category": "platform", "url": "https://ubuntu.com/blog/feed" },
+    { "name": "Docker Engine Releases", "category": "platform", "url": "https://github.com/moby/moby/releases.atom", "note": "moby = Docker Engine upstream." },
+    { "name": "Podman Releases", "category": "platform", "url": "https://github.com/containers/podman/releases.atom" },
+    { "name": "Ansible Releases", "category": "platform", "url": "https://github.com/ansible/ansible/releases.atom", "note": "ansible.com/blog/rss.xml parses to 0 items — releases are the usable signal." },
+    { "name": "Inside Java", "category": "platform", "url": "https://inside.java/feed.xml", "priority": 1, "note": "Official OpenJDK team blog. blogs.oracle.com/java returns 403." },
+    { "name": "InfoQ Java", "category": "platform", "url": "https://feed.infoq.com/java/" },
+    { "name": "Spring Blog", "category": "platform", "url": "https://spring.io/blog.atom" },
+    { "name": "Quarkus Blog", "category": "platform", "url": "https://quarkus.io/feed.xml", "note": "Full archive (~400 items); capped on ingest." }
   ],
   "hackerNews": {
     "enabled": true,
@@ -114,7 +140,10 @@
       { "label": "AI agents", "topic": "ai", "q": "topic:ai-agents pushed:>{{since:14d}} stars:>400", "sort": "stars", "limit": 8 },
       { "label": "MCP ecosystem", "topic": "ai", "q": "topic:mcp pushed:>{{since:14d}} stars:>300", "sort": "stars", "limit": 8 },
       { "label": "Realtime & streaming", "topic": "eventtech", "q": "topic:webrtc pushed:>{{since:90d}} stars:>200", "sort": "stars", "limit": 8 },
-      { "label": "Event & ticketing platforms", "topic": "eventtech", "q": "topic:event-management pushed:>{{since:365d}} stars:>30", "sort": "stars", "limit": 10 }
+      { "label": "Event & ticketing platforms", "topic": "eventtech", "q": "topic:event-management pushed:>{{since:365d}} stars:>30", "sort": "stars", "limit": 10 },
+      { "label": "Security & pentesting", "topic": "security", "q": "topic:pentesting pushed:>{{since:30d}} stars:>300", "sort": "stars", "limit": 8 },
+      { "label": "Defensive & appsec", "topic": "security", "q": "topic:security-tools pushed:>{{since:30d}} stars:>300", "sort": "stars", "limit": 8 },
+      { "label": "Self-hosted & platform", "topic": "platform", "q": "topic:docker pushed:>{{since:14d}} stars:>1000", "sort": "stars", "limit": 8 }
     ]
   }
 }

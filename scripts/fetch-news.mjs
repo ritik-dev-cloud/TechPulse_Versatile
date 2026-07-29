@@ -156,8 +156,21 @@ async function collectFeed(feed) {
       priority: feed.priority ?? 2,
     }));
     debug(`${feed.name}: ${normalised.length} items in ${Date.now() - started}ms`);
+    // Newest publish date is what separates "this publisher has gone quiet"
+    // from "we fetched fresh items and then lost them", which are very
+    // different problems. See the classification in main().
+    const newestItem =
+      normalised.map((item) => Date.parse(item.published ?? '')).filter(Number.isFinite).sort((a, b) => b - a)[0] ?? null;
     return {
-      status: { name: feed.name, category: feed.category, url: feed.url, ok: true, items: normalised.length, ms: Date.now() - started },
+      status: {
+        name: feed.name,
+        category: feed.category,
+        url: feed.url,
+        ok: true,
+        items: normalised.length,
+        ms: Date.now() - started,
+        newestItem: newestItem ? new Date(newestItem).toISOString() : null,
+      },
       items: normalised,
     };
   } catch (error) {
@@ -458,9 +471,17 @@ async function main() {
         .sort((a, b) => b.stars - a.stars)
     : previous?.repos ?? [];
 
-  // A source can fetch cleanly and still contribute nothing — every item too
-  // old, or all of them deduped away. That looks identical to "healthy" in the
-  // status file unless we compare fetched against retained, so record both.
+  // A source can fetch cleanly and still contribute nothing, which looks
+  // identical to "healthy" in the status file unless we compare fetched against
+  // retained. But there are two very different reasons for it, and conflating
+  // them buries the one that matters:
+  //
+  //   dormant  — the publisher simply hasn't posted inside the retention window.
+  //              Expected, needs no action, and true of several official blogs
+  //              (React, Vue, V8) that go quiet for months at a time.
+  //   anomaly  — the source published recently, yet nothing survived. That means
+  //              a parser, dedupe or date bug on our side.
+  const cutoffMs = now.getTime() - RETAIN_DAYS * 86_400_000;
   const retainedBySource = new Map();
   for (const item of items) {
     retainedBySource.set(item.source, (retainedBySource.get(item.source) ?? 0) + 1);
@@ -468,8 +489,14 @@ async function main() {
   for (const source of statuses) {
     if (source.category === 'github') continue; // Repos are not merged into items.
     source.retained = retainedBySource.get(source.name.replace(/^DEV \/ .*/, 'DEV Community')) ?? 0;
-    if (source.ok && source.items > 0 && source.retained === 0) {
-      source.warning = 'fetched items but none were retained (too old, or all duplicates)';
+    if (!source.ok || source.items === 0 || source.retained > 0) continue;
+
+    const newest = Date.parse(source.newestItem ?? '');
+    if (Number.isFinite(newest) && newest < cutoffMs) {
+      const ageDays = Math.floor((now.getTime() - newest) / 86_400_000);
+      source.dormant = `no posts in ${ageDays}d — outside the ${RETAIN_DAYS}d window`;
+    } else {
+      source.warning = 'published recently but nothing was retained — check parser/dedupe';
     }
   }
 
@@ -516,10 +543,16 @@ async function main() {
     for (const source of failed) log(`    ✗ ${source.name} — ${source.error}`);
   }
 
+  const dormant = statuses.filter((source) => source.dormant);
+  if (dormant.length) {
+    log('');
+    log(`  dormant publishers (expected, no action needed): ${dormant.map((s) => s.name).join(', ')}`);
+  }
+
   const silent = statuses.filter((source) => source.warning);
   if (silent.length) {
     log('');
-    log('  sources that fetched but contributed nothing:');
+    log('  ANOMALY — published recently but contributed nothing:');
     for (const source of silent) log(`    ! ${source.name} — ${source.warning}`);
   }
 

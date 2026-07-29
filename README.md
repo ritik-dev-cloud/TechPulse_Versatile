@@ -60,7 +60,9 @@ A few decisions that aren't obvious from the code:
 
 **HTTP 200 is not proof of a feed.** Two real sources taught this: an Azure CDN feed URL returns 200 with a *favicon* body, and a retired event-industry blog still serves valid RSS after its domain was repurposed into casino spam. Ingest asserts status, content-type **and** an `<rss>`/`<feed>` root; `check-sources` prints the feed title it actually found.
 
-**"Fetched successfully" is not proof of contribution.** A source can return 25 healthy items that are all too old or all duplicates, which looks identical to health in a status file. Each run now compares items fetched against items retained and warns on the difference. This caught a real bug: the Hacker News search API, queried without a `query` parameter, ranks by all-time popularity and was returning stories from 2016–2024.
+**"Fetched successfully" is not proof of contribution.** A source can return 25 healthy items that are all too old or all duplicates, which looks identical to health in a status file. Each run compares items fetched against items retained. This caught a real bug: the Hacker News search API, queried without a `query` parameter, ranks by all-time popularity and was returning stories from 2016–2024.
+
+**But "contributed nothing" has two causes, and conflating them buries the one that matters.** A *dormant* publisher simply hasn't posted inside the retention window — true of React (155 days), Vue (696), V8, web.dev and Project Zero, and needing no action. An *anomaly* is a source that published recently and still lost everything, which means a parser or dedupe bug. The run reports these separately; only the second is a warning.
 
 **Deduplication needs the timestamp.** Chrome Releases legitimately publishes many posts titled "Chrome for Android Update"; PCMA runs a weekly "People on the Move" column. BizBash, by contrast, files one article under two URL paths. So the key is `source + title + exact publish instant` — title alone would delete real stories.
 
@@ -84,6 +86,12 @@ Point-in-time deep dives with inline sources. Claims that couldn't be traced to 
 | 04 | [Microservices, monoliths & event-driven architecture](docs/research/04-architecture.md) |
 | 05 | [Smart events: technology & AI](docs/research/05-event-technology.md) |
 | 06 | [How this dashboard gets its data](docs/research/06-feed-sources.md) |
+| 07 | [Event tech &amp; research worldwide](docs/research/07-global-event-tech.md) — India, China, Japan, Hong Kong, Germany, UAE |
+| 08 | [Building smart engagement software](docs/research/08-smart-engagement-build.md) |
+| 09 | [AWS + DevOps enterprise reference project](docs/research/09-aws-devops-enterprise.md) |
+| 10 | [How AI builds software &amp; token economics](docs/research/10-ai-building-software.md) |
+| 11 | [Offensive &amp; defensive security](docs/research/11-cybersecurity.md) |
+| 12 | [Docker, Linux, Kali, Ansible, Java](docs/research/12-platform-tooling.md) |
 
 ## Attribution
 

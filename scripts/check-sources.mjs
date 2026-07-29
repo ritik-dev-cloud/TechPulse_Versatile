@@ -23,9 +23,27 @@ const FIX = process.argv.includes('--fix');
 
 const config = JSON.parse(await readFile(SOURCES_PATH, 'utf8'));
 
-const results = await Promise.all(
-  config.feeds.map(async (feed) => {
-    const started = Date.now();
+/**
+ * Bounded concurrency. Firing all ~86 feeds at once exhausted the socket pool
+ * and left the top-level await unsettled, so the checker exited mid-run.
+ */
+async function mapLimit(items, limit, worker) {
+  const results = new Array(items.length);
+  let cursor = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (cursor < items.length) {
+        const index = cursor++;
+        results[index] = await worker(items[index]);
+      }
+    })
+  );
+  return results;
+}
+
+const results = await mapLimit(config.feeds, 8, async (feed) => {
+  const started = Date.now();
+  {
     try {
       const { body, status, contentType } = await fetchText(feed.url, {
         userAgent: agentFor(feed),
@@ -58,8 +76,8 @@ const results = await Promise.all(
     } catch (error) {
       return { feed, status: error.status ?? 0, ok: false, items: 0, title: '', ms: Date.now() - started, contentType: '', note: error.message };
     }
-  })
-);
+  }
+});
 
 const pad = (text, width) => String(text ?? '').padEnd(width).slice(0, width);
 const healthy = results.filter((r) => r.ok);
