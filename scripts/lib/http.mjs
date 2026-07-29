@@ -31,6 +31,22 @@ const BOT_CHALLENGE =
   /(just a moment\.\.\.|attention required!|cf-browser-verification|cf_chl_opt|__cf_chl|enable javascript and cookies to continue|checking if the site connection is secure|ddos-guard|请开启javascript|access denied.*reference #)/i;
 
 /**
+ * Pull the <title> out of an unexpected HTML response.
+ *
+ * Without this, a feed that starts serving a block page reports only
+ * "unexpected content-type: text/html", which does not say whether the URL
+ * died, the publisher moved, or a WAF is in the way — and the run is
+ * unattended, so nobody is watching to go and look. The page title almost
+ * always answers it ("Access denied", "404 Not Found", "Just a moment...").
+ */
+function describePage(head) {
+  const title = /<title[^>]*>([\s\S]{0,120}?)<\/title>/i.exec(head)?.[1];
+  if (!title) return '';
+  const clean = title.replace(/\s+/g, ' ').trim().slice(0, 70);
+  return clean ? ` — page title: "${clean}"` : '';
+}
+
+/**
  * Decide whether a response body is plausibly the feed we asked for.
  * @returns {{ok: true} | {ok: false, reason: string}}
  */
@@ -50,11 +66,11 @@ export function validateFeedResponse({ body, contentType }) {
   }
 
   if (contentType && !XML_CONTENT_TYPES.test(contentType)) {
-    return { ok: false, reason: `unexpected content-type: ${contentType}` };
+    return { ok: false, reason: `unexpected content-type: ${contentType}${describePage(head)}` };
   }
   if (!head.trim()) return { ok: false, reason: 'empty body' };
   if (/^\s*(<!doctype html|<html)/i.test(head)) {
-    return { ok: false, reason: 'served an HTML page, not a feed' };
+    return { ok: false, reason: `served an HTML page, not a feed${describePage(head)}` };
   }
   if (!/<(rss|feed|rdf:RDF)\b/i.test(head)) {
     return { ok: false, reason: 'no <rss>/<feed> root element' };

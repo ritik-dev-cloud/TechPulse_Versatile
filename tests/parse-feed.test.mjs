@@ -220,3 +220,21 @@ test('accepts a feed served with a vague content-type', () => {
     true
   );
 });
+
+// An unattended run has nobody watching, so a rejection must say enough to
+// diagnose itself later. "unexpected content-type: text/html" alone does not
+// distinguish a dead URL from a moved publisher from a WAF block.
+test('includes the page title when rejecting an unexpected HTML response', () => {
+  const result = validateFeedResponse({
+    body: '<!doctype html><html><head><title>Access Denied — Error 1020</title></head><body>no</body></html>',
+    contentType: 'text/html',
+  });
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /page title: "Access Denied — Error 1020"/);
+});
+
+test('tolerates an HTML rejection with no title', () => {
+  const result = validateFeedResponse({ body: '<html><body>bare</body></html>', contentType: 'text/html' });
+  assert.equal(result.ok, false);
+  assert.doesNotMatch(result.reason, /page title/);
+});
