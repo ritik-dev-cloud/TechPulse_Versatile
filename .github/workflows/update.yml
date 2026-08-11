@@ -34,11 +34,23 @@ on:
       # made with GITHUB_TOKEN do not trigger workflows, so there is no loop
       # today, but listing it would make one the moment a PAT was used instead.
 
-# Only one update may run at a time — two concurrent runs would race on the
-# commit and one would fail to push.
+# Only one update may run at a time.
+#
+# This was `cancel-in-progress: false`, to stop two runs racing on the commit.
+# That reasoning was wrong, and it deadlocked the schedule for five days:
+# a run wedged in `pending` with no jobs assigned held the group, and because
+# GitHub permits only one *pending* run per group, every new scheduled run
+# cancelled the previous pending one instead of ever starting. Result between
+# 2026-08-06 and 2026-08-11: 45 cancellations, 1 failure, zero successes, and a
+# dashboard that quietly went 110 hours stale.
+#
+# `true` is the safer trade. A push race is cheap and already self-corrects —
+# the commit step rebases and retries once — whereas a wedged group never
+# recovers on its own. Now a new run displaces a stuck one and the schedule
+# heals itself.
 concurrency:
   group: update-feed
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write # Needed to commit the refreshed data/ files.
@@ -97,6 +109,10 @@ jobs:
   deploy:
     needs: update
     runs-on: ubuntu-latest
+    # Bounded so a stuck Pages deployment cannot hold the concurrency group
+    # open indefinitely. The update job has had a timeout since the start; this
+    # one did not, which left an unbounded way to wedge the schedule.
+    timeout-minutes: 10
     # Deploy even when `update` reports failure: a partially-refreshed feed is
     # still worth publishing, and `update` only fails hard when the run is badly
     # degraded. Skip only if it was cancelled.
