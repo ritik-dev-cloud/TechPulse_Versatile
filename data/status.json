@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T13:45:15.215Z",
+  "checkedAt": "2026-09-23T18:29:29.352Z",
   "sources": [
     {
       "name": "AWS What's New",
@@ -7,9 +7,9 @@
       "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
       "ok": true,
       "items": 25,
-      "ms": 402,
+      "ms": 176,
       "newestItem": "2026-09-23T00:06:00.000Z",
-      "retained": 44
+      "retained": 43
     },
     {
       "name": "AWS News Blog",
@@ -17,7 +17,7 @@
       "url": "https://aws.amazon.com/blogs/aws/feed/",
       "ok": true,
       "items": 20,
-      "ms": 279,
+      "ms": 152,
       "newestItem": "2026-09-22T22:23:14.000Z",
       "retained": 6
     },
@@ -27,7 +27,7 @@
       "url": "https://blog.cloudflare.com/rss/",
       "ok": true,
       "items": 20,
-      "ms": 354,
+      "ms": 186,
       "newestItem": "2026-09-22T14:04:31.000Z",
       "retained": 5
     },
@@ -37,8 +37,8 @@
       "url": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
       "ok": true,
       "items": 25,
-      "ms": 318,
-      "newestItem": "2026-09-22T19:22:34.000Z",
+      "ms": 168,
+      "newestItem": "2026-09-23T16:50:05.000Z",
       "retained": 19
     },
     {
@@ -47,9 +47,10 @@
       "url": "https://azure.microsoft.com/en-us/blog/feed/",
       "ok": true,
       "items": 10,
-      "ms": 617,
-      "newestItem": "2026-09-16T16:00:00.000Z",
-      "retained": 1
+      "ms": 173,
+      "newestItem": "2026-09-10T21:00:00.000Z",
+      "retained": 0,
+      "warning": "published recently but nothing was retained — check parser/dedupe"
     },
     {
       "name": "Google Cloud Blog",
@@ -57,9 +58,9 @@
       "url": "https://cloudblog.withgoogle.com/rss/",
       "ok": true,
       "items": 20,
-      "ms": 994,
-      "newestItem": "2026-09-21T16:00:00.000Z",
-      "retained": 18
+      "ms": 6616,
+      "newestItem": "2026-09-23T16:00:00.000Z",
+      "retained": 20
     },
     {
       "name": "Google Cloud (GCP)",
@@ -67,7 +68,7 @@
       "url": "https://cloudblog.withgoogle.com/products/gcp/rss/",
       "ok": true,
       "items": 20,
-      "ms": 1623,
+      "ms": 1568,
       "newestItem": "2026-09-18T16:00:00.000Z",
       "retained": 1
     },
@@ -77,7 +78,7 @@
       "url": "https://kubernetes.io/feed.xml",
       "ok": true,
       "items": 25,
-      "ms": 403,
+      "ms": 369,
       "newestItem": "2026-09-22T18:00:00.000Z",
       "retained": 3
     },
@@ -87,9 +88,9 @@
       "url": "https://www.cncf.io/feed/",
       "ok": true,
       "items": 10,
-      "ms": 154,
-      "newestItem": "2026-09-22T13:34:05.000Z",
-      "retained": 2
+      "ms": 294,
+      "newestItem": "2026-09-23T14:47:15.000Z",
+      "retained": 3
     },
     {
       "name": "GitHub Changelog",
@@ -97,8 +98,8 @@
       "url": "https://github.blog/changelog/feed/",
       "ok": true,
       "items": 10,
-      "ms": 61,
-      "newestItem": "2026-09-23T02:14:54.000Z",
+      "ms": 227,
+      "newestItem": "2026-09-23T15:00:57.000Z",
       "retained": 23
     },
     {
@@ -107,7 +108,7 @@
       "url": "https://github.blog/feed/",
       "ok": true,
       "items": 10,
-      "ms": 112,
+      "ms": 242,
       "newestItem": "2026-09-23T13:00:00.000Z",
       "retained": 3
     },
@@ -117,7 +118,7 @@
       "url": "https://about.gitlab.com/atom.xml",
       "ok": true,
       "items": 20,
-      "ms": 180,
+      "ms": 274,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 9
     },
@@ -127,7 +128,7 @@
       "url": "https://www.docker.com/blog/feed/",
       "ok": true,
       "items": 10,
-      "ms": 111,
+      "ms": 301,
       "newestItem": "2026-09-22T15:06:15.000Z",
       "retained": 1
     },
@@ -137,7 +138,7 @@
       "url": "https://www.hashicorp.com/blog/feed.xml",
       "ok": true,
       "items": 20,
-      "ms": 89,
+      "ms": 131,
       "newestItem": "2026-09-29T07:00:00.000Z",
       "retained": 4
     },
@@ -147,7 +148,7 @@
       "url": "https://grafana.com/blog/index.xml",
       "ok": true,
       "items": 10,
-      "ms": 115,
+      "ms": 99,
       "newestItem": "2026-09-21T18:45:23.000Z",
       "retained": 1
     },
@@ -157,7 +158,7 @@
       "url": "https://prometheus.io/blog/feed.xml",
       "ok": true,
       "items": 25,
-      "ms": 406,
+      "ms": 343,
       "newestItem": "2026-09-21T00:00:00.000Z",
       "retained": 1
     },
@@ -167,7 +168,7 @@
       "url": "https://github.com/opentofu/opentofu/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 417,
+      "ms": 680,
       "newestItem": "2026-09-17T15:24:48.000Z",
       "retained": 1
     },
@@ -177,7 +178,7 @@
       "url": "https://github.com/argoproj/argo-cd/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 965,
+      "ms": 1070,
       "newestItem": "2026-09-16T16:11:35.000Z",
       "retained": 1
     },
@@ -187,7 +188,7 @@
       "url": "https://github.com/fluxcd/flux2/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 502,
+      "ms": 476,
       "newestItem": "2026-08-31T17:07:22.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -198,7 +199,7 @@
       "url": "https://github.com/kubernetes/kubernetes/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 279,
+      "ms": 437,
       "newestItem": "2026-08-26T16:29:12.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -209,7 +210,7 @@
       "url": "https://aws.amazon.com/blogs/devops/feed/",
       "ok": true,
       "items": 20,
-      "ms": 41,
+      "ms": 49,
       "newestItem": "2026-09-04T18:13:04.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -220,7 +221,7 @@
       "url": "https://web.dev/static/blog/feed.xml",
       "ok": true,
       "items": 10,
-      "ms": 157,
+      "ms": 204,
       "newestItem": "2026-05-29T07:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 117d — outside the 45d window"
@@ -231,7 +232,7 @@
       "url": "https://developer.chrome.com/static/blog/feed.xml",
       "ok": true,
       "items": 10,
-      "ms": 194,
+      "ms": 1111,
       "newestItem": "2026-06-22T07:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 93d — outside the 45d window"
@@ -242,7 +243,7 @@
       "url": "https://chromereleases.googleblog.com/atom.xml",
       "ok": true,
       "items": 25,
-      "ms": 401,
+      "ms": 279,
       "newestItem": "2026-09-22T18:20:17.983Z",
       "retained": 17
     },
@@ -252,7 +253,7 @@
       "url": "https://hacks.mozilla.org/feed/",
       "ok": true,
       "items": 20,
-      "ms": 213,
+      "ms": 188,
       "newestItem": "2026-08-24T15:32:15.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -263,7 +264,7 @@
       "url": "https://v8.dev/blog.atom",
       "ok": true,
       "items": 10,
-      "ms": 152,
+      "ms": 117,
       "newestItem": "2025-08-04T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 415d — outside the 45d window"
@@ -274,7 +275,7 @@
       "url": "https://react.dev/rss.xml",
       "ok": true,
       "items": 24,
-      "ms": 212,
+      "ms": 58,
       "newestItem": "2026-09-09T00:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -285,7 +286,7 @@
       "url": "https://nextjs.org/feed.xml",
       "ok": true,
       "items": 25,
-      "ms": 1338,
+      "ms": 49,
       "newestItem": "2026-09-22T18:00:00.000Z",
       "retained": 2
     },
@@ -295,8 +296,8 @@
       "url": "https://vercel.com/atom",
       "ok": true,
       "items": 25,
-      "ms": 361,
-      "newestItem": "2026-09-22T00:00:00.000Z",
+      "ms": 375,
+      "newestItem": "2026-09-23T00:00:00.000Z",
       "retained": 24
     },
     {
@@ -305,7 +306,7 @@
       "url": "https://astro.build/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 73,
+      "ms": 50,
       "newestItem": "2026-09-08T00:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -316,7 +317,7 @@
       "url": "https://svelte.dev/blog/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 154,
+      "ms": 211,
       "newestItem": "2026-09-01T00:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -327,7 +328,7 @@
       "url": "https://blog.vuejs.org/feed.rss",
       "ok": true,
       "items": 15,
-      "ms": 283,
+      "ms": 413,
       "newestItem": "2024-09-01T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 752d — outside the 45d window"
@@ -338,7 +339,7 @@
       "url": "https://nodejs.org/en/feed/blog.xml",
       "ok": true,
       "items": 25,
-      "ms": 208,
+      "ms": 97,
       "newestItem": "2026-09-22T09:03:49.000Z",
       "retained": 2
     },
@@ -348,9 +349,9 @@
       "url": "https://github.com/nodejs/node/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 1916,
-      "newestItem": "2026-09-22T09:02:46.000Z",
-      "retained": 2
+      "ms": 3147,
+      "newestItem": "2026-09-23T18:21:37.000Z",
+      "retained": 3
     },
     {
       "name": "Deno Blog",
@@ -358,7 +359,7 @@
       "url": "https://deno.com/feed",
       "ok": true,
       "items": 25,
-      "ms": 350,
+      "ms": 405,
       "newestItem": "2026-06-25T09:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 90d — outside the 45d window"
@@ -369,7 +370,7 @@
       "url": "https://bun.com/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 94,
+      "ms": 117,
       "newestItem": "2026-09-05T05:39:32.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -380,10 +381,10 @@
       "url": "https://devblogs.microsoft.com/typescript/feed/",
       "ok": true,
       "items": 10,
-      "ms": 52,
+      "ms": 59,
       "newestItem": "2026-07-08T15:58:29.000Z",
       "retained": 0,
-      "dormant": "no posts in 76d — outside the 45d window"
+      "dormant": "no posts in 77d — outside the 45d window"
     },
     {
       "name": "Rust Blog",
@@ -391,7 +392,7 @@
       "url": "https://blog.rust-lang.org/feed.xml",
       "ok": true,
       "items": 10,
-      "ms": 104,
+      "ms": 63,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 3
     },
@@ -401,9 +402,10 @@
       "url": "https://www.smashingmagazine.com/feed/",
       "ok": true,
       "items": 25,
-      "ms": 137,
+      "ms": 120,
       "newestItem": "2026-09-16T13:00:00.000Z",
-      "retained": 1
+      "retained": 0,
+      "warning": "published recently but nothing was retained — check parser/dedupe"
     },
     {
       "name": "JetBrains Blog",
@@ -411,9 +413,9 @@
       "url": "https://blog.jetbrains.com/feed/",
       "ok": true,
       "items": 12,
-      "ms": 5130,
-      "newestItem": "2026-09-23T12:25:01.000Z",
-      "retained": 11
+      "ms": 96,
+      "newestItem": "2026-09-23T13:23:34.000Z",
+      "retained": 9
     },
     {
       "name": "Google Developers Blog",
@@ -421,7 +423,7 @@
       "url": "https://blog.google/technology/developers/rss/",
       "ok": true,
       "items": 20,
-      "ms": 867,
+      "ms": 4004,
       "newestItem": "2026-09-15T17:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -432,7 +434,7 @@
       "url": "https://martinfowler.com/feed.atom",
       "ok": true,
       "items": 25,
-      "ms": 261,
+      "ms": 157,
       "newestItem": "2026-09-17T13:50:00.000Z",
       "retained": 2
     },
@@ -442,7 +444,7 @@
       "url": "https://www.thoughtworks.com/rss/insights.xml",
       "ok": true,
       "items": 25,
-      "ms": 405,
+      "ms": 330,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 3
     },
@@ -452,8 +454,8 @@
       "url": "https://feed.infoq.com/architecture-design/",
       "ok": true,
       "items": 15,
-      "ms": 716,
-      "newestItem": "2026-09-23T13:22:00.000Z",
+      "ms": 776,
+      "newestItem": "2026-09-23T14:14:00.000Z",
       "retained": 12
     },
     {
@@ -462,8 +464,8 @@
       "url": "https://feed.infoq.com/news/",
       "ok": true,
       "items": 15,
-      "ms": 990,
-      "newestItem": "2026-09-23T13:22:00.000Z",
+      "ms": 722,
+      "newestItem": "2026-09-23T14:14:00.000Z",
       "retained": 26
     },
     {
@@ -472,7 +474,7 @@
       "url": "https://aws.amazon.com/blogs/architecture/feed/",
       "ok": true,
       "items": 20,
-      "ms": 33,
+      "ms": 43,
       "newestItem": "2026-09-18T21:33:13.000Z",
       "retained": 5
     },
@@ -482,7 +484,7 @@
       "url": "https://netflixtechblog.com/feed",
       "ok": true,
       "items": 10,
-      "ms": 878,
+      "ms": 489,
       "newestItem": "2026-09-18T16:01:02.000Z",
       "retained": 1
     },
@@ -492,7 +494,7 @@
       "url": "https://engineering.fb.com/feed/",
       "ok": true,
       "items": 9,
-      "ms": 621,
+      "ms": 300,
       "newestItem": "2026-09-21T16:00:37.000Z",
       "retained": 2
     },
@@ -502,10 +504,10 @@
       "url": "https://slack.engineering/feed/",
       "ok": true,
       "items": 8,
-      "ms": 422,
+      "ms": 344,
       "newestItem": "2026-07-14T16:10:08.000Z",
       "retained": 0,
-      "dormant": "no posts in 70d — outside the 45d window"
+      "dormant": "no posts in 71d — outside the 45d window"
     },
     {
       "name": "Dropbox Tech",
@@ -513,7 +515,7 @@
       "url": "https://dropbox.tech/feed",
       "ok": true,
       "items": 10,
-      "ms": 892,
+      "ms": 674,
       "newestItem": "2026-09-23T07:00:00.000Z",
       "retained": 2
     },
@@ -523,7 +525,7 @@
       "url": "https://stripe.com/blog/feed.rss",
       "ok": true,
       "items": 10,
-      "ms": 466,
+      "ms": 98,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 3
     },
@@ -533,7 +535,7 @@
       "url": "https://engineering.atspotify.com/feed",
       "ok": true,
       "items": 5,
-      "ms": 361,
+      "ms": 168,
       "newestItem": "2026-09-16T19:13:53.000Z",
       "retained": 1
     },
@@ -543,7 +545,7 @@
       "url": "https://discord.com/blog/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 284,
+      "ms": 105,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -554,7 +556,7 @@
       "url": "https://stackoverflow.blog/engineering/feed/",
       "ok": true,
       "items": 25,
-      "ms": 324,
+      "ms": 82,
       "newestItem": "2026-09-23T04:40:00.000Z",
       "retained": 4
     },
@@ -564,9 +566,9 @@
       "url": "https://newsletter.pragmaticengineer.com/feed",
       "ok": true,
       "items": 20,
-      "ms": 301,
-      "newestItem": "2026-09-22T17:17:31.000Z",
-      "retained": 2
+      "ms": 270,
+      "newestItem": "2026-09-23T17:07:22.000Z",
+      "retained": 3
     },
     {
       "name": "OpenAI Blog",
@@ -574,8 +576,8 @@
       "url": "https://openai.com/news/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 243,
-      "newestItem": "2026-09-23T13:00:00.000Z",
+      "ms": 80,
+      "newestItem": "2026-09-24T12:00:00.000Z",
       "retained": 15
     },
     {
@@ -584,7 +586,7 @@
       "url": "https://huggingface.co/blog/feed.xml",
       "ok": true,
       "items": 25,
-      "ms": 179,
+      "ms": 108,
       "newestItem": "2026-09-23T13:17:01.000Z",
       "retained": 6
     },
@@ -594,7 +596,7 @@
       "url": "https://simonwillison.net/atom/everything/",
       "ok": true,
       "items": 25,
-      "ms": 176,
+      "ms": 134,
       "newestItem": "2026-09-23T02:53:19.000Z",
       "retained": 25
     },
@@ -604,9 +606,9 @@
       "url": "https://meetings.skift.com/feed/",
       "ok": true,
       "items": 10,
-      "ms": 191,
-      "newestItem": "2026-09-23T13:32:36.000Z",
-      "retained": 9
+      "ms": 595,
+      "newestItem": "2026-09-23T18:15:44.000Z",
+      "retained": 8
     },
     {
       "name": "Event Industry News",
@@ -614,9 +616,9 @@
       "url": "https://www.eventindustrynews.com/feed",
       "ok": true,
       "items": 10,
-      "ms": 1271,
-      "newestItem": "2026-09-23T13:34:52.000Z",
-      "retained": 20
+      "ms": 1297,
+      "newestItem": "2026-09-23T15:07:32.000Z",
+      "retained": 18
     },
     {
       "name": "PCMA",
@@ -624,8 +626,8 @@
       "url": "https://www.pcma.org/feed/",
       "ok": true,
       "items": 10,
-      "ms": 512,
-      "newestItem": "2026-09-18T16:57:43.000Z",
+      "ms": 208,
+      "newestItem": "2026-09-23T15:34:45.000Z",
       "retained": 8
     },
     {
@@ -634,9 +636,9 @@
       "url": "https://www.bizbash.com/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 767,
+      "ms": 4653,
       "newestItem": "2026-10-28T14:00:00.000Z",
-      "retained": 13
+      "retained": 12
     },
     {
       "name": "TSNN Trade Show News",
@@ -644,8 +646,8 @@
       "url": "https://www.tsnn.com/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 874,
-      "newestItem": "2026-09-22T19:39:32.000Z",
+      "ms": 755,
+      "newestItem": "2026-09-23T15:00:29.000Z",
       "retained": 9
     },
     {
@@ -654,9 +656,9 @@
       "url": "https://www.eventmarketer.com/feed/",
       "ok": true,
       "items": 5,
-      "ms": 422,
-      "newestItem": "2026-09-21T21:52:51.000Z",
-      "retained": 9
+      "ms": 115,
+      "newestItem": "2026-09-23T14:03:36.000Z",
+      "retained": 10
     },
     {
       "name": "Krebs on Security",
@@ -664,7 +666,7 @@
       "url": "https://krebsonsecurity.com/feed/",
       "ok": true,
       "items": 10,
-      "ms": 436,
+      "ms": 36,
       "newestItem": "2026-09-16T18:14:22.000Z",
       "retained": 1
     },
@@ -674,9 +676,9 @@
       "url": "https://www.bleepingcomputer.com/feed/",
       "ok": true,
       "items": 15,
-      "ms": 496,
-      "newestItem": "2026-09-23T12:29:53.000Z",
-      "retained": 55
+      "ms": 63,
+      "newestItem": "2026-09-23T16:20:54.000Z",
+      "retained": 57
     },
     {
       "name": "The Hacker News",
@@ -684,9 +686,9 @@
       "url": "https://feeds.feedburner.com/TheHackersNews",
       "ok": true,
       "items": 25,
-      "ms": 375,
-      "newestItem": "2026-09-23T12:16:00.000Z",
-      "retained": 65
+      "ms": 103,
+      "newestItem": "2026-09-23T16:53:10.000Z",
+      "retained": 64
     },
     {
       "name": "Google Project Zero",
@@ -694,7 +696,7 @@
       "url": "https://googleprojectzero.blogspot.com/feeds/posts/default",
       "ok": true,
       "items": 10,
-      "ms": 713,
+      "ms": 604,
       "newestItem": "2026-09-21T07:00:00.000Z",
       "retained": 1
     },
@@ -704,10 +706,9 @@
       "url": "https://portswigger.net/research/rss",
       "ok": true,
       "items": 25,
-      "ms": 388,
-      "newestItem": "2026-08-25T14:24:32.000Z",
-      "retained": 0,
-      "warning": "published recently but nothing was retained — check parser/dedupe"
+      "ms": 240,
+      "newestItem": "2026-09-23T14:00:00.000Z",
+      "retained": 1
     },
     {
       "name": "CISA Advisories",
@@ -715,9 +716,9 @@
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
       "ok": true,
       "items": 25,
-      "ms": 113,
-      "newestItem": "2026-09-22T12:00:00.000Z",
-      "retained": 21
+      "ms": 138,
+      "newestItem": "2026-09-23T12:00:00.000Z",
+      "retained": 22
     },
     {
       "name": "Kali Linux",
@@ -725,7 +726,7 @@
       "url": "https://www.kali.org/rss.xml",
       "ok": true,
       "items": 10,
-      "ms": 282,
+      "ms": 403,
       "newestItem": "2026-06-29T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 86d — outside the 45d window"
@@ -736,8 +737,8 @@
       "url": "https://isc.sans.edu/rssfeed.xml",
       "ok": true,
       "items": 10,
-      "ms": 239,
-      "newestItem": "2026-09-23T02:40:13.000Z",
+      "ms": 234,
+      "newestItem": "2026-09-23T16:14:37.000Z",
       "retained": 11
     },
     {
@@ -746,7 +747,7 @@
       "url": "https://www.schneier.com/feed/atom/",
       "ok": true,
       "items": 10,
-      "ms": 94,
+      "ms": 96,
       "newestItem": "2026-09-23T11:03:36.000Z",
       "retained": 6
     },
@@ -756,9 +757,9 @@
       "url": "https://www.darkreading.com/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 905,
+      "ms": 316,
       "newestItem": "2026-12-03T16:00:00.000Z",
-      "retained": 23
+      "retained": 24
     },
     {
       "name": "The Record",
@@ -766,9 +767,9 @@
       "url": "https://therecord.media/feed",
       "ok": true,
       "items": 5,
-      "ms": 92,
-      "newestItem": "2026-09-23T12:45:00.000Z",
-      "retained": 29
+      "ms": 371,
+      "newestItem": "2026-09-23T15:30:00.000Z",
+      "retained": 26
     },
     {
       "name": "LWN.net",
@@ -776,9 +777,9 @@
       "url": "https://lwn.net/headlines/rss",
       "ok": true,
       "items": 15,
-      "ms": 295,
-      "newestItem": "2026-09-23T13:20:48.000Z",
-      "retained": 18
+      "ms": 275,
+      "newestItem": "2026-09-23T15:39:30.000Z",
+      "retained": 20
     },
     {
       "name": "Phoronix",
@@ -786,9 +787,9 @@
       "url": "https://www.phoronix.com/rss.php",
       "ok": true,
       "items": 25,
-      "ms": 252,
-      "newestItem": "2026-09-23T12:27:01.000Z",
-      "retained": 76
+      "ms": 323,
+      "newestItem": "2026-09-23T14:54:44.000Z",
+      "retained": 74
     },
     {
       "name": "Red Hat Blog",
@@ -796,9 +797,9 @@
       "url": "https://www.redhat.com/en/rss/blog",
       "ok": true,
       "items": 10,
-      "ms": 312,
+      "ms": 133,
       "newestItem": "2026-09-23T00:00:00.000Z",
-      "retained": 13
+      "retained": 14
     },
     {
       "name": "Ubuntu Blog",
@@ -806,9 +807,9 @@
       "url": "https://ubuntu.com/blog/feed",
       "ok": true,
       "items": 12,
-      "ms": 732,
-      "newestItem": "2026-09-23T08:37:00.000Z",
-      "retained": 4
+      "ms": 415,
+      "newestItem": "2026-09-23T15:09:20.000Z",
+      "retained": 5
     },
     {
       "name": "Docker Engine Releases",
@@ -816,7 +817,7 @@
       "url": "https://github.com/moby/moby/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 427,
+      "ms": 850,
       "newestItem": "2026-09-15T17:05:26.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -827,7 +828,7 @@
       "url": "https://github.com/containers/podman/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 402,
+      "ms": 801,
       "newestItem": "2026-09-16T18:13:20.000Z",
       "retained": 1
     },
@@ -837,7 +838,7 @@
       "url": "https://github.com/ansible/ansible/releases.atom",
       "ok": true,
       "items": 10,
-      "ms": 301,
+      "ms": 250,
       "newestItem": "2026-09-18T16:37:36.000Z",
       "retained": 1
     },
@@ -847,7 +848,7 @@
       "url": "https://inside.java/feed.xml",
       "ok": true,
       "items": 10,
-      "ms": 735,
+      "ms": 140,
       "newestItem": "2026-09-23T00:00:00.000Z",
       "retained": 5
     },
@@ -857,7 +858,7 @@
       "url": "https://feed.infoq.com/java/",
       "ok": true,
       "items": 3,
-      "ms": 86,
+      "ms": 94,
       "newestItem": "2026-09-21T17:00:00.000Z",
       "retained": 1
     },
@@ -867,7 +868,7 @@
       "url": "https://spring.io/blog.atom",
       "ok": true,
       "items": 4,
-      "ms": 267,
+      "ms": 47,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 5
     },
@@ -877,7 +878,7 @@
       "url": "https://quarkus.io/feed.xml",
       "ok": true,
       "items": 25,
-      "ms": 446,
+      "ms": 681,
       "newestItem": "2026-09-22T00:00:00.000Z",
       "retained": 6
     },
@@ -887,7 +888,7 @@
       "url": "https://brooker.co.za/blog/rss.xml",
       "ok": true,
       "items": 25,
-      "ms": 471,
+      "ms": 158,
       "newestItem": "2026-07-29T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 56d — outside the 45d window"
@@ -898,7 +899,7 @@
       "url": "https://danluu.com/atom.xml",
       "ok": true,
       "items": 25,
-      "ms": 918,
+      "ms": 440,
       "newestItem": "2026-09-07T00:00:00.000Z",
       "retained": 1
     },
@@ -908,7 +909,7 @@
       "url": "https://jvns.ca/atom.xml",
       "ok": true,
       "items": 20,
-      "ms": 445,
+      "ms": 340,
       "newestItem": "2026-07-21T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 64d — outside the 45d window"
@@ -919,8 +920,8 @@
       "url": "https://blog.bytebytego.com/feed",
       "ok": true,
       "items": 20,
-      "ms": 414,
-      "newestItem": "2026-09-22T15:32:06.000Z",
+      "ms": 239,
+      "newestItem": "2026-09-23T15:30:40.000Z",
       "retained": 5
     },
     {
@@ -929,7 +930,7 @@
       "url": "https://medium.com/feed/airbnb-engineering",
       "ok": true,
       "items": 10,
-      "ms": 502,
+      "ms": 216,
       "newestItem": "2026-09-17T17:01:02.000Z",
       "retained": 1
     },
@@ -939,7 +940,7 @@
       "url": "https://engineering.grab.com/feed.xml",
       "ok": true,
       "items": 10,
-      "ms": 214,
+      "ms": 205,
       "newestItem": "2026-08-28T00:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -950,7 +951,7 @@
       "url": "https://blog.flipkart.tech/feed",
       "ok": true,
       "items": 10,
-      "ms": 589,
+      "ms": 353,
       "newestItem": "2026-08-03T12:26:43.000Z",
       "retained": 0,
       "dormant": "no posts in 51d — outside the 45d window"
@@ -961,9 +962,9 @@
       "url": "https://itnext.io/feed",
       "ok": true,
       "items": 10,
-      "ms": 618,
+      "ms": 332,
       "newestItem": "2026-09-22T23:43:51.000Z",
-      "retained": 18
+      "retained": 15
     },
     {
       "name": "Hotstar Engineering",
@@ -971,7 +972,7 @@
       "url": "https://blog.hotstar.com/feed",
       "ok": true,
       "items": 10,
-      "ms": 539,
+      "ms": 199,
       "newestItem": "2026-07-20T10:22:24.000Z",
       "retained": 0,
       "dormant": "no posts in 65d — outside the 45d window"
@@ -982,7 +983,7 @@
       "url": "https://eng.lyft.com/feed",
       "ok": true,
       "items": 10,
-      "ms": 626,
+      "ms": 3267,
       "newestItem": "2026-09-10T16:12:28.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -993,7 +994,7 @@
       "url": "https://zerodha.tech/index.xml",
       "ok": true,
       "items": 14,
-      "ms": 389,
+      "ms": 159,
       "newestItem": "2024-03-28T00:00:00.000Z",
       "retained": 0,
       "dormant": "no posts in 909d — outside the 45d window"
@@ -1004,7 +1005,7 @@
       "url": "https://medium.com/feed/pinterest-engineering",
       "ok": true,
       "items": 10,
-      "ms": 249,
+      "ms": 154,
       "newestItem": "2026-09-17T15:01:05.000Z",
       "retained": 1
     },
@@ -1014,7 +1015,7 @@
       "url": "https://engineering.zalando.com/atom.xml",
       "ok": true,
       "items": 25,
-      "ms": 265,
+      "ms": 290,
       "newestItem": "2026-08-31T22:00:00.000Z",
       "retained": 0,
       "warning": "published recently but nothing was retained — check parser/dedupe"
@@ -1025,7 +1026,7 @@
       "url": "https://medium.com/feed/expedia-group-tech",
       "ok": true,
       "items": 10,
-      "ms": 119,
+      "ms": 136,
       "newestItem": "2026-09-22T11:01:01.000Z",
       "retained": 1
     },
@@ -1035,7 +1036,7 @@
       "url": "https://medium.com/feed/agoda-engineering",
       "ok": true,
       "items": 10,
-      "ms": 278,
+      "ms": 131,
       "newestItem": "2026-09-22T09:59:02.000Z",
       "retained": 1
     },
@@ -1045,24 +1046,24 @@
       "url": "https://hn.algolia.com/api/v1/search",
       "ok": true,
       "items": 30,
-      "retained": 391
+      "retained": 386
     },
     {
-      "name": "Reddit r/softwarearchitecture",
+      "name": "Reddit r/aws",
       "category": "community",
-      "url": "https://www.reddit.com/r/softwarearchitecture/.rss",
+      "url": "https://www.reddit.com/r/aws/.rss",
       "ok": true,
       "items": 20,
       "note": "rotates hourly across 8 subreddits",
-      "retained": 58
+      "retained": 43
     },
     {
       "name": "DEV / architecture",
       "category": "community",
       "url": "https://dev.to/api/articles?tag=architecture&per_page=15&top=14",
       "ok": true,
-      "items": 11,
-      "retained": 14
+      "items": 13,
+      "retained": 19
     },
     {
       "name": "DEV / systemdesign",
@@ -1070,23 +1071,23 @@
       "url": "https://dev.to/api/articles?tag=systemdesign&per_page=15&top=14",
       "ok": true,
       "items": 3,
-      "retained": 14
+      "retained": 19
     },
     {
       "name": "DEV / devops",
       "category": "community",
       "url": "https://dev.to/api/articles?tag=devops&per_page=15&top=14",
       "ok": true,
-      "items": 8,
-      "retained": 14
+      "items": 9,
+      "retained": 19
     },
     {
       "name": "DEV / aws",
       "category": "community",
       "url": "https://dev.to/api/articles?tag=aws&per_page=15&top=14",
       "ok": true,
-      "items": 5,
-      "retained": 14
+      "items": 7,
+      "retained": 19
     },
     {
       "name": "DEV / kubernetes",
@@ -1094,7 +1095,7 @@
       "url": "https://dev.to/api/articles?tag=kubernetes&per_page=15&top=14",
       "ok": true,
       "items": 1,
-      "retained": 14
+      "retained": 19
     },
     {
       "name": "DEV org / aws",
@@ -1102,7 +1103,7 @@
       "url": "https://dev.to/api/organizations/aws/articles?per_page=15",
       "ok": true,
       "items": 15,
-      "retained": 14
+      "retained": 19
     },
     {
       "name": "DEV org / cloudflare",
@@ -1110,7 +1111,7 @@
       "url": "https://dev.to/api/organizations/cloudflare/articles?per_page=15",
       "ok": true,
       "items": 12,
-      "retained": 14
+      "retained": 19
     },
     {
       "name": "GitHub / Rising repos (30d)",
