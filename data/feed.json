@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T08:25:20.494Z",
+ "generatedAt": "2026-09-27T15:12:57.774Z",
  "retainDays": 45,
  "categories": [
   {
@@ -50,26 +50,273 @@
  ],
  "stats": {
   "totalItems": 1400,
-  "newThisRun": 15,
-  "last24h": 66,
-  "sourcesOk": 120,
+  "newThisRun": 25,
+  "last24h": 54,
+  "sourcesOk": 119,
   "sourcesTotal": 120,
   "repos": 79,
   "unlicensedRepos": 12,
   "restrictedRepos": 0,
   "byCategory": {
-   "cloud": 94,
-   "devops": 57,
+   "cloud": 93,
+   "devops": 59,
    "webdev": 45,
    "architecture": 72,
    "ai": 46,
    "eventtech": 72,
-   "security": 211,
-   "platform": 135,
-   "community": 668
+   "security": 213,
+   "platform": 136,
+   "community": 664
   }
  },
  "items": [
+  {
+   "id": "15dijqm",
+   "title": "Wireshark 4.6.9 Released, (Sun, Sep 27th)",
+   "url": "https://isc.sans.edu/diary/rss/33372",
+   "source": "SANS Internet Storm Center",
+   "category": "security",
+   "published": "2026-09-27T15:04:49.000Z",
+   "summary": "Wireshark release 4.6.9 fixes 19 vulnerabilities and 16 bugs.",
+   "author": "",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "bkwkzl",
+   "title": "\"They had no concept of a duty of care to their users.\"",
+   "url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T14:45:07Z",
+   "summary": "8 points · 0 comments",
+   "author": "@jandeboevrie",
+   "tags": [],
+   "score": 8,
+   "discussion": "https://news.ycombinator.com/item?id=49867067",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "4miul1",
+   "title": "10 Tells of a Slop UI",
+   "url": "https://hereticpleb.vercel.app/blog/10-tells-of-slop",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T14:41:26Z",
+   "summary": "41 points · 26 comments",
+   "author": "@theanonymousone",
+   "tags": [],
+   "score": 41,
+   "discussion": "https://news.ycombinator.com/item?id=49867038",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1xzl020",
+   "title": "In an $80 Motel Room, a Discovery to Shed Light on the Origins of Life",
+   "url": "https://www.nytimes.com/2026/09/26/science/motel-science-discovery.html",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T14:30:55Z",
+   "summary": "24 points · 8 comments",
+   "author": "@danso",
+   "tags": [],
+   "score": 24,
+   "discussion": "https://news.ycombinator.com/item?id=49866951",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1kxfoy6",
+   "title": "Google Rewrites Critical C Dependencies to Rust Using AI and Differential Fuzzing",
+   "url": "https://www.infoq.com/news/2026/09/c-rust-rewrite/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
+   "source": "InfoQ News",
+   "category": "architecture",
+   "published": "2026-09-27T14:14:00.000Z",
+   "summary": "Google's security team developed a method to replace legacy C code in the giflib image-processing library with Rust, targeting inherent memory vulnerabilities. They utilised an automated migration process, ensuring compatibility and zero-day vulnerability mitigation. The project successfully maintained runtime…",
+   "author": "Olimpiu Pop",
+   "tags": [
+    "AI Harness",
+    "Large language models",
+    "Rust",
+    "Memory Safety",
+    "Development"
+   ],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1cthqzh",
+   "title": "Cloudflare fixes Containers cross-tenant flaw exposing customer data",
+   "url": "https://www.bleepingcomputer.com/news/security/cloudflare-fixes-containers-cross-tenant-flaw-exposing-customer-data/",
+   "source": "BleepingComputer",
+   "category": "security",
+   "published": "2026-09-27T14:13:31.000Z",
+   "summary": "Cloudflare has fixed a vulnerability in Containers and Sandboxes that allowed customers with a Workers Paid account to recover residual data from other customers' containers on the same physical host. [...]",
+   "author": "Bill Toulas",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1altt2m",
+   "title": "Swift 6.4 Brings Subprocess 1.0, Improved Interoperability, Faster Wasm, and More",
+   "url": "https://www.infoq.com/news/2026/09/swift-6-4-released/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
+   "source": "InfoQ News",
+   "category": "architecture",
+   "published": "2026-09-27T14:00:00.000Z",
+   "summary": "The latest release of Swift, Swift 6.4, introduces a range of language and tooling improvements, including better performance through expanded support for non-copyable values, up to 40 times faster Wasm generated code, improved interoperability with C++20 and Java, and a new Subprocess library that provides a…",
+   "author": "Sergio De Simone",
+   "tags": [
+    "Programming Languages",
+    "Open Source",
+    "WebAssembly",
+    "Apple",
+    "Mobile"
+   ],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1q29m4s",
+   "title": "Anthropic turns Claude into an AI marketplace with 2,000+ plugins and connectors",
+   "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/",
+   "source": "BleepingComputer",
+   "category": "security",
+   "published": "2026-09-27T13:38:40.000Z",
+   "summary": "Anthropic has just announced a new Claude Marketplace, and it brings all AI-related tools into one place, including plugins, connectors, agents, and more. [...]",
+   "author": "Mayank Parmar",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "jcn1td",
+   "title": "Replacing the old battery on rechargeable bike lights",
+   "url": "https://jvns.ca/blog/2026/09/27/replacing-the-old-battery-on-rechargeable-bike-lights/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T13:30:11Z",
+   "summary": "33 points · 5 comments",
+   "author": "@surprisetalk",
+   "tags": [],
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z",
+   "score": 33,
+   "discussion": "https://news.ycombinator.com/item?id=49866515"
+  },
+  {
+   "id": "1wkuua5",
+   "title": "Linux Kernel's LZ4 Compression Code Being Resynced For Better Performance & Cleanliness",
+   "url": "https://www.phoronix.com/news/Linux-LZ4-Clean-Resync",
+   "source": "Phoronix",
+   "category": "platform",
+   "published": "2026-09-27T13:16:20.000Z",
+   "summary": "In addition to the Linux kernel's Zstd compression code being improved, the LZ4 compression code within the kernel tree is also seeing a separate set of enhancements...",
+   "author": "Michael Larabel",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "toh5ar",
+   "title": "Intel Delivers A Significant Memory Hotplugging Performance Optimization For Linux",
+   "url": "https://www.phoronix.com/news/Linux-7.4-Faster-RAM-Hotplug",
+   "source": "Phoronix",
+   "category": "platform",
+   "published": "2026-09-27T10:49:05.000Z",
+   "summary": "Adding to the features expected to land for Linux 7.4 is a significant performance optimization for the memory hotplugging speed for adding additional RAM. In particular, the memory hotplugging being most applicable for cases like expanding the amount of memory for VMs or in today's CXL world for adding additional…",
+   "author": "Michael Larabel",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1gxj8kz",
+   "title": "New Linux Patches For Supporting Lenovo ThinkPad X1 Carbon G14's Second Camera",
+   "url": "https://www.phoronix.com/news/Linux-X1-Carbon-G14-MIPI-Cam",
+   "source": "Phoronix",
+   "category": "platform",
+   "published": "2026-09-27T10:33:00.000Z",
+   "summary": "For those considering Lenovo's recently launched and beautifully crafted ThinkPad X1 Carbon Gen 14 laptop powered by Intel Core Ultra Series 3 \"Panther Lake\", one of the lingering missing features under Linux will hopefully soon be addressed: its second web camera...",
+   "author": "Michael Larabel",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "bvn8gs",
+   "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+   "url": "https://arxiv.org/abs/2609.25021",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T10:26:25Z",
+   "summary": "80 points · 82 comments",
+   "author": "@yu3zhou4",
+   "tags": [],
+   "score": 80,
+   "discussion": "https://news.ycombinator.com/item?id=49865343",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "p6q7ed",
+   "title": "New Patch Series Working Toward DRBD 9 Support In The Linux Kernel",
+   "url": "https://www.phoronix.com/news/Linux-Patches-Toward-DRBD-9",
+   "source": "Phoronix",
+   "category": "platform",
+   "published": "2026-09-27T10:23:07.000Z",
+   "summary": "Earlier this year developers at LINBIT began working toward a goal of upstreaming ~15 years worth of their Distributed Replicated Block Device changes into the mainline Linux kernel. That major update has yet to land but sent out this week was a new patch series in preparing the trek toward introducing DRBD 9 support…",
+   "author": "Michael Larabel",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "1r0phod",
+   "title": "What If the Fastest Database Call Never Left Your Process?",
+   "url": "https://itnext.io/what-if-the-fastest-database-call-never-left-your-process-6bb05f790796?source=rss----5b301f10ddcd---4",
+   "source": "ITNEXT",
+   "category": "community",
+   "published": "2026-09-27T09:11:09.000Z",
+   "summary": "Building Spedo: a Rust data engine that turns remote state into a local programming primitive A dark navy data engine with amber data flows, a Python client, storage, and search. One profile changed the direction of Spedo. I was looking at a hot configuration path in a Python service. The server-side operation was…",
+   "author": "Dany Cohen",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "h4xvz2",
+   "title": "Rusty thoughts on \"Parse, don't validate\"",
+   "url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T08:59:59Z",
+   "summary": "27 points · 7 comments",
+   "author": "@ingve",
+   "tags": [],
+   "score": 27,
+   "discussion": "https://news.ycombinator.com/item?id=49864743",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
+  {
+   "id": "p1420c",
+   "title": "Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election",
+   "url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T08:44:04Z",
+   "summary": "337 points · 243 comments",
+   "author": "@rbanffy",
+   "tags": [],
+   "score": 337,
+   "discussion": "https://news.ycombinator.com/item?id=49864642",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
+  },
   {
    "id": "s1epp4",
    "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
@@ -93,11 +340,11 @@
    "summary": "Google has published benchmarks for GKE Pod snapshots, reporting up to 89% lower startup latency and a 70B model loading in 37 seconds. The feature checkpoints CPU and GPU memory through gVisor into Cloud Storage. Practitioners have asked whether invalidation is the harder problem, since snapshots match on a spec…",
    "author": "Steef-Jan Wiggers",
    "tags": [
-    "Containers",
     "Cloud",
+    "Containers",
     "Performance",
     "Kubernetes",
-    "Google Cloud"
+    "Architecture"
    ],
    "priority": 2,
    "firstSeen": "2026-09-27T08:25:20.494Z"
@@ -109,10 +356,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-27T06:19:33Z",
-   "summary": "24 points · 1 comments",
+   "summary": "520 points · 427 comments",
    "author": "@papergirl",
    "tags": [],
-   "score": 24,
+   "score": 520,
    "discussion": "https://news.ycombinator.com/item?id=49863864",
    "priority": 1,
    "firstSeen": "2026-09-27T08:25:20.494Z"
@@ -142,6 +389,21 @@
    "tags": [],
    "priority": 3,
    "firstSeen": "2026-09-27T08:25:20.494Z"
+  },
+  {
+   "id": "txhg47",
+   "title": "The internet discovers TLA+. Now what?",
+   "url": "https://reasonable.io/blog/tla-tutorial/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-27T05:26:15Z",
+   "summary": "73 points · 35 comments",
+   "author": "@matt_d",
+   "tags": [],
+   "score": 73,
+   "discussion": "https://news.ycombinator.com/item?id=49863600",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "pfhn54",
@@ -198,6 +460,19 @@
    "tags": [],
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
+  },
+  {
+   "id": "1y4vgl5",
+   "title": "Unsure if I should stick to LGTM + Alloy or look into migrating Mimir + Prometheus with VictoriaMetrics?",
+   "url": "https://www.reddit.com/r/sre/comments/1wr27dx/unsure_if_i_should_stick_to_lgtm_alloy_or_look/",
+   "source": "Reddit r/sre",
+   "category": "community",
+   "published": "2026-09-26T21:30:42.000Z",
+   "summary": "Hey all, company is tasking me on standing up new infrastructure for observability. I have setup previous companies with LGTM (Loki, Grafana, Tempo, Mimir) + Alloy which has worked well for what we have done. However, 1 regret I have heard from many of my friends who are DevOps/SREs is if you are wanting to start from…",
+   "author": "/u/DopeyMcDouble",
+   "tags": [],
+   "priority": 3,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "9g7mom",
@@ -288,10 +563,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T18:22:41Z",
-   "summary": "237 points · 79 comments",
+   "summary": "293 points · 94 comments",
    "author": "@shenli3514",
    "tags": [],
-   "score": 237,
+   "score": 293,
    "discussion": "https://news.ycombinator.com/item?id=49859112",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
@@ -318,10 +593,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T17:26:54Z",
-   "summary": "74 points · 10 comments",
+   "summary": "98 points · 11 comments",
    "author": "@pwg",
    "tags": [],
-   "score": 74,
+   "score": 98,
    "discussion": "https://news.ycombinator.com/item?id=49858676",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -372,10 +647,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T17:10:40Z",
-   "summary": "288 points · 80 comments",
+   "summary": "351 points · 93 comments",
    "author": "@jpwalsh234",
    "tags": [],
-   "score": 288,
+   "score": 351,
    "discussion": "https://news.ycombinator.com/item?id=49858513",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
@@ -405,10 +680,10 @@
    "summary": "Docker Cloud Sandboxes provide secure, hosted execution environments for running AI coding agents on Docker-managed infrastructure. Built on hardware-enforced microVM isolation, the platform provides a consistent execution environment and unified CLI workflows for seamlessly moving workloads from local machines to the…",
    "author": "Sergio De Simone",
    "tags": [
-    "Containers",
     "Cloud",
-    "Agents",
     "AI Security",
+    "Containers",
+    "Agents",
     "Docker"
    ],
    "priority": 2,
@@ -473,10 +748,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T15:56:34Z",
-   "summary": "143 points · 41 comments",
+   "summary": "169 points · 44 comments",
    "author": "@parasitid",
    "tags": [],
-   "score": 143,
+   "score": 169,
    "discussion": "https://news.ycombinator.com/item?id=49857729",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
@@ -617,10 +892,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T14:34:49Z",
-   "summary": "200 points · 62 comments",
+   "summary": "295 points · 131 comments",
    "author": "@chmaynard",
    "tags": [],
-   "score": 200,
+   "score": 295,
    "discussion": "https://news.ycombinator.com/item?id=49856988",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -637,6 +912,21 @@
    "tags": [],
    "priority": 1,
    "firstSeen": "2026-09-26T16:33:32.601Z"
+  },
+  {
+   "id": "1megbzs",
+   "title": "Fakecloud: Local AWS cloud emulator for integration tests",
+   "url": "https://fakecloud.dev/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-26T14:25:16Z",
+   "summary": "28 points · 9 comments",
+   "author": "@theanonymousone",
+   "tags": [],
+   "score": 28,
+   "discussion": "https://news.ycombinator.com/item?id=49856885",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "1ygl7td",
@@ -678,21 +968,6 @@
    "discussion": "https://news.ycombinator.com/item?id=49856665",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
-  },
-  {
-   "id": "bywmz6",
-   "title": "Improving site performance by shipping more CSS",
-   "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-26T13:10:05Z",
-   "summary": "34 points · 15 comments",
-   "author": "@torutofu",
-   "tags": [],
-   "priority": 1,
-   "firstSeen": "2026-09-25T18:46:47.015Z",
-   "score": 34,
-   "discussion": "https://news.ycombinator.com/item?id=49856193"
   },
   {
    "id": "1r3ktgy",
@@ -769,10 +1044,10 @@
    "summary": "Mallika Rao explains that the true complexity of adaptive recommendation systems lies outside model architecture. She discusses how real-time feedback loops, retrieval freshness, multi-stage orchestration, and end-to-end latency budgeting enable systems to continuously learn and evolve in production under real-world…",
    "author": "Mallika Rao",
    "tags": [
-    "Data",
     "Scaling",
+    "Data",
     "Performance",
-    "Transcripts",
+    "QCon AI Boston 2026",
     "Observability"
    ],
    "priority": 1,
@@ -936,10 +1211,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T09:41:58Z",
-   "summary": "218 points · 265 comments",
+   "summary": "290 points · 305 comments",
    "author": "@signa11",
    "tags": [],
-   "score": 218,
+   "score": 290,
    "discussion": "https://news.ycombinator.com/item?id=49854875",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
@@ -954,10 +1229,10 @@
    "summary": "Cloudflare recently documented the migration of its main blog from WordPress to EmDash, the open source content management system developed internally. The new platform is designed to improve performance and caching, and it was tested to handle traffic of up to 7000 requests per second. By Renato Losio",
    "author": "Renato Losio",
    "tags": [
-    "Cloudflare",
     "WordPress",
     "Caching",
     "migration",
+    "Cloudflare",
     "Portal/CMS"
    ],
    "priority": 2,
@@ -970,13 +1245,33 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T09:13:41Z",
-   "summary": "392 points · 100 comments",
+   "summary": "419 points · 109 comments",
    "author": "@ksec",
    "tags": [],
-   "score": 392,
+   "score": 419,
    "discussion": "https://news.ycombinator.com/item?id=49854693",
    "priority": 1,
    "firstSeen": "2026-09-26T11:36:52.275Z"
+  },
+  {
+   "id": "1c54pka",
+   "title": "Six System Design Problems, and the New Problem Each Fix Creates",
+   "url": "https://dev.to/devopsdaily/six-system-design-problems-and-the-new-problem-each-fix-creates-27b6",
+   "source": "DEV Community",
+   "category": "architecture",
+   "published": "2026-09-26T09:00:00Z",
+   "summary": "Every system starts the same way: a client talks to a server, and the server talks to a database....",
+   "author": "DevOps Daily",
+   "tags": [
+    "devops",
+    "systemdesign",
+    "scalability",
+    "reliability"
+   ],
+   "score": 11,
+   "devtoSurface": "tag:systemdesign",
+   "priority": 3,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "1u2mihe",
@@ -1026,10 +1321,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T07:50:24Z",
-   "summary": "46 points · 6 comments",
+   "summary": "242 points · 15 comments",
    "author": "@blutack",
    "tags": [],
-   "score": 46,
+   "score": 242,
    "discussion": "https://news.ycombinator.com/item?id=49854219",
    "priority": 1,
    "firstSeen": "2026-09-27T08:25:20.494Z"
@@ -1099,10 +1394,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T04:14:11Z",
-   "summary": "86 points · 91 comments",
+   "summary": "134 points · 133 comments",
    "author": "@apsec112",
    "tags": [],
-   "score": 86,
+   "score": 134,
    "discussion": "https://news.ycombinator.com/item?id=49853137",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -1127,10 +1422,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-26T03:23:31Z",
-   "summary": "52 points · 25 comments",
+   "summary": "83 points · 48 comments",
    "author": "@geox",
    "tags": [],
-   "score": 52,
+   "score": 83,
    "discussion": "https://news.ycombinator.com/item?id=49852905",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -1383,10 +1678,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-25T22:48:52Z",
-   "summary": "27 points · 0 comments",
+   "summary": "52 points · 0 comments",
    "author": "@matt_d",
    "tags": [],
-   "score": 27,
+   "score": 52,
    "discussion": "https://news.ycombinator.com/item?id=49850991",
    "priority": 1,
    "firstSeen": "2026-09-27T08:25:20.494Z"
@@ -1418,6 +1713,21 @@
    "discussion": "https://news.ycombinator.com/item?id=49850781",
    "priority": 1,
    "firstSeen": "2026-09-26T05:15:13.366Z"
+  },
+  {
+   "id": "a6jgc1",
+   "title": "Accelerated Out of Core Shuffling",
+   "url": "https://quasiben.github.io/blog/ooc-shuffling-rapidsmpf/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-25T22:23:51Z",
+   "summary": "8 points · 0 comments",
+   "author": "@quasiben",
+   "tags": [],
+   "score": 8,
+   "discussion": "https://news.ycombinator.com/item?id=49850735",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "w71gkm",
@@ -1569,6 +1879,21 @@
    "discussion": "https://news.ycombinator.com/item?id=49849820",
    "priority": 1,
    "firstSeen": "2026-09-26T16:33:32.601Z"
+  },
+  {
+   "id": "94wyuj",
+   "title": "Finally, A True Blue Rose Exists",
+   "url": "https://www.sciencenews.org/article/true-blue-rose-pigment-copigment",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-25T20:44:38Z",
+   "summary": "56 points · 22 comments",
+   "author": "@bookofjoe",
+   "tags": [],
+   "score": 56,
+   "discussion": "https://news.ycombinator.com/item?id=49849723",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "1iaf49a",
@@ -2402,6 +2727,21 @@
    "firstSeen": "2026-09-25T18:46:47.015Z"
   },
   {
+   "id": "bywmz6",
+   "title": "Improving site performance by shipping more CSS",
+   "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+   "source": "GitHub Blog",
+   "category": "devops",
+   "published": "2026-09-25T15:00:00.000Z",
+   "summary": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
+   "author": "Josh Black",
+   "tags": [],
+   "priority": 2,
+   "firstSeen": "2026-09-25T18:46:47.015Z",
+   "score": 34,
+   "discussion": "https://news.ycombinator.com/item?id=49856193"
+  },
+  {
    "id": "193gb8w",
    "title": "Cyberattack hits Welsh police force, may have affected staff data",
    "url": "https://therecord.media/wales-cyberattack-police-breach",
@@ -2417,6 +2757,26 @@
    ],
    "priority": 2,
    "firstSeen": "2026-09-25T18:46:47.015Z"
+  },
+  {
+   "id": "xuaw5v",
+   "title": "GRO Hid My TLS Handshake's Real Packet Split, Even Over a Real Network",
+   "url": "https://dev.to/alexgeorgiev17/gro-hid-my-tls-handshakes-real-packet-split-even-over-a-real-network-2eec",
+   "source": "DEV Community",
+   "category": "devops",
+   "published": "2026-09-25T15:00:00Z",
+   "summary": "Docker couldn't show me whether a post-quantum TLS handshake really splits across two TCP segments, same-host GSO hides it. Testing over a real external network wasn't enough either, until I found and disabled GRO, a default on basically any Linux cloud VM.",
+   "author": "Alex Georgiev",
+   "tags": [
+    "networking",
+    "tls",
+    "linux",
+    "devops"
+   ],
+   "score": 10,
+   "devtoSurface": "tag:devops",
+   "priority": 3,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "1ylb8bd",
@@ -2600,7 +2960,7 @@
     "docker",
     "devops"
    ],
-   "score": 17,
+   "score": 18,
    "devtoSurface": "tag:aws",
    "priority": 3,
    "firstSeen": "2026-09-25T18:46:47.015Z"
@@ -2685,10 +3045,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-25T13:49:06Z",
-   "summary": "258 points · 595 comments",
+   "summary": "356 points · 768 comments",
    "author": "@MC995",
    "tags": [],
-   "score": 258,
+   "score": 356,
    "discussion": "https://news.ycombinator.com/item?id=49844663",
    "priority": 1,
    "firstSeen": "2026-09-25T14:01:12.835Z"
@@ -2700,10 +3060,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-25T13:48:38Z",
-   "summary": "308 points · 217 comments",
+   "summary": "445 points · 331 comments",
    "author": "@silveraxe93",
    "tags": [],
-   "score": 308,
+   "score": 445,
    "discussion": "https://news.ycombinator.com/item?id=49844657",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -2821,11 +3181,11 @@
    "summary": "AWS details how the latest Model Context Protocol specification removes protocol-level sessions, sticky-session requirements, and session storage for remote MCP servers. The change enables independent request routing and simpler horizontal scaling while shifting application state, retries, observability, and…",
    "author": "Leela Kumili",
    "tags": [
-    "Deployment",
     "Scaling",
     "Load Balancing",
+    "Deployment",
     "OpenTelemetry",
-    "Distributed Systems"
+    "Microservices"
    ],
    "priority": 2,
    "firstSeen": "2026-09-25T14:01:12.835Z"
@@ -2964,8 +3324,8 @@
    "author": "Craig Risi",
    "tags": [
     "Automated testing",
-    "Observability",
     "Grafana",
+    "Observability",
     "DevOps",
     "news"
    ],
@@ -3160,10 +3520,10 @@
    "summary": "QCon AI New York has confirmed 23 sessions covering agent authorization, production guardrails, shared inference infrastructure, and the evaluation of AI systems after deployment. By Artenisa Chatziou",
    "author": "Artenisa Chatziou",
    "tags": [
-    "Artificial Intelligence",
+    "QCon AI New York 2026",
     "QCon Software Development Conference",
     "Architecture",
-    "QCon AI New York 2026",
+    "Artificial Intelligence",
     "AI Architecture"
    ],
    "priority": 2,
@@ -3179,11 +3539,11 @@
    "summary": "Christine Lemmer-Webber and David Thompson explain how Spritely's architecture solves core decentralization challenges. They share insights on capability-based access control with Goblins, actor-model communication via OCapN, and petname systems. Discover how Spritely leverages Scheme, WebAssembly (Hoot), and…",
    "author": "Christine Lemmer-Webber, David Thompson",
    "tags": [
-    "CRDT",
     "WebAssembly",
     "P2P",
-    "QCon London 2026",
-    "Security"
+    "CRDT",
+    "Local First",
+    "QCon London 2026"
    ],
    "priority": 1,
    "firstSeen": "2026-09-25T14:01:12.835Z"
@@ -3195,10 +3555,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-25T10:55:40Z",
-   "summary": "403 points · 219 comments",
+   "summary": "461 points · 248 comments",
    "author": "@Qision",
    "tags": [],
-   "score": 403,
+   "score": 461,
    "discussion": "https://news.ycombinator.com/item?id=49842764",
    "priority": 1,
    "firstSeen": "2026-09-26T16:33:32.601Z"
@@ -3728,8 +4088,8 @@
    "tags": [
     "Web Development",
     "JavaScript",
-    "Node.js",
     "TypeScript",
+    "Node.js",
     "Development"
    ],
    "priority": 2,
@@ -3913,10 +4273,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-25T02:11:07Z",
-   "summary": "61 points · 23 comments",
+   "summary": "100 points · 37 comments",
    "author": "@pseudolus",
    "tags": [],
-   "score": 61,
+   "score": 100,
    "discussion": "https://news.ycombinator.com/item?id=49839438",
    "priority": 1,
    "firstSeen": "2026-09-27T08:25:20.494Z"
@@ -4429,10 +4789,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-24T20:51:50Z",
-   "summary": "192 points · 175 comments",
+   "summary": "258 points · 234 comments",
    "author": "@azhenley",
    "tags": [],
-   "score": 192,
+   "score": 258,
    "discussion": "https://news.ycombinator.com/item?id=49836579",
    "priority": 1,
    "firstSeen": "2026-09-27T00:44:44.279Z"
@@ -4707,9 +5067,9 @@
    "author": "Sergio De Simone",
    "tags": [
     "Apple",
-    "Mobile",
-    "SwiftUI",
     "iOS",
+    "SwiftUI",
+    "Mobile",
     "Swift"
    ],
    "priority": 2,
@@ -5208,10 +5568,10 @@
    "source": "Hacker News",
    "category": "community",
    "published": "2026-09-24T16:11:42Z",
-   "summary": "161 points · 26 comments",
+   "summary": "195 points · 26 comments",
    "author": "@momentmaker",
    "tags": [],
-   "score": 161,
+   "score": 195,
    "discussion": "https://news.ycombinator.com/item?id=49832768",
    "priority": 1,
    "firstSeen": "2026-09-26T21:21:28.706Z"
@@ -5627,10 +5987,10 @@
    "author": "Artenisa Chatziou",
    "tags": [
     "AI-Assisted Engineering Certification",
+    "InfoQ Certification Program",
     "Culture",
     "Engineering Leadership Certification",
-    "InfoQ Certification Program",
-    "High Performing Teams Certification"
+    "Team Collaboration"
    ],
    "priority": 2,
    "firstSeen": "2026-09-24T17:24:55.116Z"
@@ -5828,11 +6188,11 @@
    "summary": "Security researcher Patrick Wardle revealed an unpatched zero-day vulnerability in Meta's Muse desktop client for macOS. This flaw lets unprivileged software manipulate the assistant's extensive permissions, compromising input confidentiality and account security. Despite a hotfix from Meta, the vulnerability raises…",
    "author": "Olimpiu Pop",
    "tags": [
+    "AI Security",
     "Large language models",
     "Zero Day Vulnerability",
-    "AI Security",
-    "AI, ML & Data Engineering",
-    "DevOps"
+    "DevOps",
+    "AI, ML & Data Engineering"
    ],
    "priority": 2,
    "firstSeen": "2026-09-24T17:24:55.116Z"
@@ -6522,10 +6882,10 @@
    "author": "Ben Linders",
    "tags": [
     "Stories & Case Studies",
-    "Platforms",
     "Cloud",
+    "Platforms",
     "Banking",
-    "Culture"
+    "Agile Conferences"
    ],
    "priority": 2,
    "firstSeen": "2026-09-24T12:01:57.227Z"
@@ -7212,8 +7572,8 @@
    "summary": "Canvas UI is an open-source component library created by David Haz, utilizing the experimental HTML-in-Canvas API. It features 35 components that render GPU effects on live page content while maintaining accessibility. The library integrates with multiple frameworks and requires specific Chrome versions for full…",
    "author": "Daniel Curtis",
    "tags": [
-    "Web Development",
     "WebGL",
+    "Web Development",
     "JavaScript",
     "HTML",
     "Development"
@@ -7224,20 +7584,20 @@
   {
    "id": "dfpkve",
    "title": "Apple Reference Image Signs Photos at the Sensor, Moving Provenance Trust away from C2PA",
-   "url": "https://www.infoq.com/news/2026/09/apple-reference-image-provenance/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
-   "source": "InfoQ News",
+   "url": "https://www.infoq.com/news/2026/09/apple-reference-image-provenance/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
+   "source": "InfoQ Architecture",
    "category": "architecture",
    "published": "2026-09-24T05:50:00.000Z",
    "summary": "Apple has published the design of Reference Image, an iPhone 18 Pro camera mode that signs pixel data at the sensor and develops it in Private Cloud Compute under an Apple signature. Developers on Hacker News and Reddit challenged what it proves, raising photographing a screen, the anonymity guarantee's dependence on…",
    "author": "Steef-Jan Wiggers",
    "tags": [
     "Apple",
-    "Privacy",
     "Cryptography",
+    "Privacy",
     "Artificial Intelligence",
-    "Machine Learning"
+    "Architecture"
    ],
-   "priority": 2,
+   "priority": 1,
    "firstSeen": "2026-09-24T12:01:57.227Z"
   },
   {
@@ -7722,6 +8082,21 @@
    "discussion": "https://news.ycombinator.com/item?id=49824268",
    "priority": 1,
    "firstSeen": "2026-09-24T05:08:06.973Z"
+  },
+  {
+   "id": "1876cbi",
+   "title": "Show HN: A CC0 museum of retro 3D tricks you can paste into a page",
+   "url": "https://3d-retro.com/",
+   "source": "Hacker News",
+   "category": "community",
+   "published": "2026-09-23T23:33:39Z",
+   "summary": "11 points · 2 comments",
+   "author": "@SouthWestAtlas",
+   "tags": [],
+   "score": 11,
+   "discussion": "https://news.ycombinator.com/item?id=49824144",
+   "priority": 1,
+   "firstSeen": "2026-09-27T15:12:57.774Z"
   },
   {
    "id": "dcjstj",
@@ -9631,8 +10006,8 @@
   {
    "id": "10ub7",
    "title": "Graphify: Unifying Codebase Context to Streamline Agentic Software Engineering",
-   "url": "https://www.infoq.com/news/2026/09/graphify-codebase-exploration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
-   "source": "InfoQ News",
+   "url": "https://www.infoq.com/news/2026/09/graphify-codebase-exploration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
+   "source": "InfoQ Architecture",
    "category": "architecture",
    "published": "2026-09-23T14:14:00.000Z",
    "summary": "Graphify is an open-source tool designed to convert codebases and unstructured data into queryable knowledge graphs. Launched in April 2026, it addresses challenges of multi-file reasoning for AI coding assistants. Recent updates have enhanced parser features and cross-file resolutions. Community feedback indicates a…",
@@ -9644,7 +10019,7 @@
     "Development",
     "Architecture & Design"
    ],
-   "priority": 2,
+   "priority": 1,
    "firstSeen": "2026-09-23T18:29:29.352Z"
   },
   {
@@ -9724,11 +10099,11 @@
    "summary": "In a recent article, Colin Weld and Connor Adams, staff engineers at Modal, describe how they rebuilt their sandbox infrastructure from the ground up to support millions of concurrent sandboxes and tens of thousands of sandbox creations per second. By Sergio De Simone",
    "author": "Sergio De Simone",
    "tags": [
-    "Performance & Scalability",
-    "Agents",
     "Kubernetes",
-    "AI, ML & Data Engineering",
-    "DevOps"
+    "Agents",
+    "Performance & Scalability",
+    "DevOps",
+    "AI, ML & Data Engineering"
    ],
    "priority": 1,
    "firstSeen": "2026-09-23T18:29:29.352Z"
@@ -9895,10 +10270,10 @@
    "summary": "Cloudflare redesigned the in-memory representation of its Big Pineapple DNS cache, reducing the per-entry footprint by 56% and freeing roughly 100 TB of working-set memory across its fleet. The Rust-based changes also increased cache insertion throughput by 43% and reduced lookup latency by 19%, while enabling…",
    "author": "Leela Kumili",
    "tags": [
-    "Cloudflare",
+    "DNS",
     "Scalability",
     "Caching",
-    "DNS",
+    "Cloudflare",
     "Performance"
    ],
    "priority": 1,
@@ -10518,11 +10893,11 @@
    "summary": "Jim Gough and Andreea Niculcea explain how Morgan Stanley uses Architecture as Code with CALM to modernize its API program. They demonstrate integrating Model Context Protocol (MCP) and Agent-to-Agent (A2A) communications, enforcing automated governance through deployment gates, and executing zero-downtime platform…",
    "author": "Jim Gough, Andreea Niculcea",
    "tags": [
-    "Deployment",
     "Enterprise Architecture",
     "QCon London 2026",
-    "Compliance",
-    "Platform Engineering"
+    "Deployment",
+    "Platform Engineering",
+    "Compliance"
    ],
    "priority": 1,
    "firstSeen": "2026-09-23T13:45:15.215Z"
@@ -10749,11 +11124,11 @@
    "summary": "At multi-tenant SaaS scale, a monolithic edge worker creates deployment coupling and broad blast radius. The article presents a modular Cloudflare Workers architecture using service bindings, with image optimization as a worked example of per-tenant format negotiation and device-aware sizing. It covers multi-CDN…",
    "author": "Chintan Tank",
    "tags": [
-    "Cloudflare",
-    "Cloud",
-    "CDN",
     "Serverless",
-    "Edge Computing"
+    "Cloud Architecture",
+    "Edge Computing",
+    "Cloud",
+    "Cloudflare"
    ],
    "priority": 1,
    "firstSeen": "2026-09-23T13:45:15.215Z"
@@ -10951,10 +11326,10 @@
    "summary": "AWS has added Cluster Mode to Elastic Beanstalk, running applications on EKS clusters the service creates and operates. Clusters are assigned by subnet set and cannot be changed afterward, direct cluster access is service-managed, and AWS recommends separate clusters for untrusted or regulated workloads. The mode adds…",
    "author": "Steef-Jan Wiggers",
    "tags": [
-    "Containers",
+    "Cost Optimization",
     "Cloud",
     "AWS",
-    "Cost Optimization",
+    "Containers",
     "Platform Engineering"
    ],
    "priority": 1,
@@ -16705,10 +17080,10 @@
    "author": "Leela Kumili",
    "tags": [
     "Database",
-    "Database Replication",
     "Load Balancing",
-    "Sharding",
-    "Availability"
+    "Database Replication",
+    "Algorithms",
+    "Microservices"
    ],
    "priority": 1,
    "firstSeen": "2026-09-21T19:37:48.275Z"
@@ -19408,378 +19783,6 @@
    "discussion": "https://news.ycombinator.com/item?id=49775104",
    "priority": 1,
    "firstSeen": "2026-09-20T16:20:21.710Z"
-  },
-  {
-   "id": "131lbg6",
-   "title": "The Millennium Problems for Biology",
-   "url": "https://millenniumproblems.bio/",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T12:17:54Z",
-   "summary": "95 points · 80 comments",
-   "author": "@artninja1988",
-   "tags": [],
-   "score": 95,
-   "discussion": "https://news.ycombinator.com/item?id=49775082",
-   "priority": 1,
-   "firstSeen": "2026-09-20T16:20:21.710Z"
-  },
-  {
-   "id": "1goabw7",
-   "title": "Researchers escape OpenAI Codex sandbox to run commands on host",
-   "url": "https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/",
-   "source": "BleepingComputer",
-   "category": "security",
-   "published": "2026-09-20T12:00:00.000Z",
-   "summary": "Researchers escaped OpenAI's Codex sandbox two ways, one running commands on a developer's machine from its most locked-down mode. OpenAI has patched both. [...]",
-   "author": "Ax Sharma",
-   "tags": [],
-   "priority": 1,
-   "firstSeen": "2026-09-20T16:20:21.710Z"
-  },
-  {
-   "id": "vvptw2",
-   "title": "Alibaba Open Sources OpenCodeReview for AI-Assisted Code Review",
-   "url": "https://www.infoq.com/news/2026/09/alibaba-opencodereview/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
-   "source": "InfoQ Architecture",
-   "category": "architecture",
-   "published": "2026-09-20T11:57:00.000Z",
-   "summary": "Alibaba recently open-sourced OpenCodeReview, an AI-powered code review CLI that combines deterministic pipelines for file selection, bundling, and rule matching with an LLM agent for dynamic code analysis. It supports built-in checks for issues such as null-pointer exceptions, thread safety, XSS, and SQL injection.…",
-   "author": "Renato Losio",
-   "tags": [
-    "Large language models",
-    "Static Analysis",
-    "Agents",
-    "Agentic AI Architecture",
-    "Code Reviews"
-   ],
-   "priority": 1,
-   "firstSeen": "2026-09-20T16:20:21.710Z"
-  },
-  {
-   "id": "18ge03p",
-   "title": "Need solution for automating huggingface model delivery to EFS on EKS",
-   "url": "https://www.reddit.com/r/devops/comments/1wlexzm/need_solution_for_automating_huggingface_model/",
-   "source": "Reddit r/devops",
-   "category": "community",
-   "published": "2026-09-20T11:46:47.000Z",
-   "summary": "Automating HuggingFace model delivery to EFS on EKS what's your approach? Setup One EFS filesystem (~3 GB) holding HuggingFace sentence-transformer snapshots as a flat / / tree. Mounted by four workloads across three EKS clusters – two GPU inference services (~107 pods in prod, HPA'd on spot GPU nodes), a small…",
-   "author": "/u/onepiece696999",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-22T17:07:03.646Z"
-  },
-  {
-   "id": "yhcc6w",
-   "title": "Account suddenly suspended right after sign up",
-   "url": "https://www.reddit.com/r/aws/comments/1wlebzd/account_suddenly_suspended_right_after_sign_up/",
-   "source": "Reddit r/aws",
-   "category": "community",
-   "published": "2026-09-20T11:13:56.000Z",
-   "summary": "Good day! Had anybody seen this issue with AWS? I signed up in AWS in order to learn this service, using my usual credentials for any services (Gmail email, etc) I didn't perform any actions, did not create any resources. But several hours later I simply cannot connect to console, due to \"Authentication failed because…",
-   "author": "/u/Shandresh",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-20T18:56:22.607Z"
-  },
-  {
-   "id": "18bhk5u",
-   "title": "Why do we need human mathematicians anymore?",
-   "url": "https://terrytao.wordpress.com/2026/09/19/why-do-we-need-human-mathematicians-anymore/",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T10:49:58Z",
-   "summary": "230 points · 233 comments",
-   "author": "@auggierose",
-   "tags": [],
-   "score": 230,
-   "discussion": "https://news.ycombinator.com/item?id=49774521",
-   "priority": 1,
-   "firstSeen": "2026-09-21T05:12:35.064Z"
-  },
-  {
-   "id": "1tdxz4o",
-   "title": "AI-Assisted Starling Desktop Introduces 3D View With \"Walkable 3D Waterfront City\"",
-   "url": "https://www.phoronix.com/news/Starling-0.5-3D-Desktop",
-   "source": "Phoronix",
-   "category": "platform",
-   "published": "2026-09-20T10:49:28.000Z",
-   "summary": "From a few months ago you may recall Starling as the new Linux desktop written with its own Wayland compositor, using the Swift programming language, and written in large part via AI with Claude Code. Out today is Starling 0.5 with this desktop now gaining an optional 3D desktop mode...",
-   "author": "Michael Larabel",
-   "tags": [],
-   "priority": 2,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "1d05fa2",
-   "title": "Vulkan 1.4.363 Released With New VK_INTEL_device_info Extension",
-   "url": "https://www.phoronix.com/news/Vulkan-1.4.363",
-   "source": "Phoronix",
-   "category": "platform",
-   "published": "2026-09-20T10:33:48.000Z",
-   "summary": "Vulkan 1.4.363 is out as the latest routine update to the Vulkan API specification and also introduces a new Intel vendor extension...",
-   "author": "Michael Larabel",
-   "tags": [],
-   "priority": 2,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "1jfcj7g",
-   "title": "Linux 7.3 Adds Support For Victrix Pro BFG & Azeron Controllers",
-   "url": "https://www.phoronix.com/news/Linux-7.3-rc4-Input",
-   "source": "Phoronix",
-   "category": "platform",
-   "published": "2026-09-20T10:21:51.000Z",
-   "summary": "Sent out this morning were a big batch of input subsystem fixes ahead of the Linux 7.3-rc4 kernel releasing later today. Alongside many bug fixes to different drivers is also expanding the range of supported gaming controllers by the XPad driver...",
-   "author": "Michael Larabel",
-   "tags": [],
-   "priority": 2,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "3h621m",
-   "title": "AI and the Destruction of the Creative Commons",
-   "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T10:07:51Z",
-   "summary": "17 points · 0 comments",
-   "author": "@rakel_rakel",
-   "tags": [],
-   "score": 17,
-   "discussion": "https://news.ycombinator.com/item?id=49774329",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "kcfuui",
-   "title": "Google Agent Development Kit for Kotlin Reaches Feature Parity with Python, Supports On-Device AI",
-   "url": "https://www.infoq.com/news/2026/09/google-adk-1-0-released/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=news",
-   "source": "InfoQ News",
-   "category": "architecture",
-   "published": "2026-09-20T10:00:00.000Z",
-   "summary": "Google has released the Agent Development Kit (ADK) for Kotlin 1.0, a production-ready framework for building AI agents across Kotlin, Android, and JVM/server applications. It brings Kotlin to feature parity with Google's ADK for Python and Java, while adding Android-specific capabilities for on-device and hybrid AI.…",
-   "author": "Sergio De Simone",
-   "tags": [
-    "Large language models",
-    "Open Source",
-    "Mobile",
-    "Agents",
-    "Google ADK for Kotlin"
-   ],
-   "priority": 2,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "6rvdlg",
-   "title": "PDF Forgeries Are Surprisingly Rare (2022)",
-   "url": "https://gwern.net/blog/2022/pdf-forgery",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T09:57:35Z",
-   "summary": "15 points · 12 comments",
-   "author": "@1317",
-   "tags": [],
-   "score": 15,
-   "discussion": "https://news.ycombinator.com/item?id=49774269",
-   "priority": 1,
-   "firstSeen": "2026-09-22T05:12:58.668Z"
-  },
-  {
-   "id": "ko5un8",
-   "title": "A font that reads what you wrote",
-   "url": "https://rohanadwankar.github.io/posts/semfont.html",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T09:38:16Z",
-   "summary": "26 points · 14 comments",
-   "author": "@RohanAdwankar",
-   "tags": [],
-   "score": 26,
-   "discussion": "https://news.ycombinator.com/item?id=49774161",
-   "priority": 1,
-   "firstSeen": "2026-09-22T11:54:54.047Z"
-  },
-  {
-   "id": "1enloax",
-   "title": "Feedback on Custom VPC + Bastion Architecture built with Terraform (Learning Project)",
-   "url": "https://www.reddit.com/r/aws/comments/1wlcfj8/feedback_on_custom_vpc_bastion_architecture_built/",
-   "source": "Reddit r/aws",
-   "category": "community",
-   "published": "2026-09-20T09:26:21.000Z",
-   "summary": "Hi everyone, I recently completed Project 1 of my cloud learning roadmap: building an isolated custom AWS VPC architecture from scratch using Terraform, focusing on core networking concepts rather than launching standalone instances. **GitHub Repository:** https://github.com/nikhatparveen1/My-Cloud-Journey I've…",
-   "author": "/u/milky1504",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-20T18:56:22.607Z"
-  },
-  {
-   "id": "1wbph9g",
-   "title": "Feedback on Custom VPC + Bastion Architecture built with Terraform (Learning Project)",
-   "url": "https://www.reddit.com/r/aws/comments/1wlc96j/feedback_on_custom_vpc_bastion_architecture_built/",
-   "source": "Reddit r/aws",
-   "category": "community",
-   "published": "2026-09-20T09:15:41.000Z",
-   "summary": "Hi everyone, I recently completed Project 1 of my cloud learning roadmap: building an isolated custom AWS VPC architecture from scratch using Terraform, focusing on core networking concepts rather than launching standalone instances. ### Architecture Summary: - **Custom VPC:** `10.0.0.0/16` - **Public Subnet:**…",
-   "author": "/u/milky1504",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-20T18:56:22.607Z"
-  },
-  {
-   "id": "15a88z6",
-   "title": "Benchmarking Wild vs. Mold",
-   "url": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T09:09:14Z",
-   "summary": "21 points · 0 comments",
-   "author": "@birdculture",
-   "tags": [],
-   "score": 21,
-   "discussion": "https://news.ycombinator.com/item?id=49774000",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "mmma5h",
-   "title": "Microsoft agentically ports Copilot runtime to Rust for $120K",
-   "url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T09:08:52Z",
-   "summary": "26 points · 21 comments",
-   "author": "@pjmlp",
-   "tags": [],
-   "score": 26,
-   "discussion": "https://news.ycombinator.com/item?id=49773998",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "td540",
-   "title": "Cloudflare Measures Origin TLS Preferences, Cutting Handshake Retries from 52% to 3.7%",
-   "url": "https://www.infoq.com/news/2026/09/cloudflare-automatic-key-exchang/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design",
-   "source": "InfoQ Architecture",
-   "category": "architecture",
-   "published": "2026-09-20T08:15:00.000Z",
-   "summary": "Cloudflare has replaced its static X25519 guess for origin TLS handshakes with per-origin measurement. HelloRetryRequests on scanned origins fell from roughly 52% to 3.7%, removing over 150 ms from p90 latency. Post-quantum connections completing in one round trip rose from 0% to 99.2%, though only 12.8% of origins…",
-   "author": "Steef-Jan Wiggers",
-   "tags": [
-    "Cloudflare",
-    "Networking",
-    "Cloud",
-    "Performance",
-    "Cryptography"
-   ],
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "1vgrx8m",
-   "title": "Teleoperated Humans",
-   "url": "https://www.jefftk.com/p/teleoperated-humans",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T08:02:48Z",
-   "summary": "27 points · 29 comments",
-   "author": "@luu",
-   "tags": [],
-   "score": 27,
-   "discussion": "https://news.ycombinator.com/item?id=49773597",
-   "priority": 1,
-   "firstSeen": "2026-09-22T17:07:03.646Z"
-  },
-  {
-   "id": "1xt6a7m",
-   "title": "How to Set Up the ChatGPT Desktop App with Amazon Bedrock",
-   "url": "https://dev.to/aws/how-to-set-up-the-chatgpt-desktop-app-with-amazon-bedrock-ggp",
-   "source": "DEV Community",
-   "category": "cloud",
-   "published": "2026-09-20T06:40:10Z",
-   "summary": "A while ago, I tried setting up the ChatGPT desktop app with Amazon Bedrock on another laptop and,...",
-   "author": "Matheus Guimaraes",
-   "tags": [
-    "ai",
-    "chatgpt",
-    "aws",
-    "bedrock"
-   ],
-   "score": 0,
-   "devtoSurface": "org:aws",
-   "priority": 3,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "19f85d3",
-   "title": "Building a Form Backend: This Week's Architecture Decisions & Lessons Learned",
-   "url": "https://www.reddit.com/r/softwarearchitecture/comments/1wl9e5n/building_a_form_backend_this_weeks_architecture/",
-   "source": "Reddit r/softwarearchitecture",
-   "category": "community",
-   "published": "2026-09-20T06:32:53.000Z",
-   "summary": "I've continued building a Formspree-style backend and spent most of this week improving reliability rather than adding flashy features. Highlights: - Implemented dashboard APIs with pagination, filtering, soft delete and restore. - Fixed subtle bugs where pagination defaults and date filters appeared correct but…",
-   "author": "/u/GovernmentLong5941",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-21T05:12:35.064Z"
-  },
-  {
-   "id": "f3k7cv",
-   "title": "Spain orders blocks on Archive.today and its mirrors",
-   "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T06:16:42Z",
-   "summary": "474 points · 361 comments",
-   "author": "@latein",
-   "tags": [],
-   "score": 474,
-   "discussion": "https://news.ycombinator.com/item?id=49772961",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "fm55w8",
-   "title": "System design question: Design a ChatGPT-like application",
-   "url": "https://www.reddit.com/r/softwarearchitecture/comments/1wl8gps/system_design_question_design_a_chatgptlike/",
-   "source": "Reddit r/softwarearchitecture",
-   "category": "community",
-   "published": "2026-09-20T05:42:34.000Z",
-   "summary": "I've been collecting system design interview questions and recently worked on one around designing a ChatGPT-like chat application. The requirements sound simple: Start a conversation → send messages → receive streamed AI responses → come back later and continue the conversation. But once you get into the details,…",
-   "author": "/u/AcademicLeg282",
-   "tags": [],
-   "priority": 3,
-   "firstSeen": "2026-09-21T05:12:35.064Z"
-  },
-  {
-   "id": "clglcj",
-   "title": "UTF-8000: Unlimited UTF-8",
-   "url": "https://utf-8000.jb2170.com",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T05:15:00Z",
-   "summary": "98 points · 75 comments",
-   "author": "@vismit2000",
-   "tags": [],
-   "score": 98,
-   "discussion": "https://news.ycombinator.com/item?id=49772677",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
-  },
-  {
-   "id": "1o2nyyi",
-   "title": "Telling a Computer to Do Things",
-   "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
-   "source": "Hacker News",
-   "category": "community",
-   "published": "2026-09-20T05:11:33Z",
-   "summary": "72 points · 31 comments",
-   "author": "@vismit2000",
-   "tags": [],
-   "score": 72,
-   "discussion": "https://news.ycombinator.com/item?id=49772662",
-   "priority": 1,
-   "firstSeen": "2026-09-20T11:39:49.833Z"
   }
  ],
  "repos": [
@@ -19788,8 +19791,8 @@
    "name": "affaan-m/ECC",
    "url": "https://github.com/affaan-m/ECC",
    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-   "stars": 268058,
-   "forks": 40044,
+   "stars": 268194,
+   "forks": 40066,
    "language": "JavaScript",
    "topics": [
     "ai-agents",
@@ -19816,8 +19819,8 @@
    "name": "NousResearch/hermes-agent",
    "url": "https://github.com/NousResearch/hermes-agent",
    "description": "The agent that grows with you",
-   "stars": 249312,
-   "forks": 52963,
+   "stars": 249394,
+   "forks": 53004,
    "language": "Python",
    "topics": [
     "ai",
@@ -19827,7 +19830,7 @@
     "chatgpt",
     "claude"
    ],
-   "pushedAt": "2026-09-27T08:25:13Z",
+   "pushedAt": "2026-09-27T14:20:30Z",
    "createdAt": "2025-07-22T22:22:28Z",
    "archived": false,
    "license": {
@@ -19844,8 +19847,8 @@
    "name": "deepseek-ai/deepseek-harness",
    "url": "https://github.com/deepseek-ai/deepseek-harness",
    "description": "DeepSeek Harness: Everything is a Plugin.",
-   "stars": 237202,
-   "forks": 28502,
+   "stars": 237483,
+   "forks": 28533,
    "language": "TypeScript",
    "topics": [
     "ai-agents",
@@ -19870,8 +19873,8 @@
    "name": "n8n-io/n8n",
    "url": "https://github.com/n8n-io/n8n",
    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-   "stars": 206079,
-   "forks": 60892,
+   "stars": 206102,
+   "forks": 60902,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -19881,7 +19884,7 @@
     "data-flow",
     "development"
    ],
-   "pushedAt": "2026-09-27T08:20:27Z",
+   "pushedAt": "2026-09-27T15:10:41Z",
    "createdAt": "2019-06-22T09:24:21Z",
    "archived": false,
    "license": {
@@ -19898,8 +19901,8 @@
    "name": "firecrawl/firecrawl",
    "url": "https://github.com/firecrawl/firecrawl",
    "description": "The web data API to search, scrape, and interact at scale. 🔥",
-   "stars": 185256,
-   "forks": 9936,
+   "stars": 185385,
+   "forks": 9942,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -19926,8 +19929,8 @@
    "name": "Snailclimb/JavaGuide",
    "url": "https://github.com/Snailclimb/JavaGuide",
    "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-   "stars": 158904,
-   "forks": 46144,
+   "stars": 158911,
+   "forks": 46142,
    "language": "JavaScript",
    "topics": [
     "agent",
@@ -19954,8 +19957,8 @@
    "name": "langgenius/dify",
    "url": "https://github.com/langgenius/dify",
    "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-   "stars": 157301,
-   "forks": 24792,
+   "stars": 157325,
+   "forks": 24798,
    "language": "TypeScript",
    "topics": [
     "agent",
@@ -19965,7 +19968,7 @@
     "ai",
     "automation"
    ],
-   "pushedAt": "2026-09-26T18:41:17Z",
+   "pushedAt": "2026-09-27T15:10:29Z",
    "createdAt": "2023-04-12T07:40:24Z",
    "archived": false,
    "license": {
@@ -19982,8 +19985,8 @@
    "name": "open-webui/open-webui",
    "url": "https://github.com/open-webui/open-webui",
    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-   "stars": 153299,
-   "forks": 22432,
+   "stars": 153336,
+   "forks": 22434,
    "language": "Python",
    "topics": [
     "ai",
@@ -20010,8 +20013,8 @@
    "name": "langchain-ai/langchain",
    "url": "https://github.com/langchain-ai/langchain",
    "description": "The agent engineering platform.",
-   "stars": 147140,
-   "forks": 24628,
+   "stars": 147151,
+   "forks": 24630,
    "language": "Python",
    "topics": [
     "agents",
@@ -20021,7 +20024,7 @@
     "chatgpt",
     "deepagents"
    ],
-   "pushedAt": "2026-09-27T08:16:16Z",
+   "pushedAt": "2026-09-27T15:03:31Z",
    "createdAt": "2022-10-17T02:58:36Z",
    "archived": false,
    "license": {
@@ -20038,8 +20041,8 @@
    "name": "DietrichGebert/ponytail",
    "url": "https://github.com/DietrichGebert/ponytail",
    "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-   "stars": 146658,
-   "forks": 7878,
+   "stars": 146792,
+   "forks": 7886,
    "language": "JavaScript",
    "topics": [
     "agent-skills",
@@ -20066,8 +20069,8 @@
    "name": "farion1231/cc-switch",
    "url": "https://github.com/farion1231/cc-switch",
    "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
-   "stars": 137340,
-   "forks": 9336,
+   "stars": 137447,
+   "forks": 9341,
    "language": "Rust",
    "topics": [
     "ai-tools",
@@ -20094,8 +20097,8 @@
    "name": "kubernetes/kubernetes",
    "url": "https://github.com/kubernetes/kubernetes",
    "description": "Production-Grade Container Scheduling and Management",
-   "stars": 128042,
-   "forks": 45402,
+   "stars": 128045,
+   "forks": 45414,
    "language": "Go",
    "topics": [
     "cncf",
@@ -20120,8 +20123,8 @@
    "name": "Graphify-Labs/graphify",
    "url": "https://github.com/Graphify-Labs/graphify",
    "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge…",
-   "stars": 121725,
-   "forks": 11718,
+   "stars": 121803,
+   "forks": 11728,
    "language": "Python",
    "topics": [
     "ai-agents",
@@ -20148,8 +20151,8 @@
    "name": "browser-use/browser-use",
    "url": "https://github.com/browser-use/browser-use",
    "description": "Agents that use the browser.",
-   "stars": 116447,
-   "forks": 12830,
+   "stars": 116479,
+   "forks": 12835,
    "language": "Python",
    "topics": [
     "ai-agents",
@@ -20176,8 +20179,8 @@
    "name": "punkpeye/awesome-mcp-servers",
    "url": "https://github.com/punkpeye/awesome-mcp-servers",
    "description": "A collection of MCP servers.",
-   "stars": 95567,
-   "forks": 16697,
+   "stars": 95582,
+   "forks": 16714,
    "language": "—",
    "topics": [
     "ai",
@@ -20200,8 +20203,8 @@
    "name": "Stirling-Tools/Stirling-PDF",
    "url": "https://github.com/Stirling-Tools/Stirling-PDF",
    "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
-   "stars": 93080,
-   "forks": 9722,
+   "stars": 93104,
+   "forks": 9743,
    "language": "Java",
    "topics": [
     "docker",
@@ -20211,7 +20214,7 @@
     "pdf-converter",
     "pdf-editor"
    ],
-   "pushedAt": "2026-09-27T08:16:55Z",
+   "pushedAt": "2026-09-27T15:09:21Z",
    "createdAt": "2023-01-27T18:22:42Z",
    "archived": false,
    "license": {
@@ -20228,8 +20231,8 @@
    "name": "sherlock-project/sherlock",
    "url": "https://github.com/sherlock-project/sherlock",
    "description": "Hunt down social media accounts by username across social networks",
-   "stars": 92873,
-   "forks": 10964,
+   "stars": 92903,
+   "forks": 10968,
    "language": "Python",
    "topics": [
     "cli",
@@ -20256,8 +20259,8 @@
    "name": "louislam/uptime-kuma",
    "url": "https://github.com/louislam/uptime-kuma",
    "description": "A fancy self-hosted monitoring tool",
-   "stars": 91866,
-   "forks": 8468,
+   "stars": 91873,
+   "forks": 8471,
    "language": "JavaScript",
    "topics": [
     "docker",
@@ -20284,7 +20287,7 @@
    "name": "macrozheng/mall",
    "url": "https://github.com/macrozheng/mall",
    "description": "mall项目是一套电商系统，包括前台商城系统及后台管理系统，基于Spring Boot+MyBatis实现，采用Docker容器化部署。 前台商城系统包含首页门户、商品推荐、商品搜索、商品展示、购物车、订单流程、会员中心、客户服务、帮助中心等模块。 后台管理系统包含商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等模块。",
-   "stars": 84832,
+   "stars": 84835,
    "forks": 29838,
    "language": "Java",
    "topics": [
@@ -20312,8 +20315,8 @@
    "name": "netdata/netdata",
    "url": "https://github.com/netdata/netdata",
    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
-   "stars": 80668,
-   "forks": 6636,
+   "stars": 80672,
+   "forks": 6637,
    "language": "Go",
    "topics": [
     "ai",
@@ -20341,7 +20344,7 @@
    "url": "https://github.com/moby/moby",
    "description": "The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
    "stars": 72139,
-   "forks": 19237,
+   "forks": 19236,
    "language": "Go",
    "topics": [
     "containers",
@@ -20366,8 +20369,8 @@
    "name": "dani-garcia/vaultwarden",
    "url": "https://github.com/dani-garcia/vaultwarden",
    "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
-   "stars": 68210,
-   "forks": 3254,
+   "stars": 68217,
+   "forks": 3255,
    "language": "Rust",
    "topics": [
     "bitwarden",
@@ -20394,8 +20397,8 @@
    "name": "traefik/traefik",
    "url": "https://github.com/traefik/traefik",
    "description": "The Cloud Native Application Proxy",
-   "stars": 64979,
-   "forks": 6206,
+   "stars": 64981,
+   "forks": 6205,
    "language": "Go",
    "topics": [
     "consul",
@@ -20422,8 +20425,8 @@
    "name": "usememos/memos",
    "url": "https://github.com/usememos/memos",
    "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
-   "stars": 63361,
-   "forks": 4788,
+   "stars": 63372,
+   "forks": 4792,
    "language": "Go",
    "topics": [
     "docker",
@@ -20433,7 +20436,7 @@
     "memo",
     "microblog"
    ],
-   "pushedAt": "2026-09-27T02:01:13Z",
+   "pushedAt": "2026-09-27T14:58:59Z",
    "createdAt": "2021-12-08T15:30:18Z",
    "archived": false,
    "license": {
@@ -20450,8 +20453,8 @@
    "name": "go-gitea/gitea",
    "url": "https://github.com/go-gitea/gitea",
    "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD",
-   "stars": 58177,
-   "forks": 7180,
+   "stars": 58181,
+   "forks": 7183,
    "language": "Go",
    "topics": [
     "bitbucket",
@@ -20506,7 +20509,7 @@
    "name": "x64dbg/x64dbg",
    "url": "https://github.com/x64dbg/x64dbg",
    "description": "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",
-   "stars": 49613,
+   "stars": 49618,
    "forks": 2847,
    "language": "C++",
    "topics": [
@@ -20534,8 +20537,8 @@
    "name": "KeygraphHQ/shannon",
    "url": "https://github.com/KeygraphHQ/shannon",
    "description": "Shannon is an AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
-   "stars": 48411,
-   "forks": 5544,
+   "stars": 48415,
+   "forks": 5543,
    "language": "TypeScript",
    "topics": [
     "ai-penetration-testing",
@@ -20563,7 +20566,7 @@
    "url": "https://github.com/RocketChat/Rocket.Chat",
    "description": "The Secure CommsOS™ for mission-critical operations",
    "stars": 46178,
-   "forks": 13923,
+   "forks": 13925,
    "language": "TypeScript",
    "topics": [
     "chat",
@@ -20573,7 +20576,7 @@
     "hacktoberfest",
     "javascript"
    ],
-   "pushedAt": "2026-09-26T23:25:47Z",
+   "pushedAt": "2026-09-27T14:23:55Z",
    "createdAt": "2015-05-19T07:36:09Z",
    "archived": false,
    "license": {
@@ -20590,8 +20593,8 @@
    "name": "getsentry/sentry",
    "url": "https://github.com/getsentry/sentry",
    "description": "Developer-first error tracking and performance monitoring",
-   "stars": 44851,
-   "forks": 4869,
+   "stars": 44856,
+   "forks": 4870,
    "language": "Python",
    "topics": [
     "apm",
@@ -20601,7 +20604,7 @@
     "devops",
     "django"
    ],
-   "pushedAt": "2026-09-27T02:25:43Z",
+   "pushedAt": "2026-09-27T12:08:56Z",
    "createdAt": "2010-08-30T22:06:41Z",
    "archived": false,
    "license": {
@@ -20618,7 +20621,7 @@
    "name": "Kong/kong",
    "url": "https://github.com/Kong/kong",
    "description": "🦍 The API and AI Gateway",
-   "stars": 44200,
+   "stars": 44201,
    "forks": 5219,
    "language": "Lua",
    "topics": [
@@ -20646,7 +20649,7 @@
    "name": "ToolJet/ToolJet",
    "url": "https://github.com/ToolJet/ToolJet",
    "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and…",
-   "stars": 41002,
+   "stars": 41003,
    "forks": 5457,
    "language": "JavaScript",
    "topics": [
@@ -20702,8 +20705,8 @@
    "name": "sqlmapproject/sqlmap",
    "url": "https://github.com/sqlmapproject/sqlmap",
    "description": "Automatic SQL injection and database takeover tool",
-   "stars": 38529,
-   "forks": 6375,
+   "stars": 38531,
+   "forks": 6374,
    "language": "Python",
    "topics": [
     "api-security",
@@ -20730,8 +20733,8 @@
    "name": "istio/istio",
    "url": "https://github.com/istio/istio",
    "description": "Connect, secure, control, and observe services.",
-   "stars": 38409,
-   "forks": 8374,
+   "stars": 38410,
+   "forks": 8373,
    "language": "Go",
    "topics": [
     "api-management",
@@ -20758,7 +20761,7 @@
    "name": "aquasecurity/trivy",
    "url": "https://github.com/aquasecurity/trivy",
    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-   "stars": 38090,
+   "stars": 38091,
    "forks": 715,
    "language": "Go",
    "topics": [
@@ -20786,7 +20789,7 @@
    "name": "soxoj/maigret",
    "url": "https://github.com/soxoj/maigret",
    "description": "🕵️‍♂️ Collect a dossier on a person by username from 6K websites",
-   "stars": 38001,
+   "stars": 38010,
    "forks": 2986,
    "language": "Python",
    "topics": [
@@ -20814,8 +20817,8 @@
    "name": "Dokploy/dokploy",
    "url": "https://github.com/Dokploy/dokploy",
    "description": "Open Source Alternative to Vercel, Netlify and Heroku.",
-   "stars": 37530,
-   "forks": 3013,
+   "stars": 37534,
+   "forks": 3014,
    "language": "TypeScript",
    "topics": [
     "agents",
@@ -20842,7 +20845,7 @@
    "name": "awesome-foss/awesome-sysadmin",
    "url": "https://github.com/awesome-foss/awesome-sysadmin",
    "description": "A curated list of amazingly awesome open-source sysadmin resources.",
-   "stars": 35270,
+   "stars": 35273,
    "forks": 2109,
    "language": "—",
    "topics": [
@@ -20870,7 +20873,7 @@
    "name": "lissy93/web-check",
    "url": "https://github.com/lissy93/web-check",
    "description": "🕵️‍♂️ All-in-one OSINT tool for analysing any website",
-   "stars": 34929,
+   "stars": 34935,
    "forks": 2866,
    "language": "TypeScript",
    "topics": [
@@ -20880,7 +20883,7 @@
     "security-tools",
     "sysadmin"
    ],
-   "pushedAt": "2026-09-20T21:08:24Z",
+   "pushedAt": "2026-09-27T12:55:01Z",
    "createdAt": "2023-06-25T14:32:11Z",
    "archived": false,
    "license": {
@@ -20897,7 +20900,7 @@
    "name": "dokku/dokku",
    "url": "https://github.com/dokku/dokku",
    "description": "A docker-powered PaaS that helps you build and manage the lifecycle of applications",
-   "stars": 32160,
+   "stars": 32161,
    "forks": 2079,
    "language": "Go",
    "topics": [
@@ -20925,7 +20928,7 @@
    "name": "webtorrent/webtorrent",
    "url": "https://github.com/webtorrent/webtorrent",
    "description": "⚡️ Streaming torrent client for the web",
-   "stars": 31422,
+   "stars": 31423,
    "forks": 2902,
    "language": "JavaScript",
    "topics": [
@@ -20953,8 +20956,8 @@
    "name": "jitsi/jitsi-meet",
    "url": "https://github.com/jitsi/jitsi-meet",
    "description": "Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.",
-   "stars": 30003,
-   "forks": 8046,
+   "stars": 30004,
+   "forks": 8047,
    "language": "TypeScript",
    "topics": [
     "debian",
@@ -20981,8 +20984,8 @@
    "name": "gitleaks/gitleaks",
    "url": "https://github.com/gitleaks/gitleaks",
    "description": "Find secrets with Gitleaks 🔑",
-   "stars": 29504,
-   "forks": 2247,
+   "stars": 29513,
+   "forks": 2250,
    "language": "Go",
    "topics": [
     "ai-powered",
@@ -21009,8 +21012,8 @@
    "name": "Infisical/infisical",
    "url": "https://github.com/Infisical/infisical",
    "description": "Infisical is the open-source platform for secrets, certificates, and privileged access management.",
-   "stars": 29456,
-   "forks": 2285,
+   "stars": 29457,
+   "forks": 2286,
    "language": "TypeScript",
    "topics": [
     "acme",
@@ -21020,7 +21023,7 @@
     "go",
     "golang"
    ],
-   "pushedAt": "2026-09-27T08:00:49Z",
+   "pushedAt": "2026-09-27T11:08:32Z",
    "createdAt": "2022-08-05T13:50:00Z",
    "archived": false,
    "license": {
@@ -21037,8 +21040,8 @@
    "name": "ossrs/srs",
    "url": "https://github.com/ossrs/srs",
    "description": "SRS is a simple, high-performance, AI-driven real-time media server supporting RTMP, WebRTC, HLS, HTTP-FLV, HTTP-TS, SRT, MPEG-DASH, and GB28181, with codec support for H.264, H.265, AV1, VP9, AAC, Opus, and G.711.",
-   "stars": 29287,
-   "forks": 5691,
+   "stars": 29288,
+   "forks": 5692,
    "language": "C++",
    "topics": [
     "ai-driven",
@@ -21065,8 +21068,8 @@
    "name": "kestra-io/kestra",
    "url": "https://github.com/kestra-io/kestra",
    "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
-   "stars": 28373,
-   "forks": 3055,
+   "stars": 28376,
+   "forks": 3056,
    "language": "Java",
    "topics": [
     "ai-agents",
@@ -21093,7 +21096,7 @@
    "name": "trufflesecurity/trufflehog",
    "url": "https://github.com/trufflesecurity/trufflehog",
    "description": "Find, verify, and analyze leaked credentials",
-   "stars": 28093,
+   "stars": 28115,
    "forks": 2601,
    "language": "Go",
    "topics": [
@@ -21121,8 +21124,8 @@
    "name": "NandhaKishorM/laya",
    "url": "https://github.com/NandhaKishorM/laya",
    "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
-   "stars": 26122,
-   "forks": 2273,
+   "stars": 26430,
+   "forks": 2299,
    "language": "Python",
    "topics": [
     "calibration",
@@ -21149,8 +21152,8 @@
    "name": "promptfoo/promptfoo",
    "url": "https://github.com/promptfoo/promptfoo",
    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD…",
-   "stars": 25486,
-   "forks": 2381,
+   "stars": 25495,
+   "forks": 2382,
    "language": "TypeScript",
    "topics": [
     "ci",
@@ -21160,7 +21163,7 @@
     "evaluation-framework",
     "llm"
    ],
-   "pushedAt": "2026-09-27T08:25:18Z",
+   "pushedAt": "2026-09-27T15:05:03Z",
    "createdAt": "2023-04-28T15:48:49Z",
    "archived": false,
    "license": {
@@ -21177,8 +21180,8 @@
    "name": "vxcontrol/pentagi",
    "url": "https://github.com/vxcontrol/pentagi",
    "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
-   "stars": 25002,
-   "forks": 3211,
+   "stars": 25012,
+   "forks": 3216,
    "language": "Go",
    "topics": [
     "ai-agents",
@@ -21205,7 +21208,7 @@
    "name": "m1k1o/neko",
    "url": "https://github.com/m1k1o/neko",
    "description": "A self hosted virtual browser that runs in docker and uses WebRTC.",
-   "stars": 22393,
+   "stars": 22394,
    "forks": 1630,
    "language": "Go",
    "topics": [
@@ -21216,7 +21219,7 @@
     "remote-desktop",
     "self-hosted"
    ],
-   "pushedAt": "2026-09-24T08:58:39Z",
+   "pushedAt": "2026-09-27T15:08:51Z",
    "createdAt": "2020-03-14T20:46:07Z",
    "archived": false,
    "license": {
@@ -21233,7 +21236,7 @@
    "name": "bee-san/Ciphey",
    "url": "https://github.com/bee-san/Ciphey",
    "description": "⚡ Automatically decrypt encryptions without knowing the key or cipher, decode encodings, and crack hashes ⚡",
-   "stars": 21637,
+   "stars": 21636,
    "forks": 1443,
    "language": "Rust",
    "topics": [
@@ -21261,7 +21264,7 @@
    "name": "pavlobu/deskreen",
    "url": "https://github.com/pavlobu/deskreen",
    "description": "Deskreen turns any device with a web browser into a secondary screen for your computer. ⭐️ Star to support our work!",
-   "stars": 21516,
+   "stars": 21518,
    "forks": 1205,
    "language": "TypeScript",
    "topics": [
@@ -21289,7 +21292,7 @@
    "name": "livekit/livekit",
    "url": "https://github.com/livekit/livekit",
    "description": "End-to-end realtime stack for connecting humans and AI",
-   "stars": 21135,
+   "stars": 21141,
    "forks": 2388,
    "language": "Go",
    "topics": [
@@ -21317,8 +21320,8 @@
    "name": "browser-use/jev-ultrafast",
    "url": "https://github.com/browser-use/jev-ultrafast",
    "description": "Fastest and cheapest web agent",
-   "stars": 20647,
-   "forks": 1419,
+   "stars": 20730,
+   "forks": 1425,
    "language": "Python",
    "topics": [],
    "pushedAt": "2026-09-25T04:06:12Z",
@@ -21339,7 +21342,7 @@
    "url": "https://github.com/bee-san/RustScan",
    "description": "🤖 The Modern Port Scanner 🤖",
    "stars": 20462,
-   "forks": 1381,
+   "forks": 1382,
    "language": "Rust",
    "topics": [
     "docker",
@@ -21366,7 +21369,7 @@
    "name": "bluenviron/mediamtx",
    "url": "https://github.com/bluenviron/mediamtx",
    "description": "Ready-to-use Media-over-QUIC / SRT / WebRTC / RTSP / RTMP / LL-HLS / MPEG-TS / RTP live media server and media proxy that allows to read, publish, proxy, record and playback real-time video and audio streams.",
-   "stars": 20279,
+   "stars": 20280,
    "forks": 2388,
    "language": "Go",
    "topics": [
@@ -21394,11 +21397,11 @@
    "name": "eternity4719/HowToLiveBetter",
    "url": "https://github.com/eternity4719/HowToLiveBetter",
    "description": "按性价比排序的循证生活指南：长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
-   "stars": 19023,
-   "forks": 1338,
+   "stars": 20094,
+   "forks": 1434,
    "language": "HTML",
    "topics": [],
-   "pushedAt": "2026-09-25T12:52:30Z",
+   "pushedAt": "2026-09-27T12:42:38Z",
    "createdAt": "2026-09-07T01:53:36Z",
    "archived": false,
    "license": {
@@ -21415,8 +21418,8 @@
    "name": "ffuf/ffuf",
    "url": "https://github.com/ffuf/ffuf",
    "description": "Fast web fuzzer written in Go",
-   "stars": 16727,
-   "forks": 1603,
+   "stars": 16736,
+   "forks": 1604,
    "language": "Go",
    "topics": [
     "fuzzer",
@@ -21469,8 +21472,8 @@
    "name": "lnkiai/m3e-canvas",
    "url": "https://github.com/lnkiai/m3e-canvas",
    "description": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
-   "stars": 8310,
-   "forks": 869,
+   "stars": 8338,
+   "forks": 878,
    "language": "TypeScript",
    "topics": [
     "design-tool",
@@ -21480,7 +21483,7 @@
     "nextjs",
     "prompt"
    ],
-   "pushedAt": "2026-09-24T14:29:43Z",
+   "pushedAt": "2026-09-27T14:21:13Z",
    "createdAt": "2026-09-02T04:36:34Z",
    "archived": false,
    "license": {
@@ -21497,15 +21500,15 @@
    "name": "jaredpalmer/kev",
    "url": "https://github.com/jaredpalmer/kev",
    "description": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
-   "stars": 7295,
-   "forks": 439,
+   "stars": 7356,
+   "forks": 445,
    "language": "Python",
    "topics": [
     "decision-model",
     "jev",
     "qwen3"
    ],
-   "pushedAt": "2026-09-26T14:47:41Z",
+   "pushedAt": "2026-09-27T11:26:27Z",
    "createdAt": "2026-09-17T20:49:39Z",
    "archived": false,
    "license": {
@@ -21522,8 +21525,8 @@
    "name": "tamaratran/fast-jev-compaction",
    "url": "https://github.com/tamaratran/fast-jev-compaction",
    "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
-   "stars": 6984,
-   "forks": 432,
+   "stars": 7005,
+   "forks": 434,
    "language": "TypeScript",
    "topics": [],
    "pushedAt": "2026-09-18T04:45:31Z",
@@ -21543,8 +21546,8 @@
    "name": "rakanki911/DLSS5-Swapper",
    "url": "https://github.com/rakanki911/DLSS5-Swapper",
    "description": "Install, tune and restore DLSS 5 in your games with one click. Native RenoDX, DLSS5-Feeder for games without DLSS, OptiScaler and multipass routes; DirectX 8/9/11/12, Vulkan, OpenGL, DirectDraw and emulators. In-game F8…",
-   "stars": 6882,
-   "forks": 360,
+   "stars": 6932,
+   "forks": 363,
    "language": "JavaScript",
    "topics": [],
    "pushedAt": "2026-09-13T02:02:21Z",
@@ -21564,8 +21567,8 @@
    "name": "zai-org/ZCode",
    "url": "https://github.com/zai-org/ZCode",
    "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
-   "stars": 6860,
-   "forks": 2069,
+   "stars": 6883,
+   "forks": 2076,
    "language": "TypeScript",
    "topics": [],
    "pushedAt": "2026-09-24T06:49:55Z",
@@ -21585,8 +21588,8 @@
    "name": "jev-chat/jev-chat-jarvis",
    "url": "https://github.com/jev-chat/jev-chat-jarvis",
    "description": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
-   "stars": 6720,
-   "forks": 1158,
+   "stars": 6761,
+   "forks": 1163,
    "language": "Kotlin",
    "topics": [
     "accessibility-service",
@@ -21595,7 +21598,7 @@
     "llm",
     "qq"
    ],
-   "pushedAt": "2026-09-26T16:16:56Z",
+   "pushedAt": "2026-09-27T14:35:20Z",
    "createdAt": "2026-09-21T11:12:53Z",
    "archived": false,
    "license": {
@@ -21612,8 +21615,8 @@
    "name": "mizorewww/laya-mlx",
    "url": "https://github.com/mizorewww/laya-mlx",
    "description": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
-   "stars": 6440,
-   "forks": 504,
+   "stars": 6459,
+   "forks": 509,
    "language": "Python",
    "topics": [
     "apple-silicon",
@@ -21640,8 +21643,8 @@
    "name": "Human-Agent-Society/reef",
    "url": "https://github.com/Human-Agent-Society/reef",
    "description": "Infrastructure for continually self‑improving agents",
-   "stars": 6257,
-   "forks": 562,
+   "stars": 6322,
+   "forks": 567,
    "language": "Python",
    "topics": [
     "agent-infrastructure",
@@ -21651,7 +21654,7 @@
     "llm",
     "llm-training"
    ],
-   "pushedAt": "2026-09-27T05:49:07Z",
+   "pushedAt": "2026-09-27T15:12:29Z",
    "createdAt": "2026-08-31T01:39:18Z",
    "archived": false,
    "license": {
@@ -21668,11 +21671,11 @@
    "name": "robbietilton/Compositor",
    "url": "https://github.com/robbietilton/Compositor",
    "description": "The Photoshop alternative for Mac",
-   "stars": 5797,
-   "forks": 621,
+   "stars": 5845,
+   "forks": 627,
    "language": "Swift",
    "topics": [],
-   "pushedAt": "2026-09-27T03:41:49Z",
+   "pushedAt": "2026-09-27T15:10:17Z",
    "createdAt": "2026-09-16T20:35:54Z",
    "archived": false,
    "license": {
@@ -21690,7 +21693,7 @@
    "url": "https://github.com/HiEventsDev/Hi.Events",
    "description": "Open-source event management and ticket selling platform — perfect for concerts, conferences, and everything in between 🎟️ If you find this project helpful, please consider giving us a star ⭐️",
    "stars": 4036,
-   "forks": 726,
+   "forks": 728,
    "language": "PHP",
    "topics": [
     "attendize-alternative",
@@ -21718,7 +21721,7 @@
    "url": "https://github.com/golevelup/nestjs",
    "description": "A collection of badass modules and utilities to help you level up your NestJS applications 🚀",
    "stars": 2747,
-   "forks": 302,
+   "forks": 301,
    "language": "TypeScript",
    "topics": [
     "event-management",
@@ -21836,7 +21839,7 @@
     "lists",
     "members"
    ],
-   "pushedAt": "2026-09-27T07:31:29Z",
+   "pushedAt": "2026-09-27T11:22:06Z",
    "createdAt": "2015-01-05T11:03:46Z",
    "archived": false,
    "license": {
